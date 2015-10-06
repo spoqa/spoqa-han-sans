@@ -1,0 +1,16 @@
+//
+// Sidebar
+// ==========================================================================
+
+
+// Legacy
+
+.nav-wrap {
+  display: table-cell;
+  vertical-align: top;
+  width: $sidebar-width;
+  max-width: 280px;
+  min-width: 220px;
+  height: 100%;
+  background-color: $grey-9;
+}

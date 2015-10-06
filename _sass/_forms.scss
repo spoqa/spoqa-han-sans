@@ -1,0 +1,248 @@
+//
+// Forms
+// ==========================================================================
+
+
+// Normalize non-controls
+//
+// Restyle and baseline non-control form elements.
+
+fieldset {
+  padding: 0;
+  margin: 0;
+  border: 0;
+  // Chrome and Firefox set a `min-width: min-content;` on fieldsets,
+  // so we reset that to ensure it behaves more like a standard block element.
+  // See https://github.com/twbs/bootstrap/issues/12359.
+  min-width: 0;
+}
+
+legend {
+  display: block;
+  width: 100%;
+  padding: 0;
+  margin-bottom: $line-height-computed; //FIXME: ?? what is this for?
+  font-size: ($font-size-base * 1.5);
+  line-height: inherit;
+  color: $legend-color;
+  border: 0;
+}
+
+label {
+  display: inline-block;
+  max-width: 100%; // Force IE8 to wrap long content (see https://github.com/twbs/bootstrap/issues/13141)
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+
+// Normalize form controls
+//
+// While most of our form styles require extra classes, some basic normalization
+// is required to ensure optimum display with or without those classes to better
+// address browser inconsistencies.
+
+// Override content-box in Normalize (* isn't specific enough)
+input[type="search"] {
+  @include box-sizing(border-box);
+}
+
+// Position radios and checkboxes better
+input[type="radio"],
+input[type="checkbox"] {
+  margin: 4px 0 0;
+  margin-top: 1px \9; // IE8-9
+  line-height: normal;
+}
+
+// Set the height of file controls to match text inputs
+input[type="file"] {
+  display: block;
+}
+
+// Make range inputs behave like textual form controls
+input[type="range"] {
+  display: block;
+  width: 100%;
+}
+
+// Make multiple select elements height not fixed
+select[multiple],
+select[size] {
+  height: auto;
+}
+
+// Focus for file, radio, and checkbox
+input[type="file"]:focus,
+input[type="radio"]:focus,
+input[type="checkbox"]:focus {
+  @include tab-focus;
+}
+
+// Adjust output element
+output {
+  display: block;
+  padding-top: ($padding-base-vertical + 1);
+  font-size: $font-size-base;
+  line-height: $line-height-base;
+  color: $input-color;
+}
+
+
+// Common form controls
+//
+// Shared size and type resets for form controls. Apply `.form-control` to any
+// of the following form controls:
+//
+// select
+// textarea
+// input[type="text"]
+// input[type="password"]
+// input[type="datetime"]
+// input[type="datetime-local"]
+// input[type="date"]
+// input[type="month"]
+// input[type="time"]
+// input[type="week"]
+// input[type="number"]
+// input[type="email"]
+// input[type="url"]
+// input[type="search"]
+// input[type="tel"]
+// input[type="color"]
+
+.form-control,
+input[type="text"],
+input[type="password"],
+input[type="email"],
+input[type="number"],
+input[type="tel"],
+input[type="url"],
+select,
+textarea {
+  display: block;
+  width: 100%;
+  height: $input-height-base; // Make inputs at least the height of their button counterpart (base line-height + padding + border)
+  margin: 1px auto;
+  padding: $padding-base-vertical;
+  font-size: $font-size-adjust;
+  line-height: $form-line-height-base;
+  color: $input-color;
+  vertical-align: middle;
+  background-color: $input-bg;
+  background-image: none; // Reset unusual Firefox-on-Android default style; see https://github.com/necolas/normalize.css/issues/214
+  border: 1px solid $border-color;
+  border-radius: $border-radius-base; // Note: This has no effect on <select>s in some browsers, due to the limited stylability of <select>s in CSS.
+  outline: none;
+  box-shadow: none;
+  @include appearance(none); // Remove iOS safari box-shadow
+
+  &:focus,
+  &.focus,
+  &:active {
+    outline: 1px solid $primary-l1;
+    border: 1px solid $primary-l1;
+    box-shadow: none;
+  }
+
+  // Placeholder
+  @include placeholder($input-color-placeholder);
+
+  // Disabled and read-only inputs
+  //
+  // HTML5 says that controls under a fieldset > legend:first-child won't be
+  // disabled if the fieldset is disabled. Due to implementation difficulty, we
+  // don't honor that edge case; we style them as disabled anyway.
+  &[disabled],
+  &[readonly],
+  fieldset[disabled] & {
+    opacity: 1; // iOS fix for unreadable disabled content; see https://github.com/twbs/bootstrap/issues/11655
+  }
+
+  &[disabled],
+  fieldset[disabled] & {
+    cursor: not-allowed;
+  }
+
+  // [converter] extracted textarea& to textarea.form-control
+}
+
+// Reset height for `textarea`s
+textarea.form-control {
+  height: auto;
+}
+
+// Search
+// --------------------------------------------------------------------------
+
+input.form-search {
+  background: url(" data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiBwcmVzZXJ2ZUFzcGVjdFJhdGlvPSJ4TWlkWU1pZCIgd2lkdGg9IjIwIiBoZWlnaHQ9IjIwIiB2aWV3Qm94PSIwIDAgMjAgMjAiPgogIDxkZWZzPgogICAgPHN0eWxlPgogICAgICAuY2xzLTEgewogICAgICAgIGZpbGw6ICNhOWFmYjM7CiAgICAgICAgZmlsbC1ydWxlOiBldmVub2RkOwogICAgICB9CiAgICA8L3N0eWxlPgogIDwvZGVmcz4KICA8cGF0aCBkPSJNMTkuNjkwLDE5LjY5MCBDMTkuMjkyLDIwLjA4OCAxOC42NDcsMjAuMDg4IDE4LjI0OSwxOS42OTAgTDEyLjg4NSwxNC4zMjYgQzExLjUzMywxNS4zNzEgOS44NDEsMTYuMDAwIDguMDAwLDE2LjAwMCBDMy41ODIsMTYuMDAwIDAuMDAwLDEyLjQxOCAwLjAwMCw4LjAwMCBDMC4wMDAsMy41ODIgMy41ODIsMC4wMDAgOC4wMDAsMC4wMDAgQzEyLjQxOCwwLjAwMCAxNi4wMDAsMy41ODIgMTYuMDAwLDguMDAwIEMxNi4wMDAsOS44NDEgMTUuMzcxLDExLjUzMyAxNC4zMjYsMTIuODg1IEwxOS42OTAsMTguMjQ5IEMyMC4wODgsMTguNjQ3IDIwLjA4OCwxOS4yOTIgMTkuNjkwLDE5LjY5MCBaTTguMDAwLDIuMDAwIEM0LjY4NiwyLjAwMCAyLjAwMCw0LjY4NiAyLjAwMCw4LjAwMCBDMi4wMDAsMTEuMzE0IDQuNjg2LDE0LjAwMCA4LjAwMCwxNC4wMDAgQzExLjMxNCwxNC4wMDAgMTQuMDAwLDExLjMxNCAxNC4wMDAsOC4wMDAgQzE0LjAwMCw0LjY4NiAxMS4zMTQsMi4wMDAgOC4wMDAsMi4wMDAgWiIgY2xhc3M9ImNscy0xIi8+Cjwvc3ZnPgo=") no-repeat;
+  background-position: top   calc(#{$padding-base-vertical} - 1px)
+                       right $padding-base-vertical;
+  background-size: $form-icon-height;
+}
+
+// Search inputs in iOS
+//
+// This overrides the extra rounded corners on search inputs in iOS so that our
+// `.form-control` class can properly style them. Note that this cannot simply
+// be added to `.form-control` as it's not specific enough. For details, see
+// https://github.com/twbs/bootstrap/issues/11586.
+
+input[type="search"] {
+  -webkit-appearance: none;
+}
+
+
+// Select
+//
+// Apply `.select` to any `<select>` element for custom styles.
+// --------------------------------------------------------------------------
+
+select.form-control,
+.select {
+  display: inline-block;
+  padding: $padding-base-vertical $padding-base-horizontal;
+  vertical-align: middle;
+  background: url(" data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiBwcmVzZXJ2ZUFzcGVjdFJhdGlvPSJ4TWlkWU1pZCIgd2lkdGg9IjQ4IiBoZWlnaHQ9IjQ4IiB2aWV3Qm94PSIwIDAgNDggNDgiPgogIDxkZWZzPgogICAgPHN0eWxlPgogICAgICAuY2xzLTEgewogICAgICAgIGZpbGw6ICNhYWFmYjM7CiAgICAgICAgZmlsbC1ydWxlOiBldmVub2RkOwogICAgICB9CiAgICA8L3N0eWxlPgogIDwvZGVmcz4KICA8ZyBpZD0iYXJ0Ym9hcmQtMSI+CiAgICA8cGF0aCBkPSJNNDEuMzgwLDIxLjUyNCBMMjUuNzIwLDM3LjIxOCBDMjUuNjc1LDM3LjI3MyAyNS42NTUsMzcuMzQwIDI1LjYwMywzNy4zOTEgQzI1LjE4OCwzNy44MDIgMjQuNjQyLDM3Ljk5OSAyNC4wOTgsMzcuOTkwIEMyMy41NTYsMzcuOTk1IDIzLjAxMywzNy43OTIgMjIuNjAwLDM3LjM3OCBDMjIuNTU3LDM3LjMzNSAyMi41NDMsMzcuMjc5IDIyLjUwNSwzNy4yMzUgTDYuNTUyLDIxLjQ1NCBDNS43NDAsMjAuNjUxIDUuNzQwLDE5LjM0OSA2LjU1MiwxOC41NDYgQzcuMzY0LDE3Ljc0MyA4LjY4MCwxNy43NDMgOS40OTIsMTguNTQ2IEwyNC4wNTUsMzIuOTUyIEwzOC40MjAsMTguNTU3IEMzOS4yMzcsMTcuNzM3IDQwLjU2MywxNy43MzcgNDEuMzgwLDE4LjU1NyBDNDIuMTk4LDE5LjM3NiA0Mi4xOTgsMjAuNzA1IDQxLjM4MCwyMS41MjQgWiIgY2xhc3M9ImNscy0xIi8+CiAgPC9nPgo8L3N2Zz4=") no-repeat;
+  background-position: top   calc(#{$padding-base-vertical} - 2px)
+                       right calc(#{$padding-base-vertical} - 2px); 
+  background-size: $form-icon-height;
+  @include appearance(none);
+
+  // Hides the caret in IE11
+  &::-ms-expand {
+    opacity: 0;
+  }
+}
+
+
+
+//===================================================================================
+// FIXME: on Mobile Milestone
+// Special styles for iOS temporal inputs
+//
+// In Mobile Safari, setting `display: block` on temporal inputs causes the
+// text within the input to become vertically misaligned. As a workaround, we
+// set a pixel line-height that matches the given height of the input, but only
+// for Safari. See https://bugs.webkit.org/show_bug.cgi?id=139848
+
+@media screen and (-webkit-min-device-pixel-ratio: 0) {
+  input[type="date"],
+  input[type="time"],
+  input[type="datetime-local"],
+  input[type="month"] {
+    line-height: $input-height-base;
+
+    &.input-sm,
+    .input-group-sm & {
+      line-height: $input-height-small;
+    }
+
+    &.input-lg,
+    .input-group-lg & {
+      line-height: $input-height-large;
+    }
+  }
+}
+

@@ -1,0 +1,214 @@
+
+// Layout
+// ==========================================================================
+$fixed-container-width:         900px;
+$container-width:               1024px;
+$grid-gutter:                   15px;
+$grid-gutter-width:             2px; // for bootstrap layout
+
+$full-container-bg:             #fff;
+
+
+// Type
+// ==========================================================================
+
+$font-size-base:                14px;
+$font-size-adjust:              15px;
+$font-size-lg:                  22px;
+$font-size-sm:                  11px;
+$font-size-jp:                  15px;
+
+$text-color:                    $grey-7;
+$grey-text-color:               $grey-5;
+$font-family-base:              'Spoqa Han Sans', 'Spoqa Han Sans JP', 'Source Sans Pro', Apple SD Gothic Neo, Nanum Barun Gothic, Nanum Gothic, Verdana, Arial, Dotum, sans-serif;
+$font-family-jp:                'Spoqa Han Sans JP', 'Spoqa Han Sans', 'Source Sans Pro', Apple SD Gothic Neo, Nanum Barun Gothic, Nanum Gothic, Verdana, Arial, Dotum, sans-serif;
+
+$line-height-base:              1.5em;
+$line-height-jp:                1.6em;
+$hading-line-height-jp:         1.3em;
+
+//** Computed "line-height" (`font-size` * `line-height`) for use with `margin`, `padding`, etc.
+$line-height-computed:          floor(($font-size-base * $line-height-base)) !default; // ~20px
+
+
+
+// Sidebar
+// ==========================================================================
+
+$sidebar-width:                 18%;
+
+
+// General UI
+// ==========================================================================
+
+$container-padding-base:        40px;
+$padding-base-vertical:         16px;
+$padding-base-horizontal:       24px;
+$bg-grey:                       $grey-0;
+
+$link-color:                    $primary-0;
+$divider-color:                 $grey-3;
+$disabled-text-color:           $grey-text-color;
+
+$border-color:                  $grey-4;
+$border-radius-base:            2px;
+$border-radius-lg:              3px;
+
+$shadow-base:                   0 1px 3px rgba($grey-9, 0.125);
+$form-line-height-base:         20px;
+$input-height-base:             calc(#{$form-line-height-base} + #{$padding-base-vertical} * 2 + 2px); //2px is border
+
+$form-section-gutter:           60px;
+$form-group-gutter:             20px;
+
+$form-icon-height:              20px;
+
+//** Disabled cursor for form controls and buttons.
+$cursor-disabled:                not-allowed !default;
+
+
+// Buttons
+//
+// For each of spoqa's buttons, define text, background and border color.
+// ==========================================================================
+
+$btn-bg-base:                   #fff;
+$bth-color-base:                $text-color;
+$btn-padding-base:              $padding-base-vertical $padding-base-horizontal;
+
+$btn-default-border:            $grey-4;
+$btn-default-highlight-bg:      $grey-1;
+$btn-default-disabled-color:    $grey-4;
+$btn-default-disabled-border:   $grey-3;
+$btn-default-disabled-bg:       $grey-0;
+
+$bth-primary-color:             $primary-0;
+$btn-primary-border:            $primary-0;
+$btn-primary-highlight-bg:      rgba($primary-0, 0.1);
+$btn-primary-disabled-color:    rgba($primary-0, 0.4);
+$btn-primary-disabled-border:   rgba($primary-0, 0.3);
+$btn-primary-disabled-bg:       rgba($primary-0, 0.04);
+
+$btn-solid-color:               #fff;
+$btn-solid-border:              $primary-0;
+$btn-solid-bg:                  $primary-0;
+$btn-solid-highlight-bg:        $primary-d1;
+$btn-solid-highlight-border:    $primary-d1;
+$btn-solid-disabled-color:      #fff;
+$btn-solid-disabled-border:     rgba($primary-0, 0.3);
+$btn-solid-disabled-bg:         rgba($primary-0, 0.3);
+
+$btn-danger-color:              $red-0;
+$btn-danger-highlight-bg:       rgba($red-0, 0.1);
+$btn-danger-border:             $red-0;
+
+$btn-convex-bg:                 $grey-1;
+$btn-convex-highlight-bg:       $grey-3;
+
+$btn-padding-lg:                20px 30px;
+$btn-lg-font-size:              1.05em;
+
+// Form
+// ==========================================================================
+
+// Label
+// --------------------------------------------------------------------------
+
+$label-control-color:           $text-color;
+
+// Dropdown
+// --------------------------------------------------------------------------
+
+$dropdown-bg:                   #fff;
+$dropdown-border:               $btn-default-border;
+$dropdown-fallback-border:      #ced3d6; // IE8 fallback
+$dropdown-link-active-bg:       $grey-1;
+$dropdown-link-disabled-color:  $grey-text-color;
+$dropdown-header-color:         $grey-text-color;
+
+
+// Navbar
+// ==========================================================================
+
+// Topnav
+// --------------------------------------------------------------------------
+
+$navbar-height:                 60px;
+$navbar-border-width:           4px;
+
+$topnav-gutter:                 20px;
+$topnav-font-size:              14px;
+
+$brand-logo-height:             22px;
+
+
+// Tables
+// ==========================================================================
+
+$table-bg:                      $full-container-bg;
+$table-cell-padding:            14px 20px;
+$table-border-color:            $grey-1;
+
+$table-title-font-size:         22px;
+
+$pager-padding:                 8px 14px;
+
+
+// Forms
+// ==========================================================================
+
+$legend-color:                  $text-color;
+$input-color:                   $text-color;
+$input-color-placeholder:       $grey-text-color;
+
+$input-bg:                      #fff;
+
+
+// Logos
+// ==========================================================================
+
+$logo-dodo-point-default:       url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiBwcmVzZXJ2ZUFzcGVjdFJhdGlvPSJ4TWlkWU1pZCIgd2lkdGg9IjMzOCIgaGVpZ2h0PSI2NyIgdmlld0JveD0iMCAwIDMzOCA2NyI+CiAgPGRlZnM+CiAgICA8c3R5bGU+CiAgICAgIC5jbHMtMSB7CiAgICAgICAgZmlsbDogI2E5YWZiMzsKICAgICAgfQoKICAgICAgLmNscy0xLCAuY2xzLTIgewogICAgICAgIGZpbGwtcnVsZTogZXZlbm9kZDsKICAgICAgfQoKICAgICAgLmNscy0yIHsKICAgICAgICBmaWxsOiAjNGM4MGYxOwogICAgICB9CiAgICA8L3N0eWxlPgogIDwvZGVmcz4KICA8ZyBpZD0iYXJ0Ym9hcmQtMSI+CiAgICA8cGF0aCBkPSJNMzI4LjkxNiw1Mi4wMTcgQzMyMS44MjgsNTIuMDE2IDMxNy4wNzMsNDcuMTg4IDMxNy4wNzMsNDAuNDExIEwzMTcuMDczLDIyLjcyOSBMMzA5LjczMywyMi43MjkgTDMwOS42NzIsMjIuMDE2IEwzMjUuNTA1LDUuMTgxIEwzMjYuMjIyLDUuMjQ2IEwzMjYuMjIyLDE1LjMzMSBMMzM1LjM2OCwxNS4zMzEgTDMzNS4zNjgsMjIuNzI5IEwzMjYuMjIyLDIyLjcyOSBMMzI2LjIyMiwzOS4xODUgQzMyNi4yMjIsNDEuODMyIDMyOC4zNzQsNDMuODk3IDMzMS4zNDcsNDMuODk4IEMzMzQuNTA3LDQzLjkwMCAzMzYuNzQwLDQyLjc1OCAzMzguMDAxLDQxLjQ5MiBMMzM4LjAwMSw0OS4zODMgQzMzNS43MTcsNTEuMjYzIDMzMi41NzcsNTIuMDE4IDMyOC45MTYsNTIuMDE3IFpNMjk3Ljk3MywyOC45MzEgQzI5Ny45NzMsMjUuMTE2IDI5NS4zNzMsMjIuMzgyIDI5MS42MTgsMjIuMzgyIEMyODguOTQ2LDIyLjM4MiAyODYuMjczLDIzLjY3NyAyODMuODkwLDI2LjE5NyBMMjgzLjg5MCw1MS4xNzMgTDI3NC42NDYsNTEuMTczIEwyNzQuNjQ2LDE1LjE4NCBMMjgzLjYyNCwxNS4xODQgTDI4My44OTAsMTguMjc5IEMyODcuMTQxLDE1LjY4OCAyOTAuNzUxLDE0LjMyMCAyOTQuNDM0LDE0LjMyMCBDMzAxLjk0NSwxNC4zMjAgMzA3LjI5MCwxOS42NDcgMzA3LjI5MCwyNy4yNzUgTDMwNy4yOTAsNTEuMTczIEwyOTcuOTczLDUxLjE3MyBMMjk3Ljk3MywyOC45MzEgWk0yNjIuMTE1LDEwLjQzNCBDMjU5LjAxMCwxMC40MzQgMjU2Ljg0Myw4LjI3NCAyNTYuODQzLDUuMjUxIEMyNTYuODQzLDIuMTU2IDI1OS4wMTAsLTAuMDAzIDI2Mi4xMTUsLTAuMDAzIEMyNjUuMTQ5LC0wLjAwMyAyNjcuMzg2LDIuMTU2IDI2Ny4zODYsNS4yNTEgQzI2Ny4zODYsOC4yNzQgMjY1LjE0OSwxMC40MzQgMjYyLjExNSwxMC40MzQgWk0yMzMuNjQxLDUyLjA0NyBDMjIyLjc4OSw1Mi4wNDcgMjE1LjEwMCw0NC4yNDAgMjE1LjEwMCwzMy4yODIgQzIxNS4xMDAsMjIuMjUzIDIyMi43ODksMTQuNTE3IDIzMy42NDEsMTQuNTE3IEMyNDQuNDkxLDE0LjUxNyAyNTIuMTA5LDIyLjI1MyAyNTIuMTA5LDMzLjI4MiBDMjUyLjEwOSw0NC4yNDAgMjQ0LjQ5MSw1Mi4wNDcgMjMzLjY0MSw1Mi4wNDcgWk0yMzMuNjQxLDIyLjE4MSBDMjI4LjI1MiwyMi4xODEgMjI0LjUxNCwyNi42OTMgMjI0LjUxNCwzMy4yODIgQzIyNC41MTQsMzkuODcxIDIyOC4yNTIsNDQuMzgzIDIzMy42NDEsNDQuMzgzIEMyMzguOTU5LDQ0LjM4MyAyNDIuNjk1LDM5Ljg3MSAyNDIuNjk1LDMzLjI4MiBDMjQyLjY5NSwyNi42OTMgMjM4Ljk1OSwyMi4xODEgMjMzLjY0MSwyMi4xODEgWk0xOTUuMDEwLDUxLjc1NCBDMTkxLjkyMCw1MS43NTQgMTg4Ljc1OCw1MC42MDggMTg1Ljg4Myw0OC4zODcgTDE4NS44ODMsNjYuMDA2IEwxNzYuNjg1LDY2LjAwNiBMMTc2LjY4NSwxNS4wODMgTDE4NS42NzYsMTUuMDgzIEwxODUuODgzLDE3LjUxOCBDMTg4Ljc1OCwxNS4zNzAgMTkxLjkyMCwxNC4yMjQgMTk1LjAxMCwxNC4yMjQgQzIwNC42NDAsMTQuMjI0IDIxMS4yNTEsMjEuOTU5IDIxMS4yNTEsMzIuOTg4IEMyMTEuMjUxLDQ0LjAxOCAyMDQuNjQwLDUxLjc1NCAxOTUuMDEwLDUxLjc1NCBaTTE5My4wNzAsMjIuMTAyIEMxOTAuNTU1LDIyLjEwMiAxODguMDM5LDIzLjE3NyAxODUuODgzLDI1LjMyNSBMMTg1Ljg4Myw0MC42NTIgQzE4OC4wMzksNDIuODAxIDE5MC41NTUsNDMuODc1IDE5My4wNzAsNDMuODc1IEMxOTguMjQ0LDQzLjg3NSAyMDEuODM3LDM5LjQzNCAyMDEuODM3LDMyLjk4OCBDMjAxLjgzNywyNi41NDMgMTk4LjI0NCwyMi4xMDIgMTkzLjA3MCwyMi4xMDIgWk0yNjYuNzM2LDUxLjE3MiBMMjU3LjQ5Miw1MS4xNzIgTDI1Ny40OTIsMTUuMTg0IEwyNjYuNzM2LDE1LjE4NCBMMjY2LjczNiw1MS4xNzIgWiIgY2xhc3M9ImNscy0xIi8+CiAgICA8cGF0aCBkPSJNMTM5LjE1Myw1Mi4wNDcgQzEyOC4yNDcsNTIuMDQ3IDEyMC41MjEsNDQuMjAyIDEyMC41MjEsMzMuMTg5IEMxMjAuNTIxLDIyLjEwNSAxMjguMjQ3LDE0LjMzMSAxMzkuMTUzLDE0LjMzMSBDMTUwLjA1NywxNC4zMzEgMTU3LjcxMiwyMi4xMDUgMTU3LjcxMiwzMy4xODkgQzE1Ny43MTIsNDQuMjAyIDE1MC4wNTcsNTIuMDQ3IDEzOS4xNTMsNTIuMDQ3IFpNMTM5LjE1MywyMi4wMzMgQzEzMy43MzcsMjIuMDMzIDEyOS45ODEsMjYuNTY4IDEyOS45ODEsMzMuMTg5IEMxMjkuOTgxLDM5LjgxMSAxMzMuNzM3LDQ0LjM0NiAxMzkuMTUzLDQ0LjM0NiBDMTQ0LjQ5Nyw0NC4zNDYgMTQ4LjI1MiwzOS44MTEgMTQ4LjI1MiwzMy4xODkgQzE0OC4yNTIsMjYuNTY4IDE0NC40OTcsMjIuMDMzIDEzOS4xNTMsMjIuMDMzIFpNMTA2LjY2Niw0OC43MzYgQzEwMy43NzcsNTAuODk2IDEwMC41OTksNTIuMDQ3IDk3LjQ5NCw1Mi4wNDcgQzg3LjgxNiw1Mi4wNDcgODEuMTczLDQ0LjI3NCA4MS4xNzMsMzMuMTg5IEM4MS4xNzMsMjIuMTA1IDg3LjgxNiwxNC4zMzEgOTcuNDk0LDE0LjMzMSBDMTAwLjU5OSwxNC4zMzEgMTAzLjc3NywxNS40ODMgMTA2LjY2NiwxNy43MTQgTDEwNi42NjYsMC4wMDggTDExNS45MTAsMC4wMDggTDExNS45MTAsNTEuMTg0IEwxMDYuODc1LDUxLjE4NCBMMTA2LjY2Niw0OC43MzYgWk0xMDYuNjY2LDI1LjQ4OCBDMTA0LjQ5OSwyMy4zMjkgMTAxLjk3MiwyMi4yNDkgOTkuNDQ0LDIyLjI0OSBDOTQuMjQ0LDIyLjI0OSA5MC42MzMsMjYuNzExIDkwLjYzMywzMy4xODkgQzkwLjYzMywzOS42NjcgOTQuMjQ0LDQ0LjEzMCA5OS40NDQsNDQuMTMwIEMxMDEuOTcyLDQ0LjEzMCAxMDQuNDk5LDQzLjA1MCAxMDYuNjY2LDQwLjg5MSBMMTA2LjY2NiwyNS40ODggWk01Ny45NjYsNTIuMDQ3IEM0Ny4wNjIsNTIuMDQ3IDM5LjMzNCw0NC4yMDIgMzkuMzM0LDMzLjE4OSBDMzkuMzM0LDIyLjEwNSA0Ny4wNjIsMTQuMzMxIDU3Ljk2NiwxNC4zMzEgQzY4Ljg3MCwxNC4zMzEgNzYuNTI2LDIyLjEwNSA3Ni41MjYsMzMuMTg5IEM3Ni41MjYsNDQuMjAyIDY4Ljg3MCw1Mi4wNDcgNTcuOTY2LDUyLjA0NyBaTTU3Ljk2NiwyMi4wMzMgQzUyLjU1MCwyMi4wMzMgNDguNzk0LDI2LjU2OCA0OC43OTQsMzMuMTg5IEM0OC43OTQsMzkuODExIDUyLjU1MCw0NC4zNDYgNTcuOTY2LDQ0LjM0NiBDNjMuMzEwLDQ0LjM0NiA2Ny4wNjYsMzkuODExIDY3LjA2NiwzMy4xODkgQzY3LjA2NiwyNi41NjggNjMuMzEwLDIyLjAzMyA1Ny45NjYsMjIuMDMzIFpNMjUuNDkxLDQ4LjczNiBDMjIuNjAyLDUwLjg5NiAxOS40MjUsNTIuMDQ3IDE2LjMxOSw1Mi4wNDcgQzYuNjQyLDUyLjA0NyAtMC4wMDIsNDQuMjc0IC0wLjAwMiwzMy4xODkgQy0wLjAwMiwyMi4xMDUgNi42NDIsMTQuMzMxIDE2LjMxOSwxNC4zMzEgQzE5LjQyNSwxNC4zMzEgMjIuNjAyLDE1LjQ4MyAyNS40OTEsMTcuNzE0IEwyNS40OTEsMC4wMDggTDM0LjczNSwwLjAwOCBMMzQuNzM1LDUxLjE4NCBMMjUuNzAwLDUxLjE4NCBMMjUuNDkxLDQ4LjczNiBaTTI1LjQ5MSwyNS40ODggQzIzLjMyNSwyMy4zMjkgMjAuNzk3LDIyLjI0OSAxOC4yNjksMjIuMjQ5IEMxMy4wNjksMjIuMjQ5IDkuNDU4LDI2LjcxMSA5LjQ1OCwzMy4xODkgQzkuNDU4LDM5LjY2NyAxMy4wNjksNDQuMTMwIDE4LjI2OSw0NC4xMzAgQzIwLjc5Nyw0NC4xMzAgMjMuMzI1LDQzLjA1MCAyNS40OTEsNDAuODkxIEwyNS40OTEsMjUuNDg4IFoiIGNsYXNzPSJjbHMtMiIvPgogIDwvZz4KPC9zdmc+Cg==") no-repeat;
+
+
+
+// Hero
+// ==========================================================================
+
+$hero-height:                   600px;
+
+
+// Section
+// ==========================================================================
+
+$section-img-height:            200px;
+
+
+// Transition
+//
+// FIXME: Move to somewhere proper
+// ==========================================================================
+
+.transition {
+  -webkit-transition: border ease-out 0.2s; // Safari
+          transition: border ease-out 0.2s;
+}
+
+
+// Z-index master list
+//
+// Warning: Avoid customizing these values. They're used for a bird's eye view
+// of components dependent on the z-axis and are designed to all work together.
+//
+// Note: These variables are not generated into the Customizer.
+// ==========================================================================
+
+$zindex-navbar:            1000 !default;
+$zindex-dropdown:          1000 !default;
+$zindex-popover:           1060 !default;
+$zindex-tooltip:           1070 !default;
+$zindex-topnav-fixed:      1030 !default;
+$zindex-modal-background:  1040 !default;
+$zindex-modal:             1050 !default;
+
+
+

@@ -1,0 +1,399 @@
+//
+// Table
+// ==========================================================================
+
+table {
+  background-color: $table-bg;
+}
+
+caption {
+  padding-top: $table-cell-padding;
+  padding-bottom: $table-cell-padding;
+  text-align: left;
+}
+
+th {
+  text-align: left;
+}
+
+
+// Baseline styles
+// --------------------------------------------------------------------------
+
+.table {
+  width: 100%;
+
+  // Cells
+  > thead,
+  > tbody,
+  > tfoot {
+    > tr {
+      > th,
+      > td {
+        padding: $table-cell-padding;
+        line-height: $line-height-base;
+        vertical-align: top;
+        border-top: 1px solid $table-border-color;
+
+        &:first-child {
+          padding-left: $container-padding-base; //FIXME: consider fixed-width container
+        }
+        &:last-child {
+          padding-right: $container-padding-base; //FIXME: consider fixed-width container
+        }
+      }
+    }
+  }
+
+  // hover background
+  > tbody > tr {
+    @include transition(background-color, .2s, ease);
+
+    &:hover {
+      background-color: $bg-grey;
+    }
+  }
+
+  > thead > tr > th {
+    font-size: 13px;
+    font-weight: 700;
+
+    // Bottom align for column headings
+    vertical-align: bottom;
+    border-bottom: 1px solid $table-border-color;
+  }
+
+  // Remove top border from thead by default
+  > thead:first-child {
+    > tr:first-child {
+      > th,
+      > td {
+        border-top: 0;
+      }
+    }
+  }
+
+  // Account for multiple tbody instances
+  > tbody + tbody {
+    border-top: 2px solid $table-border-color;
+  }
+
+  // Nesting
+  .table {
+    background-color: $table-bg;
+  }
+}
+
+// Sort
+// --------------------------------------------------------------------------
+
+.table > thead > tr > th {
+  &,
+  > a {
+    color: $grey-text-color;
+  }
+  
+  &.order-desc,
+  &.order-asc {
+
+    > a {  
+      color: $text-color;
+
+      &:after {
+        position: absolute;
+        padding-left: 4px;
+      }
+    }
+  }
+
+  &.order-asc a:after {
+    content: url('../../images/sort_asc.png');
+  }
+
+  &.order-desc a:after {
+    content: url('../../images/sort_desc.png');
+  }
+
+  &.order-none a:after {
+    position: absolute;
+    padding-left: 4px;
+    content: url('../../images/sort_both.png');
+  }
+}
+
+// linked cell
+// --------------------------------------------------------------------------
+
+.table {
+  > thead,
+  > tbody,
+  > tfoot {
+    > tr {
+      > td {
+        &.linked-cell {
+          padding: 0;
+
+          > a {
+            display: block;
+            padding: $table-cell-padding;
+            color: $text-color;
+            line-height: $line-height-base;
+            @include transition(color .2s ease);
+
+            &:hover,
+            &:active,
+            &:focus {
+              color: $link-color;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+// Table header
+// --------------------------------------------------------------------------
+
+.table-top, // Fixme: legacy class of datatable 
+.table-header-wrap {
+  margin-top: 0;
+  margin-bottom: 60px;
+  padding: 0 $container-padding-base;
+
+  .table-title {
+    margin: 0 auto 10px 0;
+    font-size: $table-title-font-size;
+    font-weight: 400;
+  }
+
+  .table-information {
+    color: $grey-text-color;
+  }
+}
+
+// Table filter forms
+// To make fixed width on table form
+.table-wrap {
+  .select {
+    width: 200px;
+  }
+}
+
+.table-filters {
+  display: inline-block;
+  float: right;
+  margin-bottom: 20px;
+  text-align: right;
+
+  .select {
+    margin-right: 5px;
+  }
+}
+
+// Search filter (a.k.a. ilike-set)
+.table-wrap .search-filter-wrap { 
+  float: right;
+
+  .search-filter {
+    display: inline-block;
+    margin-right: -3px;
+    width: auto;
+    background: none; // for remove caret
+    @include border-right-radius(0);
+    border-right-color: $grey-3;
+  }
+
+  .search-input {
+    @extend .form-control;
+    @extend .form-search;
+    display: inline-block;
+    padding-right: 50px; // space for search icon
+    width: auto;
+    @include border-left-radius(0);
+    border-left: none;
+
+    &:active,
+    &:focus {
+      outline: none;
+      border-left: none;
+      border-color: $border-color;
+    }
+  }
+}
+
+
+// Pagination
+// --------------------------------------------------------------------------
+
+.pagination, // Fixme: legacy class of datatable 
+.pager {
+  padding-left: 0;
+  margin: 60px 0;
+  list-style: none;
+  text-align: center;
+  @include clearfix;
+
+  li {
+    display: inline;
+
+    > a,
+    > span {
+      display: inline-block;
+      padding: $pager-padding;
+      color: $text-color;
+      background-color: transparent;
+      border: 1px solid transparent;
+      border-radius: $border-radius-base;
+      @include transition(background-color, .2s, ease);
+    }
+
+    &.active > a, // Fixme: legacy class of datatable 
+    > a:hover,
+    > a:focus {
+      text-decoration: none;
+      background-color: $bg-grey;
+    }
+  }
+
+  .selected {
+    color: $primary-0;
+    background-color: $bg-grey;
+  }
+
+  .next {
+    > a,
+    > span {
+      padding: $pager-padding;
+    }
+  }
+
+  .previous {
+    > a,
+    > span {
+      padding: $pager-padding;
+    }
+  }
+
+  .disabled {
+    > a,
+    > a:hover,
+    > a:focus,
+    > span {
+      color: $disabled-text-color;
+      background-color: $pager-bg;
+      cursor: $cursor-disabled;
+    }
+  }
+}
+
+
+/*
+// Bootstrap legacy
+// FIXME: Mobile mialston
+// ==========================================================================
+// Table cell sizing
+//
+// Reset default table behavior
+
+table col[class*="col-"] {
+  position: static; // Prevent border hiding in Firefox and IE9-11 (see https://github.com/twbs/bootstrap/issues/11623)
+  float: none;
+  display: table-column;
+}
+table {
+  td,
+  th {
+    &[class*="col-"] {
+      position: static; // Prevent border hiding in Firefox and IE9-11 (see https://github.com/twbs/bootstrap/issues/11623)
+      float: none;
+      display: table-cell;
+    }
+  }
+}
+
+
+// Table backgrounds
+//
+// Exact selectors below required to override `.table-striped` and prevent
+// inheritance to nested tables.
+
+// Generate the contextual variants
+@include table-row-variant('active', $table-bg-active);
+@include table-row-variant('success', $state-success-bg);
+@include table-row-variant('info', $state-info-bg);
+@include table-row-variant('warning', $state-warning-bg);
+@include table-row-variant('danger', $state-danger-bg);
+
+
+// Responsive tables
+//
+// Wrap your tables in `.table-responsive` and we'll make them mobile friendly
+// by enabling horizontal scrolling. Only applies <768px. Everything above that
+// will display normally.
+
+.table-responsive {
+  overflow-x: auto;
+  min-height: 0.01%; // Workaround for IE9 bug (see https://github.com/twbs/bootstrap/issues/14837)
+
+  @media screen and (max-width: $screen-xs-max) {
+    width: 100%;
+    margin-bottom: ($line-height-computed * 0.75);
+    overflow-y: hidden;
+    -ms-overflow-style: -ms-autohiding-scrollbar;
+    border: 1px solid $table-border-color;
+
+    // Tighten up spacing
+    > .table {
+      margin-bottom: 0;
+
+      // Ensure the content doesn't wrap
+      > thead,
+      > tbody,
+      > tfoot {
+        > tr {
+          > th,
+          > td {
+            white-space: nowrap;
+          }
+        }
+      }
+    }
+
+    // Special overrides for the bordered tables
+    > .table-bordered {
+      border: 0;
+
+      // Nuke the appropriate borders so that the parent can handle them
+      > thead,
+      > tbody,
+      > tfoot {
+        > tr {
+          > th:first-child,
+          > td:first-child {
+            border-left: 0;
+          }
+          > th:last-child,
+          > td:last-child {
+            border-right: 0;
+          }
+        }
+      }
+
+      // Only nuke the last row's bottom-border in `tbody` and `tfoot` since
+      // chances are there will be only one `tr` in a `thead` and that would
+      // remove the border altogether.
+      > tbody,
+      > tfoot {
+        > tr:last-child {
+          > th,
+          > td {
+            border-bottom: 0;
+          }
+        }
+      }
+
+    }
+  }
+}
+*/
