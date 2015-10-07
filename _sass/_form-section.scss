@@ -1,0 +1,38 @@
+//
+// Form Section
+// ==========================================================================
+
+.form-section {
+  @include clearfix;
+  margin-bottom: $form-section-gutter;
+  padding-bottom: $form-section-gutter - $form-group-gutter;
+  border-bottom: 1px solid $divider-color;
+
+  legend,
+  .legend {
+    margin-bottom: 30px;
+    font-size: 14px;
+    font-weight: 700;
+  }
+}
+
+.form-group {
+  padding-bottom: $form-group-gutter;
+}
+
+.label-control {
+  display: inline-block;
+  width: 100%;
+  padding: 4px 0;
+  font-size: $font-size-base;
+  font-weight: 400;
+  line-height: $line-height-base;
+  color: $grey-text-color;
+  white-space: nowrap;
+}
+
+.form-static {
+  height: $input-height-base;
+  padding: $padding-base-vertical 0;
+}
+

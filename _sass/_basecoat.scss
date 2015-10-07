@@ -1,0 +1,53 @@
+* {
+  box-sizing: border-box;
+}
+
+input,
+select,
+textarea,
+button {
+  font: $font-size-base/1.5, $font-family-base;
+}
+
+body {
+  background-color: #fff;
+}
+
+a {
+  color: $primary-color;
+  text-decoration: none;
+
+  &:hover,
+  &:active {
+    text-decoration: none;
+  }
+}
+
+section,
+.section {
+  @include clearfix;
+  padding: 60px 0;
+}
+
+fieldset {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+figure {
+  margin: 0;
+  border-radius: $border-radius-base;
+}
+
+// Horizontal lines
+hr {
+  height: 0;
+  width: $container-width;
+  margin: 15px auto;
+  overflow: hidden;
+  background: transparent;
+  border: 0;
+  border-bottom: 1px solid $divider-color;
+  @include clearfix();
+}
