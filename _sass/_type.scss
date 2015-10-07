@@ -1,51 +1,8 @@
 //
 // Spoqa Han Sans
-// FIXME: Change as webfont
 // ==========================================================================
 
-// ENG, KR
-// --------------------------------------------------------------------------
-
-@font-face {
-  font-family: 'Spoqa Han Sans';
-  src: url('_sass/font/SpoqaHanSans-Bold_subset.woff') format('woff');
-  font-weight: 700;
-}
-
-@font-face {
-  font-family: 'Spoqa Han Sans';
-  src: url('_sass/font/SpoqaHanSans-Regular_subset.woff') format('woff');
-  font-weight: 400;
-}
-
-@font-face {
-  font-family: 'Spoqa Han Sans';
-  src: url('_sass/font/SpoqaHanSans-Thin_subset.woff') format('woff');
-  font-weight: 100;
-}
-
-
-// JP
-// --------------------------------------------------------------------------
-
-@font-face {
-  font-family: 'Spoqa Han Sans JP';
-  src: url('_sass/font/SpoqaHanSansJP-Bold_subset.woff') format('woff');
-  font-weight: 700;
-}
-
-@font-face {
-  font-family: 'Spoqa Han Sans JP';
-  src: url('_sass/font/SpoqaHanSansJP-Regular_subset.woff') format('woff');
-  font-weight: 400;
-}
-
-@font-face {
-  font-family: 'Spoqa Han Sans JP';
-  src: url('_sass/font/SpoqaHanSansJP-Thin_subset.woff') format('woff');
-  font-weight: 100;
-}
-
+@import url(//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSans-kr.css);
 
 
 // Default Setting
@@ -54,14 +11,15 @@
 body {
   font-family: $font-family-base;
   font-size: $font-size-base;
-  line-height: 1.5em;
+  line-height: 1.5;
   color: $text-color;
+  font-weight: 400;
   -webkit-font-smoothing: antialiased;
   word-break: keep-all;
 
   &:lang(ja) {
     font-family: $font-family-jp;
-    line-height: 1.6em;
+    line-height: 1.6;
   }
 }
 
@@ -70,9 +28,9 @@ body {
 // --------------------------------------------------------------------------
 
 h1, h2, h3, h4, h5, h6 {
-  margin-top: 1.5em;
-  margin-bottom: 1em;
-  line-height: 1em;
+  margin-top: 1.8em;
+  margin-bottom: 0.6em;
+  line-height: 1.3;
 }
 
 h1, h2 {
@@ -138,7 +96,7 @@ dl {
 
 dt,
 dd {
-  line-height: 1.5em;
+  line-height: 1.5;
 }
 
 dt {

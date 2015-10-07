@@ -1,0 +1,485 @@
+---
+# this ensures Jekyll reads the file to be transformed into CSS later
+# only Main files contain this front matter, not partials.
+---
+@import 'bs-sass/assets/stylesheets/bootstrap';
+  $screen-sm-min: 768px; //Bootstrap media variable
+
+@font-face {
+    font-family: 'Noto Sans Korean';
+    font-style: normal;
+    font-weight: 500;
+    src: local('Noto Sans Medium'), local('NotoSans-Medium'),
+    url(https://cdn.rawgit.com/theeluwin/NotoSansKR-Hestia/master/fonts/eot/NotoSansKR-Medium-Hestia.eot),
+    url(https://cdn.rawgit.com/theeluwin/NotoSansKR-Hestia/master/fonts/eot/NotoSansKR-Medium-Hestia.eot?#iefix) format('embedded-opentype'),
+    url(https://cdn.rawgit.com/theeluwin/NotoSansKR-Hestia/master/fonts/woff/NotoSansKR-Medium-Hestia.woff) format('woff'),
+    url(https://cdn.rawgit.com/theeluwin/NotoSansKR-Hestia/master/fonts/otf/NotoSansKR-Medium-Hestia.otf) format('opentype');
+}
+
+// Colors
+@import "colors";
+  $primary-d2:  $mainblue-d2;
+  $primary-d1:  $mainblue-d1;
+  $primary-0:   $mainblue-0;
+  $primary-l1:  $mainblue-l1;
+  $primary-color: $mainblue-0;//FIXME: Legacy for Bootstrap. Delete this line when remove bootstrap
+
+
+// Global requirements
+@import "variables";
+  $font-size-base: 16px; //Blog size
+@import "mixins";
+
+
+// Reset and dependencies
+@import "normalize";
+
+
+// Basecoat
+@import "basecoat";
+@import "layout";
+@import 'type';
+
+
+// Components
+@import 'buttons';
+@import "topnav";
+
+//@import 'button-groups';
+//@import 'dropdown';
+
+
+// Optional 
+@import "page-headers";
+
+// Font demo
+@import "font-demo";
+
+// ADhoc Style
+
+code {
+  font-family: "Source Code Pro", Consolas, "Letter Gothic Std", Courier, "Nanum Gothic Coding", monospace; }
+
+pre {
+  margin: 10px 0;
+  padding: 20px;
+  display: inline-block;
+  width: 100%;
+  background: $grey-0;
+  border: none;
+  border-radius: 2px;
+}
+
+pre code {
+  word-wrap: break-word;
+  width: 100%;
+  border: none;
+  padding: 0;
+  margin: 0;
+  font-size: 15px;
+}
+
+section h3 {
+  font-weight: 700;
+}
+
+// nav
+
+.nav {
+  display: block;
+  float: right;
+
+  .cta {
+    color: $primary-0 !important;
+    font-weight: 700;
+  }
+}
+#toggle,
+.toggle {
+  display: none;
+}
+.toggle {
+  z-index: 2;
+}
+.toggle:hover:after {
+  border-bottom: 3px solid $mainblue-0;
+}
+.toggle:after {
+  content: '메뉴';
+  display: inline-block;
+  padding: 20px 20px 17px;
+  background: transparent;
+  text-align: center;
+  font-size: 15px;
+  color: $text-color;
+  line-height: 19px;
+  -webkit-transition: all 0.5s linear;
+  -moz-transition: all 0.5s linear;
+  -o-transition: all 0.5s linear;
+  transition: all 0.5s linear;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  border-bottom: 3px solid transparent;
+}
+#toggle:checked + .toggle:after {
+  border-bottom: 3px solid $mainblue-0;
+}
+@media only screen and (max-width: 650px) {
+  .toggle {
+    display: block;
+    position: relative;
+    cursor: pointer;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    user-select: none;
+  }
+  #toggle:checked ~ .menu {
+    display: block;
+    opacity: 1;
+  }
+  .menu {
+    display: none;
+    opacity: 0;
+    margin: 10px 5% 0 !important;
+    padding-left: 0;
+    width: 90%;
+    position: absolute;
+    z-index: 1;
+    right: 0;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 2px;
+    text-align: center;
+  }
+  .menu li {
+    display: block;
+    width: 100%;
+
+    a{
+      padding: 20px 0;
+      width: 100%;
+    }
+  }
+}
+
+.divider {
+  border-bottom: 1px solid $divider-color;
+  @extend .clearfix;
+}
+
+.bg-grey {
+  background-color: $grey-0;
+}
+
+.underline {
+  border-bottom: 5px solid $primary-0;
+}
+
+.section-title {
+  margin-top: 0;
+  margin-bottom: 60px;
+  font-size: 48px;
+  font-weight: 400;
+}
+.section-cover {
+  width: 100%;
+  background-color: $grey-0;
+
+  .img-cover {
+    text-align: center;
+
+    img {
+      width: 100%;
+      max-width: 900px;
+      margin-bottom: 40px;
+    }
+  }
+  .cover-info {
+    text-align: center;
+    font-size: 22px;
+
+    @media only screen and (max-width: 650px) {
+      br {
+        display: none;
+      }
+    }
+  }
+}
+
+.section-intro {
+  h3:first-child {
+    margin-top: 0;
+  }
+}
+
+
+.group-color-circle {
+  margin-top: 60px;
+  margin-bottom: 40px;
+  text-align: right;
+}
+.color-circle-wrap {
+  display: inline-block;
+  margin-right: 30px;
+  float: right;
+
+  .color-circle {
+    display: inline-block;
+    height: 20px;
+    width: 20px;
+    border-radius: 10px;
+    vertical-align: top;
+
+    &.source-han-sans {
+      background-color: $primary-l1;
+    }
+    &.spoqa-han-sans {
+      background-color: $text-color;
+    }
+  }
+
+  .color-text {
+    display: inline-block;
+  }
+}
+
+
+.section-glyphs {
+  padding-top: 0;
+  border-top: 1px solid $text-color;
+
+  .glyphs {
+    padding: 40px 0 50px;
+    font-size: 70px;
+    line-height: 1;
+    font-weight: 400;
+    border-bottom: 1px solid $text-color;
+    color: $grey-text-color;
+
+    &.glyphs-glyphs {
+      line-height: 1.4;
+    }
+
+    .edited {
+      display: inline-block;
+      position: relative;
+      color: $text-color;
+
+      &:after {
+        margin-top: -3px;
+        margin-left: 1px;
+        font-family: 'Noto Sans Korean', sans-serif;
+        color: $primary-l1;
+        opacity: 0;
+        position: absolute;
+        top: 0;
+        left: 0;
+        transition: 0.2s ease-in opacity;
+      }
+
+      &.a:after { content: 'A'; }
+      &.b:after { content: 'B'; }
+      &.c:after { content: 'C'; }
+      &.d:after { content: 'D'; }
+      &.e:after { content: 'E'; }
+      &.f:after { content: 'F'; }
+      &.g:after { content: 'G'; }
+      &.h:after { content: 'H'; }
+      &.i:after { content: 'I'; }
+      &.j:after { content: 'J'; }
+      &.k:after { content: 'K'; }
+      &.l:after { content: 'L'; }
+      &.m:after { content: 'M'; }
+      &.n:after { content: 'N'; }
+      &.o:after { content: 'O'; }
+      &.p:after { content: 'P'; }
+      &.q:after { content: 'Q'; }
+      &.r:after { content: 'R'; }
+      &.s:after { content: 'S'; }
+      &.t:after { content: 'T'; }
+      &.u:after { content: 'U'; }
+      &.v:after { content: 'V'; }
+      &.w:after { content: 'W'; }
+      &.x:after { content: 'X'; }
+      &.y:after { content: 'Y'; }
+      &.z:after { content: 'Z'; }
+
+      &.l-lower:after { content: 'l'; }
+
+      &.one:after { content: '1'; }
+      &.two:after { content: '2'; }
+      &.three:after { content: '3'; }
+      &.four:after { content: '4'; }
+      &.five:after { content: '5'; }
+      &.six:after { content: '6'; }
+      &.seven:after { content: '7'; }
+      &.eight:after { content: '8'; }
+      &.nine:after { content: '9'; }
+      &.zero:after { content: '0'; }
+
+      &.glyph-1:after { content: '_'; }
+      &.glyph-2:after { content: '-'; }
+      &.glyph-3:after { content: '='; }
+      &.glyph-4:after { content: '|'; }
+      &.glyph-5:after { content: '/'; }
+      &.glyph-6:after { content: '\\'; }
+      &.glyph-7:after { content: '※'; }
+      &.glyph-8:after { content: '^'; }
+      &.glyph-9:after { content: '%'; }
+      &.glyph-10:after { content: '&'; }
+      &.glyph-11:after { content: '?'; }
+      &.glyph-12:after { content: '#'; }
+      &.glyph-13:after { content: '<'; }
+      &.glyph-14:after { content: '>'; }
+      &.glyph-15:after { content: '('; }
+      &.glyph-16:after { content: ')'; }
+      &.glyph-17:after { content: '{'; }
+      &.glyph-18:after { content: '}'; }
+      &.glyph-19:after { content: '['; }
+      &.glyph-20:after { content: ']'; }
+      &.glyph-21:after { content: '¥'; }
+      &.glyph-22:after { content: '$'; }
+      &.glyph-23:after { content: '₩'; }
+      &.glyph-24:after { content: '.'; }
+      &.glyph-25:after { content: ','; }
+      &.glyph-26:after { content: ':'; }
+      &.glyph-27:after { content: ';'; }
+
+      &:hover {
+        &:after {
+          opacity: 0.7;
+        }
+      }
+    }
+  }
+}
+
+.section-edited {
+  .feature {
+    margin-bottom: 100px;
+    padding-top: 30px;
+    border-top: 1px solid $text-color;
+    @extend .clearfix;
+
+    h3 {
+      margin-top: 0;
+    }
+
+    .col-sm-6:not(.img) {
+      padding-left: 20px;
+    }
+    > .img:first-child {
+      .order {
+        height: 20px;
+        width: 20px;
+        float: left;
+        color: #fff;
+        font-size: $font-size-sm;
+        font-weight: 700;
+        text-align: center;
+        line-height: 20px;
+        background: $text-color;
+        border-radius: 10px;
+      }
+    }
+
+    .img img {
+      width: 100%;
+      margin-bottom: 40px;
+    }
+
+    .img-number {
+      padding: 20px 0 60px;
+      font-size: 100px;
+      line-height: 1.3;
+      text-align: center;
+      font-weight: 400;
+
+      @media only screen and (max-width: 650px) {
+        font-size: 90px;
+      }
+      @media only screen and (max-width: 400px) {
+        font-size: 60px;
+      }
+    }
+
+    .img-text-weight,
+    .img-text-title {
+      padding: 50px 0 70px;
+      font-size: 60px;
+      line-height: 1.3;
+      text-align: center;
+      font-weight: 400;
+    }
+  }
+}
+
+.FontDemo {
+  .FontDemo-optionContainer {
+    margin-bottom: 40px;
+  }
+}
+
+.download-group {
+  padding: 0 15px;
+  margin-top: 60px;
+  text-align: center;
+
+  .btn {
+    margin: 10px 0;
+    width: 100%;
+    padding-left: 0;
+    padding-right: 0;
+    font-size: 16px;
+    font-weight: 700;
+    color: $primary-0;
+    border: 2px solid $primary-0;
+    transition: 0.2s ease-in background-color;
+
+    &:hover {
+      background-color: rgba($primary-0, 0.1);
+    }
+  }
+
+  .download {
+    padding: 0;
+
+    @media (max-width: $screen-sm-min) {
+      &:nth-child(even) {
+        padding-right: 7px;
+      }
+      &:nth-child(even) + .download {
+        padding-left: 7px;
+      }
+    }
+
+    @media (min-width: $screen-sm-min) {
+      &:not(:first-child) {
+        padding-left: 14px;
+      }
+    }
+  }
+}
+
+.section-webfont {
+  ul { padding: 0; }
+  li { list-style: none; }
+}
+
+.footer {
+  padding-top: 80px;
+  background-color: $grey-0;
+
+  &.topnav { 
+    height: auto;
+    border-bottom: none;
+    .topnav-tabs li a.topnav-tab {
+      border-bottom: none;
+
+      &:hover {
+        border-bottom: none;
+        color: $primary-d1;
+      }
+    }
+  }
+}
