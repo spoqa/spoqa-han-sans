@@ -87,6 +87,11 @@ section h3 {
 .nav {
   display: block;
   float: right;
+
+  .cta {
+    color: $primary-0 !important;
+    font-weight: 700;
+  }
 }
 #toggle,
 .toggle {
@@ -176,18 +181,27 @@ section h3 {
   font-weight: 400;
 }
 .section-cover {
-  height: 800px;
   width: 100%;
   background-color: $grey-0;
 
   .img-cover {
-    background: url(../images/cover.png);
-    background-position: center center;
-    height: 100%;
-    background-size: 100%;
-    max-width: 900px;
-    background-repeat: no-repeat;
-    margin: 0 auto;
+    text-align: center;
+
+    img {
+      width: 100%;
+      max-width: 900px;
+      margin-bottom: 40px;
+    }
+  }
+  .cover-info {
+    text-align: center;
+    font-size: 22px;
+
+    @media only screen and (max-width: 650px) {
+      br {
+        display: none;
+      }
+    }
   }
 }
 
