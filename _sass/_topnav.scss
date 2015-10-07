@@ -42,7 +42,7 @@
         &:active,
         &.active,
         &:focus {
-          border-color: $primary-color;
+          text-decoration: none;
           outline: none;
         }
       }
