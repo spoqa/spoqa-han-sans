@@ -3,7 +3,17 @@
 # only Main files contain this front matter, not partials.
 ---
 @import 'bs-sass/assets/stylesheets/bootstrap';
-@import url(https://cdn.rawgit.com/theeluwin/NotoSansKR-Hestia/master/stylesheets/NotoSansKR-Hestia.css);
+
+@font-face {
+    font-family: 'Noto Sans Korean';
+    font-style: normal;
+    font-weight: 500;
+    src: local('Noto Sans Medium'), local('NotoSans-Medium'),
+    url(https://cdn.rawgit.com/theeluwin/NotoSansKR-Hestia/master/fonts/eot/NotoSansKR-Medium-Hestia.eot),
+    url(https://cdn.rawgit.com/theeluwin/NotoSansKR-Hestia/master/fonts/eot/NotoSansKR-Medium-Hestia.eot?#iefix) format('embedded-opentype'),
+    url(https://cdn.rawgit.com/theeluwin/NotoSansKR-Hestia/master/fonts/woff/NotoSansKR-Medium-Hestia.woff) format('woff'),
+    url(https://cdn.rawgit.com/theeluwin/NotoSansKR-Hestia/master/fonts/otf/NotoSansKR-Medium-Hestia.otf) format('opentype');
+}
 
 // Colors
 @import "colors";
@@ -72,9 +82,83 @@ section h3 {
   font-weight: 700;
 }
 
+// nav
+
+.nav {
+  display: block;
+  float: right;
+}
+#toggle,
+.toggle {
+  display: none;
+}
+.toggle {
+  z-index: 2;
+}
+.toggle:hover:after {
+  border-bottom: 3px solid $mainblue-0;
+}
+.toggle:after {
+  content: '메뉴';
+  display: inline-block;
+  padding: 20px 20px 17px;
+  background: transparent;
+  text-align: center;
+  font-size: 15px;
+  color: $text-color;
+  line-height: 19px;
+  -webkit-transition: all 0.5s linear;
+  -moz-transition: all 0.5s linear;
+  -o-transition: all 0.5s linear;
+  transition: all 0.5s linear;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  border-bottom: 3px solid transparent;
+}
+#toggle:checked + .toggle:after {
+  border-bottom: 3px solid $mainblue-0;
+}
+@media only screen and (max-width: 650px) {
+  .toggle {
+    display: block;
+    position: relative;
+    cursor: pointer;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    user-select: none;
+  }
+  #toggle:checked ~ .menu {
+    display: block;
+    opacity: 1;
+  }
+  .menu {
+    display: none;
+    opacity: 0;
+    margin: 10px 5% 0 !important;
+    padding-left: 0;
+    width: 90%;
+    position: absolute;
+    z-index: 1;
+    right: 0;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 2px;
+    text-align: center;
+  }
+  .menu li {
+    display: block;
+    width: 100%;
+
+    a{
+      padding: 20px 0;
+      width: 100%;
+    }
+  }
+}
+
 .divider {
   border-bottom: 1px solid $divider-color;
-  @include clearfix;
+  @extend .clearfix;
 }
 
 .bg-grey {
@@ -122,6 +206,7 @@ section h3 {
 .color-circle-wrap {
   display: inline-block;
   margin-right: 30px;
+  float: right;
 
   .color-circle {
     display: inline-block;
@@ -285,19 +370,27 @@ section h3 {
 
     .img img {
       width: 100%;
+      margin-bottom: 40px;
     }
 
     .img-number {
       padding: 20px 0 60px;
-      font-size: 110px;
+      font-size: 100px;
       line-height: 1.3;
       text-align: center;
       font-weight: 400;
-      letter-spacing: 20px;
+
+      @media only screen and (max-width: 650px) {
+        font-size: 90px;
+      }
+      @media only screen and (max-width: 400px) {
+        font-size: 60px;
+      }
     }
+
     .img-text-weight,
     .img-text-title {
-      padding: 20px 0 60px;
+      padding: 50px 0 70px;
       font-size: 60px;
       line-height: 1.3;
       text-align: center;
@@ -339,9 +432,11 @@ section h3 {
 }
 
 .footer {
+  padding-top: 80px;
   background-color: $grey-0;
 
   &.topnav { 
+    height: auto;
     border-bottom: none;
     .topnav-tabs li a.topnav-tab {
       border-bottom: none;
