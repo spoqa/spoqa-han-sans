@@ -3,10 +3,8 @@
   <head>
     <meta charset="UTF-8">
     <title>Spoqa Han Sans</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <link rel="stylesheet" type="text/css" href="{{ base_path }}/css/style.css">
-    <link href='//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSans-kr.css' rel='stylesheet' type='text/css'>
-    <link href='//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSans-jp.css' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Source+Code+Pro' rel='stylesheet' type='text/css'>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
@@ -32,17 +30,21 @@
     <nav class="topnav topnav-fixed">
       <div class="fixed-container">
         <div class="brand-logo"><strong>스포카 한 산스</strong>를 소개합니다.</div>
-        <ul class="topnav-tabs">
-          <li>
-            <a class="topnav-tab" href="#section-intro">폰트 소개</a>
-          </li>
-          <li>
-            <a class="topnav-tab" href="#section-edited">제작 과정</a>
-          </li>
-          <li>
-            <a class="topnav-tab" href="#section-download">폰트 다운로드</a>
-          </li>
-        </ul>
+        <div class="nav">
+          <input type="checkbox" id="toggle">
+          <label for="toggle" class="toggle" onclick></label>
+          <ul class="topnav-tabs menu">
+            <li>
+              <a class="topnav-tab" href="#section-intro">글꼴 소개</a>
+            </li>
+            <li>
+              <a class="topnav-tab" href="#section-edited">글꼴 특징</a>
+            </li>
+            <li>
+              <a class="topnav-tab" href="#section-download">글꼴 내려받기</a>
+            </li>
+          </ul>
+        </div>
       </div>
     </nav>
       {{ content }}
