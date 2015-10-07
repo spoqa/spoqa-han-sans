@@ -3,6 +3,7 @@
 # only Main files contain this front matter, not partials.
 ---
 @import 'bs-sass/assets/stylesheets/bootstrap';
+  $screen-sm-min: 768px; //Bootstrap media variable
 
 @font-face {
     font-family: 'Noto Sans Korean';
@@ -406,6 +407,7 @@ section h3 {
 }
 
 .download-group {
+  padding: 0 15px;
   margin-top: 60px;
   text-align: center;
 
@@ -422,6 +424,25 @@ section h3 {
 
     &:hover {
       background-color: rgba($primary-0, 0.1);
+    }
+  }
+
+  .download {
+    padding: 0;
+
+    @media (max-width: $screen-sm-min) {
+      &:nth-child(even) {
+        padding-right: 7px;
+      }
+      &:nth-child(even) + .download {
+        padding-left: 7px;
+      }
+    }
+
+    @media (min-width: $screen-sm-min) {
+      &:not(:first-child) {
+        padding-left: 14px;
+      }
     }
   }
 }
@@ -448,8 +469,3 @@ section h3 {
     }
   }
 }
-
-
-
-
-
