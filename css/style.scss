@@ -1,0 +1,298 @@
+---
+# this ensures Jekyll reads the file to be transformed into CSS later
+# only Main files contain this front matter, not partials.
+---
+@import 'bs-sass/assets/stylesheets/bootstrap';
+@import url(https://cdn.rawgit.com/theeluwin/NotoSansKR-Hestia/master/stylesheets/NotoSansKR-Hestia.css);
+
+// Colors
+@import "colors";
+  $primary-d2:  $mainblue-d2;
+  $primary-d1:  $mainblue-d1;
+  $primary-0:   $mainblue-0;
+  $primary-l1:  $mainblue-l1;
+  $primary-color: $mainblue-0;//FIXME: Legacy for Bootstrap. Delete this line when remove bootstrap
+
+
+// Global requirements
+@import "variables";
+  $font-size-base: 16px; //Blog size
+@import "mixins";
+
+
+// Reset and dependencies
+@import "normalize";
+
+
+// Basecoat
+@import "basecoat";
+@import "layout";
+@import 'type';
+
+
+// Components
+@import 'buttons';
+@import "topnav";
+
+//@import 'button-groups';
+//@import 'dropdown';
+
+
+// Optional 
+@import "page-headers";
+
+// ADhoc Style
+
+section h3 {
+  font-weight: 700;
+}
+
+.section-title {
+  font-size: 36px;
+  font-weight: bold;
+}
+.section-cover {
+  height: 800px;
+  width: 100%;
+  background-color: $primary-0;
+}
+
+.section-intro {
+  .section-title {
+    margin-top: 0;
+  }
+
+  h3:first-child {
+    margin-top: 0;
+  }
+}
+
+.section-detail {
+  .group-color-circle {
+    margin-top: 60px;
+    text-align: right;
+  }
+  .color-circle-wrap {
+    display: inline-block;
+    margin-right: 30px;
+
+    .color-circle {
+      display: inline-block;
+      height: 20px;
+      width: 20px;
+      border-radius: 10px;
+      vertical-align: top;
+
+      &.source-han-sans {
+        background-color: #f0f;
+      }
+      &.spoqa-han-sans {
+        background-color: $primary-0;
+      }
+    }
+
+    .color-text {
+      display: inline-block;
+    }
+  }
+}
+
+.section-glyphs {
+  margin-top: 40px;
+  padding-top: 0;
+  border-top: 3px solid $primary-0;
+
+  .glyphs {
+    padding: 40px 0 50px;
+    font-size: 90px;
+    line-height: 1em;
+    font-weight: 400;
+    border-bottom: 3px solid $primary-0;
+
+    &.glyphs-glyphs {
+      line-height: 1.4em;
+    }
+
+    .edited {
+      display: inline-block;
+      position: relative;
+      color: $primary-d1;
+
+      &:after {
+        margin-top: -3px;
+        margin-left: 1px;
+        font-family: 'Noto Sans Korean', sans-serif;
+        color: #f0f;
+        opacity: 0;
+        position: absolute;
+        top: 0;
+        left: 0;
+        transition: 0.2s ease-in opacity;
+      }
+
+      &.a:after { content: 'A'; }
+      &.b:after { content: 'B'; }
+      &.c:after { content: 'C'; }
+      &.d:after { content: 'D'; }
+      &.e:after { content: 'E'; }
+      &.f:after { content: 'F'; }
+      &.g:after { content: 'G'; }
+      &.h:after { content: 'H'; }
+      &.i:after { content: 'I'; }
+      &.j:after { content: 'J'; }
+      &.k:after { content: 'K'; }
+      &.l:after { content: 'L'; }
+      &.m:after { content: 'M'; }
+      &.n:after { content: 'N'; }
+      &.o:after { content: 'O'; }
+      &.p:after { content: 'P'; }
+      &.q:after { content: 'Q'; }
+      &.r:after { content: 'R'; }
+      &.s:after { content: 'S'; }
+      &.t:after { content: 'T'; }
+      &.u:after { content: 'U'; }
+      &.v:after { content: 'V'; }
+      &.w:after { content: 'W'; }
+      &.x:after { content: 'X'; }
+      &.y:after { content: 'Y'; }
+      &.z:after { content: 'Z'; }
+
+      &.l-lower:after { content: 'l'; }
+
+      &.one:after { content: '1'; }
+      &.two:after { content: '2'; }
+      &.three:after { content: '3'; }
+      &.four:after { content: '4'; }
+      &.five:after { content: '5'; }
+      &.six:after { content: '6'; }
+      &.seven:after { content: '7'; }
+      &.eight:after { content: '8'; }
+      &.nine:after { content: '9'; }
+      &.zero:after { content: '0'; }
+
+      &.glyph-1:after { content: '_'; }
+      &.glyph-2:after { content: '-'; }
+      &.glyph-3:after { content: '='; }
+      &.glyph-4:after { content: '|'; }
+      &.glyph-5:after { content: '/'; }
+      &.glyph-6:after { content: '\\'; }
+      &.glyph-7:after { content: '※'; }
+      &.glyph-8:after { content: '^'; }
+      &.glyph-9:after { content: '%'; }
+      &.glyph-10:after { content: '&'; }
+      &.glyph-11:after { content: '?'; }
+      &.glyph-12:after { content: '#'; }
+      &.glyph-13:after { content: '<'; }
+      &.glyph-14:after { content: '>'; }
+      &.glyph-15:after { content: '('; }
+      &.glyph-16:after { content: ')'; }
+      &.glyph-17:after { content: '{'; }
+      &.glyph-18:after { content: '}'; }
+      &.glyph-19:after { content: '['; }
+      &.glyph-20:after { content: ']'; }
+      &.glyph-21:after { content: '¥'; }
+      &.glyph-22:after { content: '$'; }
+      &.glyph-23:after { content: '₩'; }
+      &.glyph-24:after { content: '.'; }
+      &.glyph-25:after { content: ','; }
+      &.glyph-26:after { content: ':'; }
+      &.glyph-27:after { content: ';'; }
+
+      &:hover {
+        &:after {
+          opacity: 0.7;
+        }
+      }
+    }
+  }
+}
+
+.section-edited {
+  .feature {
+    margin-bottom: 100px;
+    @extend .clearfix;
+
+    h3 {
+      margin-top: 0;
+    }
+
+    .col-sm-6:not(.img) {
+      padding-left: 20px;
+    }
+    > .img:first-child {
+      margin-top: 5px;
+      border-top: 3px solid $primary-0;
+
+      .order {
+        margin-top: 15px;
+        height: 20px;
+        width: 20px;
+        float: left;
+        color: #fff;
+        font-size: $font-size-sm;
+        font-weight: 700;
+        text-align: center;
+        line-height: 20px;
+        background: $primary-0;
+        border-radius: 10px;
+      }
+    }
+
+    .img-number {
+      padding: 60px 0;
+      font-size: 110px;
+      line-height: 1.3em;
+      text-align: center;
+      font-weight: 200;
+      letter-spacing: 20px;
+    }
+    .img-text-weight {
+      padding: 60px 0;
+      font-size: 60px;
+      line-height: 1.3em;
+      text-align: center;
+      font-weight: bold;
+    }
+
+    .img-text-title {
+      padding: 60px 0;
+      font-size: 60px;
+      line-height: 1.3em;
+      text-align: left;
+      font-weight: bold;
+    }
+  }
+}
+
+.section-webfont {
+  ul { padding: 0; }
+  li { list-style: none; }
+}
+code {
+  font-family: "Source Code Pro", Consolas, "Letter Gothic Std", Courier, "Nanum Gothic Coding", monospace; }
+
+pre {
+  margin: 10px 0;
+  padding: 20px;
+  display: inline-block;
+  width: 100%;
+  background: $grey-0;
+  border: 1px solid $divider-color;
+  border-radius: 2px;
+}
+
+pre code {
+  word-wrap: break-word;
+  width: 100%;
+  border: none;
+  padding: 0;
+  margin: 0;
+  font-size: 15px;
+}
+
+
+
+
+
+
+
