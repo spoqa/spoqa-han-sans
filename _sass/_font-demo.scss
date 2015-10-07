@@ -6,12 +6,6 @@
     -webkit-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
-    opacity: 0;
-    transition: opacity 0.3s;
-    -webkit-transition: opacity 0.3s;
-    .FontDemo:hover & {
-      opacity: 1;
-    }
     &:after {
       display: table;
       clear: both;
@@ -59,12 +53,8 @@
   &-demo {
     outline: 0;
     margin-top: 10px;
-    min-width: 100px;
-    &:empty:before{
-      content: attr(placeholder);
-      display: block; /* For Firefox */
-      color: #999;
-    }
+    width: 100%;
+    border: none;
   }
 }
 
