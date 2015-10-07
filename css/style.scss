@@ -41,6 +41,9 @@
 // Optional 
 @import "page-headers";
 
+// Font demo
+@import "font-demo";
+
 // ADhoc Style
 
 section h3 {
@@ -105,12 +108,12 @@ section h3 {
   .glyphs {
     padding: 40px 0 50px;
     font-size: 90px;
-    line-height: 1em;
+    line-height: 1;
     font-weight: 400;
     border-bottom: 3px solid $primary-0;
 
     &.glyphs-glyphs {
-      line-height: 1.4em;
+      line-height: 1.4;
     }
 
     .edited {
@@ -241,7 +244,7 @@ section h3 {
     .img-number {
       padding: 60px 0;
       font-size: 110px;
-      line-height: 1.3em;
+      line-height: 1.3;
       text-align: center;
       font-weight: 200;
       letter-spacing: 20px;
@@ -249,7 +252,7 @@ section h3 {
     .img-text-weight {
       padding: 60px 0;
       font-size: 60px;
-      line-height: 1.3em;
+      line-height: 1.3;
       text-align: center;
       font-weight: bold;
     }
@@ -257,7 +260,7 @@ section h3 {
     .img-text-title {
       padding: 60px 0;
       font-size: 60px;
-      line-height: 1.3em;
+      line-height: 1.3;
       text-align: left;
       font-weight: bold;
     }
