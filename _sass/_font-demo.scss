@@ -1,6 +1,6 @@
 .FontDemo {
   width: 100%;
-  min-height: 202px;
+  min-height: 250px;
   &-optionContainer {
     overflow: hidden;
     -webkit-user-select: none;
@@ -55,6 +55,7 @@
     margin-top: 10px;
     width: 100%;
     border: none;
+    line-height: 1.4;
   }
 }
 
