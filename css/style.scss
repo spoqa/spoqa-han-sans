@@ -27,7 +27,6 @@
 
 // Global requirements
 @import "variables";
-  $font-size-base: 16px; //Blog size
 @import "mixins";
 
 
@@ -177,7 +176,6 @@ section h3 {
 .section-title {
   margin-top: 0;
   margin-bottom: 60px;
-  font-size: 48px;
   font-weight: 400;
 }
 .section-cover {
