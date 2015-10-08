@@ -8,10 +8,38 @@
     <div class="FontDemo-sizeOptionContainer">
       <span class="FontDemo-sizeOptionLabel FontDemo-sizeOptionLabel--small"
       >A</span
-      ><input type="range" class="FontDemo-sizeOption" min="12" max="120" value="90" /
+      ><input type="range" class="FontDemo-sizeOption" min="12" max="120" /
       ><span class="FontDemo-sizeOptionLabel FontDemo-sizeOptionLabel--large"
       >A</span>
     </div>
   </div>
   <input type="text" class="FontDemo-demo" placeholder="직접 입력해보세요." value="{{ include.text }}"/>
 </div>
+<script>
+$(function() {
+  if (window.FontDemoIsLoaded) return false;
+  window.FontDemoIsLoaded = true;
+  $('.FontDemo-weightOption').click(function (e) {
+    $this = $(this);
+    var weight = $this.data('weight');
+    $this.parents('.FontDemo')
+      .find('.FontDemo-demo')
+      .css('font-weight', weight);
+  });
+  $('.FontDemo-weightOption--regular').click();
+  $('.FontDemo-sizeOption').on('input change', function (e) {
+    var $this = $(this);
+    var size = $this.val();
+    $this.parents('.FontDemo')
+      .find('.FontDemo-demo')
+      .css('font-size', size + 'px');
+  });
+  $('.FontDemo-demo').keypress(function (e) {
+    var key = e.which;
+    if(key == 13) return false;
+  });
+  // 브라우저 너비에 맞게 폰트사이즈 조정
+  var initialFontSize = $('.FontDemo-demo').width() / 10;
+  $('.FontDemo-sizeOption').val(initialFontSize).change();
+})
+</script>
