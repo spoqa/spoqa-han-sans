@@ -398,27 +398,3 @@ layout: default
         </div>
       </div>
     </section>
-    <script>
-    $(function() {
-      $('.FontDemo-weightOption').click(function (e) {
-        $this = $(this);
-        var weight = $this.data('weight');
-        $this.parents('.FontDemo')
-          .find('.FontDemo-demo')
-          .css('font-weight', weight);
-      });
-      $('.FontDemo-weightOption--regular').click();
-      $('.FontDemo-sizeOption').on('input change', function (e) {
-        var $this = $(this);
-        var size = $this.val();
-        $this.parents('.FontDemo')
-          .find('.FontDemo-demo')
-          .css('font-size', size + 'px');
-      }).change();
-      $('.FontDemo-demo').keypress(function (e) {
-        var key = e.which;
-        if(key == 13) return false;
-      });
-    })
-    </script>
-
