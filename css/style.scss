@@ -225,10 +225,10 @@ section h3 {
 
   .color-circle {
     display: inline-block;
-    height: 20px;
-    width: 20px;
-    border-radius: 10px;
-    vertical-align: top;
+    height: 16px;
+    width: 16px;
+    border-radius: 8px;
+    vertical-align: text-bottom;
 
     &.source-han-sans {
       background-color: $primary-l1;
