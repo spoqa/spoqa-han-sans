@@ -243,18 +243,23 @@ section h3 {
 
 .section-glyphs {
   padding-top: 0;
-  border-top: 1px solid $text-color;
+
+  &:hover {
+    .glyphs .edited:after {
+      opacity: 0.6;
+    }
+  }
 
   .glyphs {
     padding: 40px 0 50px;
-    font-size: 70px;
-    line-height: 1;
+    font-size: 50px;
+    line-height: 1.2;
     font-weight: 400;
-    border-bottom: 1px solid $text-color;
     color: $grey-text-color;
+    letter-spacing: -4px;
 
     &.glyphs-glyphs {
-      line-height: 1.4;
+     // letter-spacing: -px;
     }
 
     .edited {
@@ -263,13 +268,13 @@ section h3 {
       color: $text-color;
 
       &:after {
-        margin-top: -3px;
-        margin-left: 1px;
+        margin-top: -2px;
+        margin-left: 0px;
         font-family: 'Noto Sans Korean', sans-serif;
         color: $primary-l1;
         opacity: 0;
         position: absolute;
-        top: 0;
+        top: 1;
         left: 0;
         transition: 0.2s ease-in opacity;
       }
@@ -341,12 +346,6 @@ section h3 {
       &.glyph-25:after { content: ','; }
       &.glyph-26:after { content: ':'; }
       &.glyph-27:after { content: ';'; }
-
-      &:hover {
-        &:after {
-          opacity: 0.7;
-        }
-      }
     }
   }
 }
