@@ -210,7 +210,7 @@ layout: default
         <div class="col-sm-6 col-xs-12">
           <h3>괄호와 대쉬 등 일부 글리프 위치를 조정했습니다.</h3>
           <div>
-            기존 글리프 중에 괄호나, 연산기호 등의 위치가 영문에 특화된 느낌이 들어 조정이 불가피하다고 판단, 국문과 숫자에도 어울리게끔 다듬었습니다. '&lt;&gt;(){}[]', '_-=', '\/|'등의 굵기와 형태를 고치고 세밀하게 높이를 조정 했습니다.
+            기존 글리프 중에 괄호나, 연산기호 등의 위치가 영문에 특화된 느낌이 들어 조정이 불가피하다고 판단, 국문과 숫자에도 어울리게끔 다듬었습니다. <q>&lt;&gt;(){}[]</q>, <q>_-=</q>, <q>\/|</q>등의 굵기와 형태를 고치고 세밀하게 높이를 조정 했습니다.
           </div>
         </div>
       </div>
@@ -220,9 +220,9 @@ layout: default
           <img src="./images/feature/05.png" />
         </div>
         <div class="col-sm-6 col-xs-12">
-          <h3>통화기호를 다듬었습니다.</h3>
+          <h3>통화 기호를 다듬었습니다.</h3>
           <div>
-            스포카의 도도 포인트는 한국, 일본에 서비스 중입니다. 또한, 영어를 쓰는 사람도 무리 없이 쓸 수 있도록 영문으로 번역되어 사용되고 있습니다. 원, 엔, 달러 어떤 통화를 쓰더라도 어울리도록 통화기호를 다듬었습니다.
+            스포카의 도도 포인트는 한국, 일본에 서비스 중입니다. 또한, 영어를 쓰는 사람도 무리 없이 쓸 수 있도록 영문으로 번역되어 사용되고 있습니다. 원, 엔, 달러 어떤 통화를 쓰더라도 어울리도록 통화 기호를 다듬었습니다.
           </div>
         </div>
       </div>
@@ -234,7 +234,7 @@ layout: default
         <div class="col-sm-6 col-xs-12">
           <h3>자주 사용하는 약물을 수정했습니다</h3>
           <div>
-            컴퓨터로 문장을 쓰다보면 자주 쓰는 특수 문자가 있습니다. 이모티콘에 자주 등장하는 '^', 숫자와 함께 쓰는 퍼센트 기호(%), &과 물음표 등등. 이러한 약물을 수정해서 글꼴을 쓰는 사용자들에게 매끄러운 사용자 경험(UX)을 제공합니다.
+            컴퓨터로 문장을 쓰다보면 자주 쓰는 특수 문자가 있습니다. 이모티콘에 자주 등장하는 캐릿(^), 숫자와 함께 쓰는 퍼센트 기호(%), 앰퍼샌드(&)와 물음표 등등. 이러한 약물을 수정해서 글꼴을 쓰는 사용자들에게 매끄러운 사용자 경험(UX)을 제공합니다.
           </div>
         </div>
       </div>
@@ -257,19 +257,19 @@ layout: default
         </div>
         <div class="">
           <div class="col-sm-4 col-xs-12">
-            <h3>11,172자  >>>>  2,350자</h3>
+            <h3>11,172자  &rarr;  2,350자</h3>
             <div>
               모든 글자를 대응했던 11,172자에서  한글꼴 완성형의 최소 단위인 2,350자로 줄였습니다.
             </div>
           </div>
           <div class="col-sm-4 col-xs-12">
-            <h3>16MB   >>>>  1MB</h3>
+            <h3>16MB   &rarr;  1MB</h3>
             <div>
               TTF 글꼴의 총 용량을 16MB에서 1MB로 줄였습니다.
             </div>
           </div>
           <div class="col-sm-4 col-xs-12">
-            <h3>서브셋 웹폰트 : 441KB</h3>
+            <h3>서브셋 웹폰트: 441KB</h3>
             <div>
               서브셋 웹폰트인 WOFF 포맷의 총 용량을 441KB까지 줄였습니다.
             </div>
@@ -332,11 +332,13 @@ layout: default
       <ul>
         <li>
           스타일 시트에 아래의 코드를 넣거나,
-          <pre><code>@import url(//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSans-kr.css);<br>@import url(//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSans-jp.css);</code></pre>
+          <pre><code>@import url(//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSans-kr.css);
+@import url(//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSans-jp.css);</code></pre>
         </li>
         <li>
           혹은 HTML의 <code>&lt;head&gt;</code> 태그 안에 아래의 코드를 넣어주세요.
-          <pre><code>&lt;link href='//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSans-kr.css' rel='stylesheet' type='text/css'&gt; <br>&lt;link href='//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSans-jp.css' rel='stylesheet' type='text/css'&gt;</code></pre>
+          <pre><code>&lt;link href='//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSans-kr.css' rel='stylesheet' type='text/css'&gt;
+&lt;link href='//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSans-jp.css' rel='stylesheet' type='text/css'&gt;</code></pre>
         </li>
         <li>
           그후 <code>&lt;style&gt;</code> 태그 안에  <code>font-family</code>를 설정해주세요.
@@ -383,20 +385,20 @@ layout: default
           <div class="col-sm-4 col-xs-12">
             <h3>스포카 한 산스를 발전시킵시다.</h3>
             <div>
-              <a href="http://spoqa.github.io/jobs.html" target="_blank">채용 공고 보기 ></a>
+              <a href="http://spoqa.github.io/jobs.html" target="_blank">채용 공고 보기 &gt;</a>
             </div>
           </div>
           <div class="col-sm-4 col-xs-12">
             <h3>문제점을 알려주세요.</h3>
             <div>
-              <a href="https://github.com/spoqa/spoqa-han-sans/issues" target="_blank"> Github에 이슈 생성하기 ></a>
+              <a href="https://github.com/spoqa/spoqa-han-sans/issues" target="_blank"> GitHub에 이슈 생성하기 &gt;</a>
             </div>
           </div>
           <div class="col-sm-4 col-xs-12">
             <h3>문의 사항을 보내주세요. </h3>
             <div>
               <a href="mailto:visual-design@spoqa.com">
-                스포카 디자인팀에 메일 보내기 >
+                스포카 디자인팀에 메일 보내기 &gt;
               </a> 
             </div>
           </div>
