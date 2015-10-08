@@ -474,8 +474,9 @@ section h3 {
   &.topnav { 
     height: auto;
     border-bottom: none;
-    .topnav-tabs li a.topnav-tab {
+    a {
       border-bottom: none;
+      color: inherit;
 
       &:hover {
         border-bottom: none;
