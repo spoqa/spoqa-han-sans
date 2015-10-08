@@ -141,9 +141,8 @@ section h3 {
   .menu {
     display: none;
     opacity: 0;
-    margin: 10px 5% 0 !important;
-    padding-left: 0;
-    width: 90%;
+    margin: 0 !important;
+    width: 100%;
     position: absolute;
     z-index: 1;
     right: 0;
@@ -153,10 +152,10 @@ section h3 {
   }
   .menu li {
     display: block;
-    width: 100%;
+    width: 94%;
 
     a{
-      padding: 20px 0;
+      padding: 20px 3%;
       width: 100%;
     }
   }
@@ -172,7 +171,7 @@ section h3 {
 }
 
 .underline {
-  border-bottom: 5px solid $primary-0;
+  border-bottom: 3px solid $primary-0;
 }
 
 .section-title {
