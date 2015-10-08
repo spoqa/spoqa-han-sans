@@ -57,7 +57,10 @@
 // ADhoc Style
 
 code {
-  font-family: "Source Code Pro", Consolas, "Letter Gothic Std", Courier, "Nanum Gothic Coding", monospace; }
+  font-family: "Source Code Pro", Consolas, "Letter Gothic Std", Courier, "Nanum Gothic Coding", monospace;
+  color: $primary-0;
+  background-color: $grey-0;
+}
 
 pre {
   margin: 10px 0;
