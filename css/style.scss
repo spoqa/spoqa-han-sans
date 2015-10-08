@@ -285,6 +285,7 @@ section h3 {
         top: 1;
         left: 0;
         transition: 0.2s ease-in opacity;
+        -moz-transform: translateZ(0);
       }
 
       &.a:after { content: 'A'; }
