@@ -21,7 +21,7 @@
         var offsetTop = target.offset().top;
         var topnavHeight = $('.topnav').height();
         var scrollTopTarget = offsetTop - topnavHeight;
-        $('body').stop().animate({scrollTop: scrollTopTarget}, '1000', 'swing');
+        $('body,html').stop().animate({scrollTop: scrollTopTarget}, '1000', 'swing');
       })
     })
     </script>
