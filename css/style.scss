@@ -489,13 +489,5 @@ section h3 {
         color: $primary-d1;
       }
     }
-    .fb-like {
-      $like-width: 55px;
-      position: absolute;
-      width: $like-width;
-      left: 50%;
-      margin-left: -$like-width;
-      margin-top: 19px;
-    }
   }
 }
