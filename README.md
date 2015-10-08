@@ -1,4 +1,4 @@
-# Spoqa han sans v1.0.0
+# Spoqa Han Sans v1.0.0
 
 스포카 한 산스는 국문, 영문, 일문, 숫자, 글리프의 어울림이 훌륭합니다.
 가는 굵기(Thin), 보통 굵기(Regular), 두꺼운 굵기(Bold) 세 가지 자족으로,
@@ -28,19 +28,22 @@
 Spoqa Han Sans를 웹폰트로 사용하시려면 2가지 방법이 있습니다.
 
 스타일 시트에 아래의 코드를 넣거나,
-```
+
+```css
 @import url(//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSans-kr.css);
 @import url(//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSans-jp.css);
 ```
 
 혹은 HTML의 `<head>` 태그 안에 아래의 코드를 넣어주세요.
-```
+
+```html
 <link href='//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSans-kr.css' rel='stylesheet' type='text/css'>
 <link href='//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSans-jp.css' rel='stylesheet' type='text/css'>
 ```
 
 그후 `<style>` 태그 안에  `font-family` 를 설정해주세요.
-```
+
+```css
 * {
   font-family: 'Spoqa Han Sans', 'Spoqa Han Sans JP', 'Sans-serif';
 }
@@ -49,9 +52,9 @@ Spoqa Han Sans를 웹폰트로 사용하시려면 2가지 방법이 있습니다
 
 ## 의견 보내기
 
-Spoqa han sans 프로젝트에 제안하고 싶은 사항이 있다면 이슈를 생성하시거나 visual-design@spoqa.com로 이메일을 보내주시길 바랍니다.
+Spoqa Han Sans 프로젝트에 제안하고 싶은 사항이 있다면 이슈를 생성하시거나 <visual-design@spoqa.com>으로 이메일을 보내주시길 바랍니다.
 
 
 ## 제작 정보
 
-Spoqa han sans에 대한 제작 배경 및 미리보기에 대한 정보는 [Spoqa han sans Introduction](http://spoqa-han-sans.com/)에서 얻으실 수 있습니다.
+Spoqa Han Sans에 대한 제작 배경 및 미리보기에 대한 정보는 [Spoqa Han Sans Introduction](http://spoqa-han-sans.com/)에서 얻으실 수 있습니다.
