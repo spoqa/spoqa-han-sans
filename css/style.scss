@@ -172,8 +172,9 @@ section h3 {
   background-color: $grey-0;
 }
 
-.underline {
+.underline, h2 em {
   border-bottom: 2px solid $mainblue-l1;
+  font-style: normal;
 }
 
 .section-title {
@@ -182,7 +183,7 @@ section h3 {
   font-weight: 400;
 }
 
-.section-title .underline {
+.section-title .underline, .section-title em {
   padding-bottom: 1px;
 }
 
@@ -259,6 +260,7 @@ section h3 {
   }
 
   .glyphs {
+    display: inline;
     padding: 40px 0 50px;
     font-size: 50px;
     line-height: 1.2;
