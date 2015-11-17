@@ -1,48 +1,20 @@
 #!/bin/sh
 
-#shellcheck build_release
-
-git_tag="$(git tag | tail -n 1)";
-
-if [ "$1" = "" ];
-then
-  release_tag="$(git tag | tail -n 1)";
-else
-  release_tag="$1";
-fi
-
-echo "Release $release_tag";
-echo "~~~~~~~~~~~~~~~";
-
-# git log from pre-released version to current version
-# git log "$(git tag | tail -n 2 | head -n 1)"..."$git_tag" --pretty="format:%an <%ae> %s" --no-merges
-
-echo "# Git tag"
+release_tag="$(git tag | tail -n 1)";
 origin="git@github.com:spoqa/spoqa-han-sans.git";
 master="master"
-echo "host: $origin, branch: $master";
-if [ "$git_tag" != "$release_tag" ] && [ ! -z "$(git tag | grep "$release_tag")" ];
-then
-  git checkout $master;
-  git pull $origin $master;
-
-  git tag "$release_tag";
-
-  git push $origin "$release_tag";
-fi
-
 project_root="$(pwd)";
 release_base_dir="$project_root/release";
-mkdir -p "$release_base_dir";
-
-release_all_name="SpoqaHanSans_all_$release_tag";
+release_all_name="SpoqaHanSans_all";
 all_dir="$release_base_dir/$release_all_name";
+
+mkdir -p "$release_base_dir";
 mkdir -p "$all_dir";
 cp LICENSE "$all_dir";
 
 build_zip()
 {
-  release_dirname="SpoqaHanSans_$1_$release_tag";
+  release_dirname="SpoqaHanSans_$1";
   release_dir="$release_base_dir/$release_dirname";
   echo "* release $release_dirname";
   mkdir -p "$release_dir";
@@ -50,11 +22,20 @@ build_zip()
   cp -r "$release_dir" "$all_dir";
   cp LICENSE "$release_dir/";
 
-  cd "$release_base_dir";
+  cd "$release_base_dir" || exit;
   zip "$release_dir.zip" -r "$release_dirname" >> /dev/null;
   cd ..
   rm -rf "$release_dir";
 }
+
+echo "Release $release_tag";
+echo "~~~~~~~~~~~~~~~";
+
+# git log from pre-released version to current version
+# git log "$(git tag | tail -n 2 | head -n 1)"..."$release_tag" --pretty="format:%an <%ae> %s" --no-merges
+
+echo "# Git tag"
+echo "host: $origin, branch: $master";
 
 echo "# Compress fonts...";
 
@@ -71,9 +52,9 @@ build_zip "jp_subset" \
           "Subset/SpoqaHanSans_JP";
 
 echo "* release $release_all_name";
-cd "$release_base_dir";
+cd "$release_base_dir" || exit;
 zip "$release_all_name.zip" -r "$release_all_name" >> /dev/null;
 rm -rf "$release_all_name";
-cd ..;
+cd ..
 
 echo "release done.";
