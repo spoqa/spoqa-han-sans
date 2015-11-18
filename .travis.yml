@@ -1,15 +1,15 @@
 language: bash
 before_deploy:
-  - ./build_release
+  - "./build_release"
 deploy:
   provider: releases
-  api_key: "e82c6f1b2bfb2dd4dbf416f08bd627fd61d28f33"
+  api_key:
+    secure: SI2GRrOlxA7MRVuLhlHH2e9wmSWNHlNHp4j9BxHQ7Cv1/o86Dvww0IjcqvNC64ZyuUWXOpWMOMPLqRAnOJ5Vd5j6pDT1rdD/4sR2MjcHo2I0NUXSrMPYooxxoAVgWnllAvY8YkGOsku0nje+dbf8yi/J9PDHNmpMW89zPAp8uTlymFiAVUhYZwv5zA21TPyR7DY9vcYU3i2Oyzoq+u9++mbbKw8JlbxYGdkc5MjoMV8DxdaVnlQewSGtHatJdeh7GF/Ik7AGnv5p4xdZjio/oTXDQebcwjmYZiv+GTpn9l8wbifvK90z7iA/kf+z1jREGJ9s8pzzFRM34N/+HD4QpmpR+9RseKAl9PgzYzryO45YNstED3NuQbb3E0rhF7cNwbBRmOgwNSkcPEp9T0UR++yYu9EvLtyOQ5JzjKqaVVLW/SlTJ9iEjCQrjqoadbt8k+LgXgZhJJGaXugPkt2PM/+hGBk84YnTi6PPMjELJxJAJu5+KI6/xINwQOcAPu+mE75r//tnXdtMGcym/kE6kjtBa8Baa9JSKOG8yWya+MMY2ea9EYxanaSKBYHM6xsYY/XK7EEpwuL9T4KTXy2LipRJyvYpno3vR6sr40nSPg0pNYjyy/c7gku+thqrp2SjabriQMl4EsotbHYlM3vG51CIkHLdSn9OeS8XhLcFpXc=
   file:
     - release/SpoqaHanSans_all.zip
     - release/SpoqaHanSans_jp_subset.zip
     - release/SpoqaHanSans_subset.zip
     - release/SpoqaHanSans_jp_original.zip
     - release/SpoqaHanSans_original.zip
-  skip_cleanup: true
   on:
     tags: true
