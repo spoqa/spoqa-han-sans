@@ -1,17 +1,9 @@
-language: python
-python:
-  - "3.5"
-install:
-  - sudo apt-get update -qq
-  - sudo apt-get install shellcheck
-script:
-  - shellcheck ./build_release
-
+language: bash
 before_deploy:
   - ./build_release
 deploy:
   provider: releases
-  api_key: "GITHUB OAUTH TOKEN"
+  api_key: "e82c6f1b2bfb2dd4dbf416f08bd627fd61d28f33"
   file:
     - release/SpoqaHanSans_all.zip
     - release/SpoqaHanSans_jp_subset.zip
