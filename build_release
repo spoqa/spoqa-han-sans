@@ -22,7 +22,7 @@ build_zip()
   cp LICENSE "$release_dir/";
 
   cd "$release_base_dir";
-  zip "$release_dir.zip" -r "$release_dirname" >> /dev/null;
+  zip "$release_dir.zip" -r "$release_dirname";
   cd ..
   rm -rf "$release_dir";
 }
@@ -51,7 +51,7 @@ build_zip "jp_subset" \
 
 echo "* release $release_all_name";
 cd "$release_base_dir";
-zip "$release_all_name.zip" -r "$release_all_name" >> /dev/null;
+zip "$release_all_name.zip" -r "$release_all_name";
 rm -rf "$release_all_name";
 cd ..
 
