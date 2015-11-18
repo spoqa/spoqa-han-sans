@@ -1,8 +1,7 @@
 #!/bin/sh
+set -e
 
-release_tag="$(git tag | tail -n 1)";
-origin="git@github.com:spoqa/spoqa-han-sans.git";
-master="master"
+release_tag="${TRAVIS_TAG:-"$(git tag | tail -n 1)"}";
 project_root="$(pwd)";
 release_base_dir="$project_root/release";
 release_all_name="SpoqaHanSans_all";
@@ -22,7 +21,7 @@ build_zip()
   cp -r "$release_dir" "$all_dir";
   cp LICENSE "$release_dir/";
 
-  cd "$release_base_dir" || exit;
+  cd "$release_base_dir";
   zip "$release_dir.zip" -r "$release_dirname" >> /dev/null;
   cd ..
   rm -rf "$release_dir";
@@ -31,11 +30,10 @@ build_zip()
 echo "Release $release_tag";
 echo "~~~~~~~~~~~~~~~";
 
+echo "${TRAVIS_REPO_SLUG:-"origin"}/${TRAVIS_BRANCH:-"master"}";
+
 # git log from pre-released version to current version
 # git log "$(git tag | tail -n 2 | head -n 1)"..."$release_tag" --pretty="format:%an <%ae> %s" --no-merges
-
-echo "# Git tag"
-echo "host: $origin, branch: $master";
 
 echo "# Compress fonts...";
 
@@ -52,7 +50,7 @@ build_zip "jp_subset" \
           "Subset/SpoqaHanSans_JP";
 
 echo "* release $release_all_name";
-cd "$release_base_dir" || exit;
+cd "$release_base_dir";
 zip "$release_all_name.zip" -r "$release_all_name" >> /dev/null;
 rm -rf "$release_all_name";
 cd ..
