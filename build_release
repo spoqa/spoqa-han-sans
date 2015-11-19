@@ -1,0 +1,58 @@
+#!/bin/sh
+set -e
+
+release_tag="${TRAVIS_TAG:-"$(git tag | tail -n 1)"}";
+project_root="$(pwd)";
+release_base_dir="$project_root/release";
+release_all_name="SpoqaHanSans_all";
+all_dir="$release_base_dir/$release_all_name";
+
+mkdir -p "$release_base_dir";
+mkdir -p "$all_dir";
+cp LICENSE "$all_dir";
+
+build_zip()
+{
+  release_dirname="SpoqaHanSans_$1";
+  release_dir="$release_base_dir/$release_dirname";
+  echo "* release $release_dirname";
+  mkdir -p "$release_dir";
+  cp -r "$project_root/$2/"* "$release_dir/";
+  cp -r "$release_dir" "$all_dir";
+  cp LICENSE "$release_dir/";
+
+  cd "$release_base_dir";
+  zip "$release_dir.zip" -r "$release_dirname";
+  cd ..
+  rm -rf "$release_dir";
+}
+
+echo "Release $release_tag";
+echo "~~~~~~~~~~~~~~~";
+
+echo "${TRAVIS_REPO_SLUG:-"origin"}/${TRAVIS_BRANCH:-"master"}";
+
+# git log from pre-released version to current version
+# git log "$(git tag | tail -n 2 | head -n 1)"..."$release_tag" --pretty="format:%an <%ae> %s" --no-merges
+
+echo "# Compress fonts...";
+
+build_zip "original" \
+          "Original/SpoqaHanSans";
+
+build_zip "jp_original" \
+          "Original/SpoqaHanSans_JP";
+
+build_zip "subset" \
+          "Subset/SpoqaHanSans";
+
+build_zip "jp_subset" \
+          "Subset/SpoqaHanSans_JP";
+
+echo "* release $release_all_name";
+cd "$release_base_dir";
+zip "$release_all_name.zip" -r "$release_all_name";
+rm -rf "$release_all_name";
+cd ..
+
+echo "release done.";
