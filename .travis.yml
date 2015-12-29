@@ -1,5 +1,7 @@
 language: ruby
+rvm:
+- 2.1.1
 before_install:
-- gem install -N jekyll
+- gem install -N jekyll:2.4.0
 script:
 - ./lint.sh
