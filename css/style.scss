@@ -229,6 +229,13 @@ section h3 {
   margin-right: 30px;
   float: right;
 
+  @media only screen and (max-width: 650px) {
+    display: none;
+  }
+  @media only screen and (max-width: 400px) {
+    display: none;
+  }
+
   .color-circle {
     display: inline-block;
     height: 16px;
