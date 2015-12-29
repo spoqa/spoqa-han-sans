@@ -40,6 +40,13 @@
       ga('create', 'UA-61954097-5', 'auto');
       ga('send', 'pageview');
     </script>
+    <script type="text/javascript">
+      if ("ontouchstart" in document.documentElement) {
+          document.documentElement.className += " touch";
+      } else {
+          document.documentElement.className += " no-touch";
+      }
+    </script>
   </head>
   <body>
     <!-- Load Facebook SDK for JavaScript -->
