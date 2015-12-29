@@ -223,6 +223,13 @@ section h3 {
   margin-top: 60px;
   margin-bottom: 40px;
   text-align: right;
+  
+  @media only screen and (max-width: 650px) {
+    margin-top: 20px;
+  }
+  @media only screen and (max-width: 400px) {
+    margin-top: 10px;
+  }
 }
 .color-circle-wrap {
   display: inline-block;
