@@ -189,6 +189,10 @@ section h3 {
   width: 100%;
   transition: 0.2s background-color, 0.2s color;
 
+  h1 {
+    margin-top: 1em;
+  }
+
   body.preview-background-dark & {
     background-color: $grey-8;
     color: $grey-0;
@@ -272,7 +276,7 @@ section h3 {
     }
 
     li {
-      display: block;
+      display: none;
       height: 0;
       margin: 0;
       color: transparent;
@@ -286,6 +290,7 @@ section h3 {
 
     $preview-font-weight-expanded-li-height: 23px;
     &.expanded {
+      display: block;
       height: auto;
       box-shadow: 0 1px rgba(0, 0, 0, 0.05);
       cursor: default;
@@ -309,6 +314,7 @@ section h3 {
         }
 
         span {
+          display: inline-block;
           cursor: pointer;
           padding-bottom: 3px;
           border-bottom: 2px solid transparent;
@@ -853,17 +859,49 @@ a.btn {
 .footer {
   padding-top: 80px;
   background-color: $grey-0;
+  height: auto;
+  border-bottom: none;
 
-  &.topnav { 
-    height: auto;
-    border-bottom: none;
-    a {
-      border-bottom: none;
-      color: inherit;
+  .brand-logo {
+    display: inline-block;
+    line-height: 60px;
+  }
 
-      &:hover {
-        border-bottom: none;
-        color: $primary-d1;
+  .topnav-tabs {
+    float: right;
+    position: relative;
+    height: $navbar-height;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    z-index: $zindex-topnav-fixed;
+    @include clearfix; // Prevent floats from breaking the navbar
+
+    li {
+      float: left; // For remove lists side margin
+      position: relative;
+      display: inline-block;
+      margin-bottom: -1px;
+
+      a.topnav-tab {
+        display: block;
+        font-size: $topnav-font-size;
+        color: inherit;
+        line-height: $topnav-font-size * 1.5;  //FIXME: `line-height-base: font-size * 1.5`
+        padding: (($navbar-height - $navbar-border-width - $topnav-font-size * 1.5) / 2) $topnav-gutter;
+        border-bottom: $navbar-border-width solid transparent;
+        @extend .transition;
+
+        &:hover {
+          border-color: $primary-0;
+        }
+
+        &:active,
+        &.active,
+        &:focus {
+          text-decoration: none;
+          outline: none;
+        }
       }
     }
   }
