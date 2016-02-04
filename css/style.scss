@@ -458,6 +458,7 @@ section h3 {
       span {
         border-width: 6px;
         background-color: white;
+        color: #fff;
       }
     }
 
@@ -465,6 +466,7 @@ section h3 {
       span {
         border-width: 0;
         background-color: $grey-8;
+        color: $grey-8;
       }
 
       &:before {
