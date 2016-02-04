@@ -3,16 +3,16 @@ layout: default
 ---
 {% assign base_path = '../..' %}
     <section class="section-cover">
-      <div class="img-cover fixed-container">
-        <h1><img src="./images/cover.png" alt="Say hello to our new font Spoqa Han Sans, Fall 2015."></h1>
-      </div>
       <div class="fixed-container">
-        <p class="cover-info">
-          스포카 혼자 쓰기엔 지나치게 산뜻한 스포카 한 산스,<br>
-          한글날을 맞이하여 누구나 무료로 쓸 수 있도록 배포합니다.
-        </p>
+        <h1>스포카 혼자 쓰기엔 지나치게 산뜻한<br>스포카 한 산스</h1>
+        <p><dfn>스포카 한 산스</dfn>는 국문, 영문, 일문, 숫자, 글리프의 어울림이
+          훌륭합니다.<br>
+          라토(Lato)를 커스텀한 미려한 숫자는 수치 표기에 탁월합니다.</p>
+        <a href="#section-download" class="download btn">글꼴 내려받기</a>
+        {% include preview.html %}
       </div>
     </section>
+    <div class="divider fixed-container"></div>
     <section class="fixed-container section-intro" id="section-intro">
       <div class="row">
         <h2 class="section-title col-sm-6 col-xs-12">
@@ -273,10 +273,6 @@ layout: default
           </div>
         </div>
       </div>
-    </section>
-    <div class="divider fixed-container"></div>
-    <section class="fixed-container">
-      {% include font-demo.html %}
     </section>
     <div class="divider fixed-container"></div>
     <section class="fixed-container section-download" id="section-download">

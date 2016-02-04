@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #a9afb3;
+        fill-rule: evenodd;
+      }
+    </style>
+  </defs>
+  <g id="plus_icon">
+    <path id="plus_copy" data-name="plus copy" class="cls-1" d="M3890,487h-7v7h-2v-7h-7v-2h7v-7h2v7h7v2Z" transform="translate(-3874 -478)"/>
+  </g>
+</svg>

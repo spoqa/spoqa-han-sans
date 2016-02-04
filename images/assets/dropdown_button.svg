@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="8" height="8" viewBox="0 0 8 8">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #a9afb3;
+        fill-rule: evenodd;
+      }
+    </style>
+  </defs>
+  <g id="dropdown_button">
+    <path id="Rectangle_19_copy" data-name="Rectangle 19 copy" class="cls-1" d="M3932,486v8h-8Z" transform="translate(-3924 -486)"/>
+  </g>
+</svg>

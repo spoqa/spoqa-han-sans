@@ -3,7 +3,6 @@
   height: $navbar-height;
   margin: 0;
   padding: 0;
-  border-bottom: 1px solid $divider-color;
   background-color: #fff;
   list-style: none;
   z-index: $zindex-topnav-fixed;
@@ -29,7 +28,7 @@
       a.topnav-tab {
         display: block;
         font-size: $topnav-font-size;
-        color: $text-color;
+        color: inherit;
         line-height: $topnav-font-size * 1.5;  //FIXME: `line-height-base: font-size * 1.5`
         padding: (($navbar-height - $navbar-border-width - $topnav-font-size * 1.5) / 2) $topnav-gutter;
         border-bottom: $navbar-border-width solid transparent;
