@@ -51,9 +51,6 @@
 // Optional 
 @import "page-headers";
 
-// Font demo
-@import "font-demo";
-
 // ADhoc Style
 
 code {
@@ -188,25 +185,387 @@ section h3 {
 }
 
 .section-cover {
+  margin-top: -70px;
   width: 100%;
-  background-color: $grey-0;
+  transition: 0.2s background-color, 0.2s color;
 
-  .img-cover {
-    text-align: center;
+  body.preview-background-dark & {
+    background-color: $grey-8;
+    color: $grey-0;
 
-    img {
-      width: 100%;
-      max-width: 900px;
-      margin-bottom: 40px;
+    & + .divider {
+      visibility: hidden;
     }
   }
-  .cover-info {
-    text-align: center;
-    font-size: 22px;
+
+  p {
+    margin-bottom: 46px;
 
     @media only screen and (max-width: 650px) {
-      br {
-        display: none;
+      display: none;
+    }
+  }
+
+  dfn {
+    font-style: normal;
+  }
+
+  // preview
+  $preview-control-width: 134px;
+  $preview-control-height: 46px;
+  $preview-control-border-width: 2px;
+
+  .download.btn {
+    width: 200px;
+    padding: 11px 0 0 0;
+    height: $preview-control-height;
+  }
+
+  .preview-controls {
+    display: block;
+    float: right;
+
+    @media only screen and (max-width: 768px) {
+      float: none;
+    }
+  }
+
+  .preview-font-weight,
+  .preview-font-size,
+  .preview-background {
+    margin-top: 10px;
+  }
+
+  .preview-font-weight, .preview-font-size {
+    border: $preview-control-border-width solid $grey-2;
+    width: $preview-control-width;
+    height: $preview-control-height;
+    padding: 10px 0;
+    transition: 0.2s border-color;
+
+
+    body.preview-background-dark & {
+      border-color: $grey-5;
+    }
+  }
+
+  .preview-font-weight {
+    position: absolute;
+    padding: 0;
+    text-align: center;
+    text-transform: uppercase;
+    cursor: pointer;
+    background-color: white;
+    transition: 0.2s height, 0.2s box-shadow, 0.2s background-color;
+    z-index: 1000;
+
+    body.preview-background-dark & {
+      background-color: $grey-8;
+    }
+
+    &:hover {
+      background-color: $grey-1;
+
+      body.preview-background-dark & {
+        background-color: $grey-7;
+      }
+    }
+
+    li {
+      display: block;
+      height: 0;
+      margin: 0;
+      color: transparent;
+      transition: 0.2s height, 0.2s color;
+      font-weight: bolder;
+
+      span {
+        transition: 0.2s border-color;
+      }
+    }
+
+    $preview-font-weight-expanded-li-height: 23px;
+    &.expanded {
+      height: auto;
+      box-shadow: 0 1px rgba(0, 0, 0, 0.05);
+      cursor: default;
+
+      &:hover {
+        background-color: white;
+
+        body.preview-background-dark & {
+          background-color: $grey-8;
+        }
+      }
+
+      li {
+        height: $preview-font-weight-expanded-li-height;
+        display: block;
+        margin: 15px 0;
+        color: $grey-7;
+
+        body.preview-background-dark & {
+          color: $grey-0;
+        }
+
+        span {
+          cursor: pointer;
+          padding-bottom: 3px;
+          border-bottom: 2px solid transparent;
+
+          &:hover {
+            border-bottom-color: $grey-2;
+          }
+        }
+      }
+    }
+
+    @each $weight in thin regular bold {
+      body.preview-weight-#{$weight} & li.#{$weight} {
+        height: $preview-font-weight-expanded-li-height;
+        margin: 10px 0;
+        display: block;
+        color: $grey-7;
+      }
+
+      body.preview-background-dark.preview-weight-#{$weight} & li.#{$weight} {
+        color: $grey-0;
+      }
+
+      body.preview-weight-#{$weight} &.expanded li.#{$weight} span {
+        border-bottom-color: $mainblue-l1;
+
+        &:hover {
+          border-bottom-color: $mainblue-0;
+        }
+      }
+    }
+  }
+
+  .preview-font-size {
+    $preview-font-size-padding: 6px;
+    padding: $preview-font-size-padding;
+    float: left;
+    margin-left: 14px + $preview-control-width;
+    margin-right: 14px;
+
+    @media only screen and (max-width: 400px) {
+      margin-left: 9px + $preview-control-width;
+      margin-right: 9px;
+    }
+
+    $preview-font-size-button-height: $preview-control-height - ($preview-control-border-width + $preview-font-size-padding) * 2;
+    $preview-font-size-button-width: $preview-font-size-button-height;
+    $preview-font-size-button-padding: 7px;
+    button {
+      margin: 0;
+      border: none;
+      outline: none;
+      -webkit-appearance: none;
+      -webkit-border-fit: border !important;
+      width: $preview-font-size-button-width;
+      height: $preview-font-size-button-height;
+      color: transparent;
+      cursor: pointer;
+      background-color: transparent;
+      background-size: $preview-font-size-button-width - $preview-font-size-button-padding * 2
+                       $preview-font-size-button-height - $preview-font-size-button-padding * 2;
+      background-repeat: no-repeat;
+      background-position: $preview-font-size-button-padding $preview-font-size-button-padding;
+      background-image: url('../images/assets/minus_icon.svg');
+
+      &.enlarge {
+        background-image: url('../images/assets/plus_icon.svg');
+      }
+
+      &:focus {
+        background-color: inherit;
+      }
+
+      &:hover {
+        background-color: $grey-1;
+
+        body.preview-background-dark & {
+          background-color: $grey-7;
+        }
+      }
+    }
+    
+    input {
+      margin: 0;
+      padding: 0;
+      width: $preview-control-width - ($preview-control-border-width + $preview-font-size-padding + $preview-font-size-button-width) * 2;
+      height: $preview-font-size-button-height;
+      border: none;
+      outline: none;
+      -webkit-appearance: none;
+      -webkit-border-fit: border !important;
+      background-color: transparent;
+      text-align: center;
+      font-size: inherit;
+      font-family: inherit;
+      font-weight: bolder;
+    }
+  }
+
+  .preview-background {
+    display: block;
+    float: left;
+    padding: 0;
+    color: transparent;
+    font-size: 1px;
+
+    li {
+      $preview-background-item-width: 46px;
+      $preview-background-item-height: $preview-background-item-width;
+      display: block;
+      float: left;
+      width: $preview-background-item-width;
+      height: $preview-background-item-height;
+      color: $grey-7;
+      cursor: pointer;
+
+      span {
+        display: block;
+        border: 2px solid $grey-2;
+        width: $preview-background-item-width;
+        height: $preview-background-item-height;
+        transition: 0.2s border-width, 0.2s border-color;
+      }
+
+      &:before {
+        position: absolute;
+        content: 'A';
+        display: block;
+        width: $preview-background-item-width;
+        line-height: $preview-background-item-height;
+        text-align: center;
+        margin: auto;
+        font-size: 15px;
+        font-weight: bolder;
+      }
+    }
+
+    .light {
+      margin-right: 9px;
+
+      span {
+        border-width: 6px;
+        background-color: white;
+      }
+    }
+
+    .dark {
+      span {
+        border-width: 0;
+        background-color: $grey-8;
+      }
+
+      &:before {
+        color: $grey-0;
+      }
+    }
+
+    body.preview-background-dark & {
+      li span {
+        border-color: $grey-5;
+      }
+
+      .light span {
+        border-width: 2px;
+      }
+
+      .dark span {
+        border-width: 6px;
+      }
+    }
+  }
+
+  .preview-text {
+    $preview-text-height: 239px;
+    $preview-text-square-width: 8px;
+    margin-top: 25px;
+    border: none;
+    outline: none;
+    -webkit-appearance: none;
+    -webkit-border-fit: border !important;
+    resize: none;
+    width: 100%;
+    height: $preview-text-height;
+    padding: 30px;
+    font-family: inherit;
+    font-size: 22px;
+    color: $grey-5;
+
+    @mixin preview-text-borders($background-color, $shift) {
+      background-image:
+        url(../images/assets/preview-text-v-line.png),
+        url(../images/assets/preview-text-v-line.png),
+        // left two square fills
+        linear-gradient(to bottom,
+                        transparent 0, transparent 1px,
+                        $background-color 1px, $background-color 7px,
+                        transparent 7px, transparent ($preview-text-height - 7px),
+                        $background-color ($preview-text-height - 7px), $background-color ($preview-text-height - 1px),
+                        transparent ($preview-text-height - 1px)),
+        // right to square fills
+        linear-gradient(to bottom,
+                        transparent 0, transparent 1px,
+                        $background-color 1px, $background-color 7px,
+                        transparent 7px, transparent ($preview-text-height - 7px),
+                        $background-color ($preview-text-height - 7px), $background-color ($preview-text-height - 1px),
+                        transparent ($preview-text-height - 1px)),
+        url(../images/assets/preview-text-h-line.png);
+      background-position: left $shift, right $shift,
+                           2px 0, calc(100% - 2px) top,
+                           left $shift;
+      background-repeat: no-repeat, no-repeat,
+                         no-repeat, no-repeat,
+                         repeat-x;
+      background-size: $preview-text-square-width auto,
+                       $preview-text-square-width auto,
+                       4px $preview-text-height,
+                       4px $preview-text-height,
+                       auto ($preview-text-height * 2);
+    }
+
+    @include preview-text-borders(white, top);
+    transition: 0.2s background-color;
+    body.preview-background-dark & {
+      background-color: $grey-8;
+      @include preview-text-borders($grey-8, top);
+    }
+
+    // non-standard vendor-prefixed pseudoclasses can't be enumerated using commas
+    @each $peusdoclass in placeholder -moz-placeholder -webkit-input-placeholder {
+      &::placeholder {
+        color: $grey-5;
+      }
+    }
+
+    &:focus {
+      color: $grey-7;
+
+      @include preview-text-borders(white, -$preview-text-height);
+      body.preview-background-dark & {
+        background-color: $grey-8;
+        @include preview-text-borders($grey-8, -$preview-text-height);
+      }
+    }
+
+    body.preview-weight-thin & {
+      font-weight: lighter;
+    }
+
+    body.preview-weight-bold & {
+      font-weight: bolder;
+    }
+
+    body.preview-background-dark & {
+      color: $grey-5;
+
+      &:focus {
+        color: white;
       }
     }
   }
@@ -218,6 +577,19 @@ section h3 {
   }
 }
 
+body.preview-background-dark .topnav{
+  background-color: $grey-8;
+  color: $grey-0;
+
+  .toggle:after {
+    color: $grey-0;
+  }
+  @media only screen and (max-width: 650px) {
+    .menu {
+      background: rgba($grey-8, 0.9);
+    }
+  }
+}
 
 .group-color-circle {
   margin-top: 60px;
@@ -431,9 +803,20 @@ section h3 {
   }
 }
 
-.FontDemo {
-  .FontDemo-optionContainer {
-    margin-bottom: 40px;
+a.btn {
+  margin: 10px 0;
+  width: 100%;
+  padding-left: 0;
+  padding-right: 0;
+  font-size: 16px;
+  font-weight: 700;
+  color: $primary-0;
+  background-color: transparent;
+  border: 2px solid $primary-0;
+  transition: 0.2s ease-in background-color;
+
+  &:hover {
+    background-color: rgba($primary-0, 0.1);
   }
 }
 
@@ -441,22 +824,6 @@ section h3 {
   padding: 0 15px;
   margin-top: 60px;
   text-align: center;
-
-  .btn {
-    margin: 10px 0;
-    width: 100%;
-    padding-left: 0;
-    padding-right: 0;
-    font-size: 16px;
-    font-weight: 700;
-    color: $primary-0;
-    border: 2px solid $primary-0;
-    transition: 0.2s ease-in background-color;
-
-    &:hover {
-      background-color: rgba($primary-0, 0.1);
-    }
-  }
 
   .download {
     padding: 0;

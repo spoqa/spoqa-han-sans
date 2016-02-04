@@ -1,0 +1,96 @@
+<div class="preview-controls">
+  <ul class="preview-font-weight">
+    <li class="thin" data-weight="thin"><span>Thin</span></li>
+    <li class="regular" data-weight="regular"><span>Regular</span></li>
+    <li class="bold" data-weight="bold"><span>Bold</span></li>
+  </ul>
+
+  <div class="preview-font-size">
+    <button class="lessen" data-step="-1">&minus;</button><!--
+    --><input type="text" value="22px" pattern="^\s*[1-9]\d*\s*(px\s*)?$"
+              data-val="22" data-touched="false"><!--
+    --><button class="enlarge" data-step="1">&plus;</button>
+  </div>
+
+  <ul class="preview-background">
+    <li class="light" data-background="light"><span>Light</span></li>
+    <li class="dark" data-background="dark"><span>Dark</span></li>
+  </ul>
+</div>
+
+<textarea class="preview-text" placeholder="국문, 영문, 일문을 혼합 입력하여 / 차별 없는 어울림을 경험하세요."></textarea>
+
+<script>
+(function ($) {
+  // tricky hack: WHATWG standards disllow placeholder to have any line breaks.
+  var previewText = $('.preview-text');
+  previewText.attr(
+    'placeholder',
+    previewText.attr('placeholder').replace(/\/\s*/g, '\n')
+  );
+  // font weight
+  $('.preview-font-weight').click(function () {
+    var self = $(this);
+    if (!self.hasClass('expanded')) {
+      self.addClass('expanded');
+    }
+  });
+  $('.preview-font-weight li').click(function (e) {
+    var parent = $(this.parentNode);
+    if (!parent.hasClass('expanded')) return;
+    var weight = $(this).data('weight');
+    document.body.className =
+      document.body.className.replace(/\bpreview-weight-\w+\b/g, ' ') +
+      ' preview-weight-' + weight;
+    parent.removeClass('expanded');
+    e.stopPropagation();
+  });
+
+  // font size
+  function setFontSize(size, draw) {
+    var input = $('.preview-font-size input'),
+        previousValue = window.parseInt(input.data('val'));
+    if (previousValue != size) {
+      input.data({
+        val: size,
+        touched: 'true'
+      });
+      $('.preview-text').css('font-size', size + 'px');
+      if (draw) {
+        input.val(size + 'px');
+      }
+    }
+  }
+  $('.preview-font-size button').click(function () {
+    var button = $(this),
+        step = window.parseInt(button.data('step')),
+        input = $('.preview-font-size input'),
+        previousValue = window.parseInt(input.data('val')),
+        nextValue = previousValue + step;
+    setFontSize(nextValue, true);
+  });
+  function fontSizeChanged() {
+    var match = $(this).val().match(/^\s*(\d+)\s*(px\s*)?$/);
+    if (!match) return;
+    var nextValue = window.parseInt(match[1]);
+    setFontSize(nextValue, false);
+  }
+  $('.preview-font-size input').on({
+    change: function () {
+      fontSizeChanged.apply(this);
+      setFontSize($(this).data('val'), true);
+    },
+    keyup: fontSizeChanged,
+    keydown: fontSizeChanged,
+    keypress: fontSizeChanged
+  });
+
+  // background
+  $('.preview-background li').click(function () {
+    var background = $(this).data('background');
+    document.body.className =
+      document.body.className.replace(/\bpreview-background-\w+\b/g, ' ') +
+      ' preview-background-' + background;
+  });
+})(jQuery);
+</script>
