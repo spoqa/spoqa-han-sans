@@ -7,3 +7,5 @@ kramdown:
   input: GFM
   hard_wrap: false
 
+email:
+  address: visual-design@spoqa.com
