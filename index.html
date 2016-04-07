@@ -399,7 +399,7 @@ layout: default
           <div class="col-sm-4 col-xs-12">
             <h3>문의 사항을 보내주세요. </h3>
             <div>
-              <a href="mailto:{{ site.email.address }}">
+              <a href="mailto:{{ site.email.address }}?body={{ site.email.body_preset|url_encode|replace:'+','%20'|escape }}">
                 스포카 디자인팀에 메일 보내기 &gt;
               </a> 
             </div>
