@@ -1,4 +1,10 @@
-# Spoqa Han Sans v1.0.0
+Spoqa Han Sans v1.0.1
+=====================
+
+[![npm version](https://badge.fury.io/js/spoqa-han-sans.svg)](https://www.npmjs.com/package/spoqa-han-sans)
+[![Build Status](https://travis-ci.org/spoqa/spoqa-han-sans.svg?branch=master)](https://travis-ci.org/spoqa/spoqa-han-sans)
+[![GitHub release](https://img.shields.io/github/release/spoqa/spoqa-han-sans.svg)](https://github.com/spoqa/spoqa-han-sans)
+
 
 스포카 한 산스는 국문, 영문, 일문, 숫자, 글리프의 어울림이 훌륭합니다.
 가는 굵기(Thin), 보통 굵기(Regular), 두꺼운 굵기(Bold) 세 가지 자족으로,
