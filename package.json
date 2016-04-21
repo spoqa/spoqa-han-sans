@@ -20,7 +20,7 @@
     "css/*",
     "scss/*",
     "less/*",
-    "fonts/*"
+    "Subset/*"
   ],
   "license": "SEE LICENSE IN LICENSE",
   "bugs": {
