@@ -64,3 +64,7 @@ Spoqa Han Sans 프로젝트에 제안하고 싶은 사항이 있다면 이슈를
 ## 제작 정보
 
 Spoqa Han Sans에 대한 제작 배경 및 미리보기에 대한 정보는 [Spoqa Han Sans Introduction](http://spoqa-han-sans.com/)에서 얻으실 수 있습니다.
+
+## 오픈 소스
+
+Spoqa Han Sans는 Spoqa에서 관리하고 있는 오픈 소스 서체로, [SIL Open Font License](http://scripts.sil.org/OFL)로 배포되고 있습니다.  ([프로젝트에 기여한 분들의 목록](https://github.com/spoqa/spoqa-han-sans/graphs/contributors) 참고.)
