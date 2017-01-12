@@ -1,6 +1,6 @@
 language: ruby
 rvm:
-- 2.1.1
+- 2.2
 before_install:
 - yes | gem install -N jekyll:2.4.0
 script:
