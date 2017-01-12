@@ -14,6 +14,8 @@
     <link rel="shortcut icon" href="{{ base_path }}/images/favicon.ico">
     <link rel="stylesheet" type="text/css" href="./css/style.css">
     <link href='https://fonts.googleapis.com/css?family=Source+Code+Pro' rel='stylesheet' type='text/css'>
+    <link href='//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSans-kr.css' rel='stylesheet' type='text/css'>
+    <link href='//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSans-jp.css' rel='stylesheet' type='text/css'>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
     <script>
@@ -59,35 +61,41 @@
       fjs.parentNode.insertBefore(js, fjs);
     }(document, 'script', 'facebook-jssdk'));</script>
 
-    <nav class="topnav">
-      <div class="fixed-container">
-        <div class="brand-logo"><strong>스포카 한 산스</strong>를 소개합니다.</div>
-        <div class="nav">
-          <input type="checkbox" id="toggle">
-          <label for="toggle" class="toggle" onclick></label>
-          <ul class="topnav-tabs menu">
-            <li>
-              <a class="topnav-tab" href="#section-intro">글꼴 소개</a>
-            </li>
-            <li>
-              <a class="topnav-tab" href="#section-edited">글꼴 특징</a>
-            </li>
-            <li>
-              <a class="topnav-tab cta" href="#section-download">글꼴 내려받기</a>
-            </li>
-          </ul>
+    <header id="top">
+      <div class="nav-box">
+        <div class="container-fluid">
+          <div class="nav-text"><a href="/">스포카 한 산스</a></div>
         </div>
       </div>
-    </nav>
+    </header>
       {{ content }}
 
-    <footer class="footer">
-      <div class="fixed-container row">
-        <div class="brand-logo">© Spoqa, Inc. Distributed under <a href="http://scripts.sil.org/OFL">Open Font License</a>.</div>
-        <ul class="topnav-tabs">
-          <li><a class="topnav-tab" href="http://www.spoqa.com/">회사 소개</a></li>
-          <li><a class="topnav-tab" href="http://spoqa.github.io/">블로그</a></li>
-        </ul>
+    <footer class="footer footer-light">
+      <div class="container-fluid">
+        <div class="footer-wrapper row">
+          <div class="col-xs-12 col-md-8">
+            <div class="info-default row">
+              <div class="col-xs-12 col-sm-10 col-md-12 col-lg-11">
+                서울특별시 강남구 테헤란로 420 하이리빙빌딩 9층 (서울 지사) / 대표 최재승, SOHN GRANT SUNGHOON / 사업자 등록번호 211-88-59899 / 통신판매번호 2013-서울강남-02586 / FAX 02-544-6460
+              </div>
+            </div>
+            <div class="footer-menus">
+              <a target="_blank" href="http://scripts.sil.org/OFL">Open Font License</a>
+              <a target="_blank" href="https://github.com/spoqa/spoqa-han-sans" target='blank'>View on Github</a>
+              <a href="https://dribbble.com/spoqa" target='blank' class="footer-menu">Dribbble</a>
+            </div>
+            <div class="corp-info">
+              <a class="corp-logo" href="http://www.spoqa.com/" target="blank"></a>
+              <div class="corp-text">
+                <span>SEOUL</span>
+                <span>∙</span>
+                <span>BUSAN</span>
+                <span>∙</span>
+                <span>TOKYO</span>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </footer>
   </body>
