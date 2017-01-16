@@ -24,29 +24,35 @@
 @font-face {
     font-family: 'Spoqa Han Sans JP';
     font-weight: 700;
-    src: local('SpoqaHanSansJP-Bold'), local('SpoqaHanSansJP-Bold'),
-    url(https://cdn.rawgit.com/spoqa/spoqa-han-sans/master/Subset/SpoqaHanSans_JP/Spoqa%20Han%20sans%20JP_subset%28webfont%20inclued%29/SpoqaHanSansJP-Bold/SpoqaHanSansJP-Bold.eot) format('eot'),
-    url(https://cdn.rawgit.com/spoqa/spoqa-han-sans/master/Subset/SpoqaHanSans_JP/Spoqa%20Han%20sans%20JP_subset%28webfont%20inclued%29/SpoqaHanSansJP-Bold/SpoqaHanSansJP-Bold.svg) format('svg'),
-    url(https://cdn.rawgit.com/spoqa/spoqa-han-sans/master/Subset/SpoqaHanSans_JP/Spoqa%20Han%20sans%20JP_subset%28webfont%20inclued%29/SpoqaHanSansJP-Bold/SpoqaHanSansJP-Bold.ttf) format('truetype'),
-    url(https://cdn.rawgit.com/spoqa/spoqa-han-sans/master/Subset/SpoqaHanSans_JP/Spoqa%20Han%20sans%20JP_subset%28webfont%20inclued%29/SpoqaHanSansJP-Bold/SpoqaHanSansJP-Bold.woff) format('woff');
+    src: url('https://cdn.rawgit.com/spoqa/spoqa-han-sans/master/Subset/SpoqaHanSans_JP/Spoqa%20Han%20sans%20JP_subset(webfont%20inclued)/SpoqaHanSansJP-Bold/SpoqaHanSansJP-Bold.eot');
+    src: local('SpoqaHanSansJP-Bold'),
+    url('https://cdn.rawgit.com/spoqa/spoqa-han-sans/master/Subset/SpoqaHanSans_JP/Spoqa%20Han%20sans%20JP_subset(webfont%20inclued)/SpoqaHanSansJP-Bold/SpoqaHanSansJP-Bold.eot?#iefix') format('embedded-opentype'),
+    url('https://cdn.rawgit.com/spoqa/spoqa-han-sans/master/Subset/SpoqaHanSans_JP/Spoqa%20Han%20sans%20JP_subset(webfont%20inclued)/SpoqaHanSansJP-Bold/SpoqaHanSansJP-Bold.woff2') format('woff2'),
+    url('https://cdn.rawgit.com/spoqa/spoqa-han-sans/master/Subset/SpoqaHanSans_JP/Spoqa%20Han%20sans%20JP_subset(webfont%20inclued)/SpoqaHanSansJP-Bold/SpoqaHanSansJP-Bold.woff') format('woff'),
+    url('https://cdn.rawgit.com/spoqa/spoqa-han-sans/master/Subset/SpoqaHanSans_JP/Spoqa%20Han%20sans%20JP_subset(webfont%20inclued)/SpoqaHanSansJP-Bold/SpoqaHanSansJP-Bold.ttf') format('truetype'),
+    url('https://cdn.rawgit.com/spoqa/spoqa-han-sans/master/Subset/SpoqaHanSans_JP/Spoqa%20Han%20sans%20JP_subset(webfont%20inclued)/SpoqaHanSansJP-Bold/SpoqaHanSansJP-Bold.svg#SpoqaHanSansJP') format('svg');
 }
 
 @font-face {
     font-family: 'Spoqa Han Sans JP';
     font-weight: 400;
-    src: local('SpoqaHanSansJP-Regular'), local('SpoqaHanSansJP-Regular'),
-    url(https://cdn.rawgit.com/spoqa/spoqa-han-sans/master/Subset/SpoqaHanSans_JP/Spoqa%20Han%20sans%20JP_subset%28webfont%20inclued%29/SpoqaHanSansJP-Regular/SpoqaHanSansJP-Regular.eot) format('eot'),
-    url(https://cdn.rawgit.com/spoqa/spoqa-han-sans/master/Subset/SpoqaHanSans_JP/Spoqa%20Han%20sans%20JP_subset%28webfont%20inclued%29/SpoqaHanSansJP-Regular/SpoqaHanSansJP-Regular.svg) format('svg'),
-    url(https://cdn.rawgit.com/spoqa/spoqa-han-sans/master/Subset/SpoqaHanSans_JP/Spoqa%20Han%20sans%20JP_subset%28webfont%20inclued%29/SpoqaHanSansJP-Regular/SpoqaHanSansJP-Regular.ttf) format('truetype'),
-    url(https://cdn.rawgit.com/spoqa/spoqa-han-sans/master/Subset/SpoqaHanSans_JP/Spoqa%20Han%20sans%20JP_subset%28webfont%20inclued%29/SpoqaHanSansJP-Regular/SpoqaHanSansJP-Regular.woff) format('woff');
+    src: url('https://cdn.rawgit.com/spoqa/spoqa-han-sans/master/Subset/SpoqaHanSans_JP/Spoqa%20Han%20sans%20JP_subset(webfont%20inclued)/SpoqaHanSansJP-Regular/SpoqaHanSansJP-Regular.eot');
+    src: local('SpoqaHanSansJP-Regular'),
+    url('https://cdn.rawgit.com/spoqa/spoqa-han-sans/master/Subset/SpoqaHanSans_JP/Spoqa%20Han%20sans%20JP_subset(webfont%20inclued)/SpoqaHanSansJP-Regular/SpoqaHanSansJP-Regular.eot?#iefix') format('embedded-opentype'),
+    url('https://cdn.rawgit.com/spoqa/spoqa-han-sans/master/Subset/SpoqaHanSans_JP/Spoqa%20Han%20sans%20JP_subset(webfont%20inclued)/SpoqaHanSansJP-Regular/SpoqaHanSansJP-Regular.woff2') format('woff2'),
+    url('https://cdn.rawgit.com/spoqa/spoqa-han-sans/master/Subset/SpoqaHanSans_JP/Spoqa%20Han%20sans%20JP_subset(webfont%20inclued)/SpoqaHanSansJP-Regular/SpoqaHanSansJP-Regular.woff') format('woff'),
+    url('https://cdn.rawgit.com/spoqa/spoqa-han-sans/master/Subset/SpoqaHanSans_JP/Spoqa%20Han%20sans%20JP_subset(webfont%20inclued)/SpoqaHanSansJP-Regular/SpoqaHanSansJP-Regular.ttf') format('truetype'),
+    url('https://cdn.rawgit.com/spoqa/spoqa-han-sans/master/Subset/SpoqaHanSans_JP/Spoqa%20Han%20sans%20JP_subset(webfont%20inclued)/SpoqaHanSansJP-Regular/SpoqaHanSansJP-Regular.svg#SpoqaHanSansJP') format('svg');
 }
 
 @font-face {
     font-family: 'Spoqa Han Sans JP';
     font-weight: 200;
-    src: local('SpoqaHanSansJP-Thin'), local('SpoqaHanSansJP-Thin'),
-    url(https://cdn.rawgit.com/spoqa/spoqa-han-sans/master/Subset/SpoqaHanSans_JP/Spoqa%20Han%20sans%20JP_subset%28webfont%20inclued%29/SpoqaHanSansJP-Thin/SpoqaHanSansJP-Thin.eot) format('eot'),
-    url(https://cdn.rawgit.com/spoqa/spoqa-han-sans/master/Subset/SpoqaHanSans_JP/Spoqa%20Han%20sans%20JP_subset%28webfont%20inclued%29/SpoqaHanSansJP-Thin/SpoqaHanSansJP-Thin.svg) format('svg'),
-    url(https://cdn.rawgit.com/spoqa/spoqa-han-sans/master/Subset/SpoqaHanSans_JP/Spoqa%20Han%20sans%20JP_subset%28webfont%20inclued%29/SpoqaHanSansJP-Thin/SpoqaHanSansJP-Thin.ttf) format('truetype'),
-    url(https://cdn.rawgit.com/spoqa/spoqa-han-sans/master/Subset/SpoqaHanSans_JP/Spoqa%20Han%20sans%20JP_subset%28webfont%20inclued%29/SpoqaHanSansJP-Thin/SpoqaHanSansJP-Thin.woff) format('woff');
+    src: url('https://cdn.rawgit.com/spoqa/spoqa-han-sans/master/Subset/SpoqaHanSans_JP/Spoqa%20Han%20sans%20JP_subset(webfont%20inclued)/SpoqaHanSansJP-Thin/SpoqaHanSansJP-Thin.eot');
+    src: local('SpoqaHanSansJP-Thin'),
+    url('https://cdn.rawgit.com/spoqa/spoqa-han-sans/master/Subset/SpoqaHanSans_JP/Spoqa%20Han%20sans%20JP_subset(webfont%20inclued)/SpoqaHanSansJP-Thin/SpoqaHanSansJP-Thin.eot?#iefix') format('embedded-opentype'),
+    url('https://cdn.rawgit.com/spoqa/spoqa-han-sans/master/Subset/SpoqaHanSans_JP/Spoqa%20Han%20sans%20JP_subset(webfont%20inclued)/SpoqaHanSansJP-Thin/SpoqaHanSansJP-Thin.woff2') format('woff2'),
+    url('https://cdn.rawgit.com/spoqa/spoqa-han-sans/master/Subset/SpoqaHanSans_JP/Spoqa%20Han%20sans%20JP_subset(webfont%20inclued)/SpoqaHanSansJP-Thin/SpoqaHanSansJP-Thin.woff') format('woff'),
+    url('https://cdn.rawgit.com/spoqa/spoqa-han-sans/master/Subset/SpoqaHanSans_JP/Spoqa%20Han%20sans%20JP_subset(webfont%20inclued)/SpoqaHanSansJP-Thin/SpoqaHanSansJP-Thin.ttf') format('truetype'),
+    url('https://cdn.rawgit.com/spoqa/spoqa-han-sans/master/Subset/SpoqaHanSans_JP/Spoqa%20Han%20sans%20JP_subset(webfont%20inclued)/SpoqaHanSansJP-Thin/SpoqaHanSansJP-Thin.svg#SpoqaHanSansJP') format('svg');
 }
