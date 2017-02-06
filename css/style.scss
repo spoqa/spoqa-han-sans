@@ -22,6 +22,7 @@ body {
   word-break: keep-all;
   font-size: 18px;
   line-height: 1.6;
+  color: $grey-8;
 }
 
 p, .column-title  {
@@ -32,9 +33,59 @@ p {
   margin-bottom: 16px;
 }
 
+
+//media query stuffed
 @media (max-width: 767px) {
   .column-group, .section-title, .section-description {
     text-align: left;
+  }
+  section, .section {
+    padding: 56px 0;
+  }
+  p, .column-title, body  {
+    font-size: 16px;
+  }
+  .feature-content {
+    padding-bottom: 30px;
+  }
+  .column-group {
+    padding-bottom: 0;
+  }
+  .section-title + .section-description {
+    margin-top: 0;
+  }
+  .section-title + .section-description {
+    margin-top: 0;
+  }
+  .section-description {
+    margin-bottom: 0;
+  }
+  .section-font-in-use {
+    margin-top: 22px;
+  }
+  .hero-wrap {
+    padding-top: 40px;
+  }
+  body, p, .column-title {
+    font-size: 15px;
+  }
+}
+
+h1 {
+  @media (max-width: 767px) {
+    font-size: 40px;
+  }
+  @media (max-width: 480px) {
+    font-size: 28px;  
+  }
+}
+
+h3.section-title {
+  @media (max-width: 767px) {
+    font-size: 32px;
+  }
+  @media (max-width: 480px) {
+    font-size: 30px;  
   }
 }
 
@@ -44,7 +95,53 @@ p {
   }  
 }
 
-//adhoc mixin 
+.subnav-wrap {
+  position: absolute;
+}
+
+// Scrolling Nav
+//
+// IMPORTANT: insert blow script on `<head>`
+//
+// <script type="text/javascript" src="{{ base_path }}/js/subnav-scrolling.js"></script>
+// <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-scrollTo/2.1.2/jquery.scrollTo.min.js"></script>
+//
+// ==========================================================================
+
+.subnav-wrap.subnav-scrolling {
+  nav.fixed-top {
+    position: fixed;
+    top: 0;
+    width: calc(#{$default-subnav-width} - (#{$container-padding-base} * 2));
+    max-width: 273.6px - ($container-padding-base * 2); // 273.px = $container-fluid-width * $default-subnav-width
+    z-index: $zindex-navbar;
+    margin-top:12px;
+  }
+
+  .subnav-menus li > a.active {
+    color: $link-color;
+    font-weight: 700;
+  }
+
+  // sub-sub menus
+  //---------------
+
+  .subnav-menus li {
+    > ul { // Hide
+      display: none;
+    }
+
+    > a.active + ul { // Show
+      display: block;
+    }
+
+    ul > li > a.active {
+      font-weight: 400;
+    }
+  }
+}
+
+// paragraph-link
 @mixin paragarph-link-effect {
   text-decoration: underline;
   color: $text-color;
@@ -84,17 +181,35 @@ p a {
 
 div.link-underline {
   margin-bottom: 36px;
+  @media (max-width: 767px) {
+    margin-bottom: 0;
+  }
 }
 
 .link-underline a {
   text-decoration: none;
   border-bottom: 2px solid $divider-color;
   color: $text-color-grey;
-  margin-right: 20px;
+  margin-right: 18px;
+  padding-bottom: 2px;
   &:hover, &:active {
     border-bottom: 2px solid $mainblue-l1;
     color: $text-color;
     transition: 0.2s all;
+  }
+  @media (max-width: 767px) {
+    margin-right: 6px;
+  }
+}
+
+//adhoc download wrap media query
+@media (max-width: 767px) {
+  .download-group {
+    display: block;
+    padding-top: 10px;
+  }
+  div.download-wrap {
+    margin-bottom: 28px;
   }
 }
 
@@ -102,14 +217,19 @@ div.link-underline {
   max-width: 100%;
   background-size: 50%;
   padding-top: 20px;
+  @media (max-width: 767px) {
+    padding-top: 0;
+  }
 }
 
 .fig_2 {
-  width: 812px;  
+  width: 373px; 
+  margin-top: -16px; 
 }
 
 .fig_3 {
-  width: 906px;  
+  width: 408px;
+  margin-top: -16px;
 }
 
 .fig_4 {
@@ -136,11 +256,136 @@ div.link-underline {
   font-weight: 700;
 }
 
+.section-description {
+  color: $text-color-grey;
+}
+
+.fig-magin-adhoc {
+  margin-bottom: 20px;
+}
+
+.section-font-in-use {
+  margin-right: -10px;
+  margin-left: -10px;
+  .col-sm-4 {
+    min-height: 322px;
+    width: 31%;
+    @media (max-width: 1440px) {
+      min-height: 280px;
+    }
+    @media (max-width: 909px) {
+      width: 30%;
+    }
+    @media (max-width: 767px) {
+      width: 97%;
+      min-height: 44px;
+      padding: 0 10px;
+    }
+  }
+}
+
+@each $item in tumblbug, assorted-books, ssup, toss, mangoplate, duiro, coinone, lendit, up {
+  .#{$item} {
+    background-image: url("../images/bw/#{$item}.png");
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    &:hover {
+      background-image: url("../images/color/#{$item}.png");
+      transition: background-image 0.5s;
+      button {
+        transform: translate3d(0, 0, 0);
+        opacity: 1;
+      }
+      @media (max-width: 767px) {
+        background-image: none;
+      }
+    }
+    .touch & {
+      background-image: url("../images/bw/#{$item}.png");
+      button {
+        transform: translate3d(0, 0, 0);
+        opacity: 1;
+      }
+      @media (max-width: 767px) {
+        background-image: none;
+        &:hover {
+          background-image: none;
+        }
+      }
+    }
+  }
+}
+
+button {
+  height: 48px;
+  font-size: 13px;
+  text-transform: uppercase;
+  border-radius: 4px;
+  border: 3px solid $grey-2;
+  padding: 2px 30px 0;
+  background: $grey-0;
+  color: $text-color;
+  opacity: 0;
+  transform: translate3d(0, -15px, 0);
+  transition: opacity 0.2s, transform 0.2s;
+  text-align: center;
+  font-weight: 700;
+  span {
+    color: $text-color-grey;
+  }
+  &:focus {
+    outline:0 !important;
+  }
+  &:hover, &:active {
+    color: $mainblue-0;
+    border-color: rgba(76, 128, 241, 0.2);
+    transition: all 0.2s;
+  }
+  &:active {
+    margin-top: 3px;
+    transition: margin-top 0.1s;
+  }
+  a:visited {
+    color: inherit;
+  }
+}
+
+.item-font-in-use {
+  background-size: 322px;
+  background-repeat: no-repeat;
+  border: 1px solid $border-color;
+  margin: 10px;
+  @media (max-width: 1440px) {
+    background-size: 280px;
+  }
+  @media (max-width: 767px) {
+    background-image: none;
+    border: none;
+    margin: 0;
+    button {
+      transform: translate3d(0, 0, 0);
+      opacity: 1;
+      background: none;
+      border: none;
+      align-self: flex-start;
+      padding: 0;
+      font-weight: 400;
+      &:active {
+        margin-top: 0;
+      }
+    }
+  }
+}
 
 //adhoc highlight style
 .highlight > pre {
     margin-bottom: 32px;
     padding: 28px 50px;
+    @media (max-width: 767px) {
+      padding: 28px 30px;    
+    }
 }
 
 .highlight .s1, .highlight .s, .highlight .sx {
@@ -149,4 +394,8 @@ div.link-underline {
 
 .highlight .nt {
   color: $mainblue-l1;
+}
+
+.highlight .na {
+  color: $green-l1;
 }
