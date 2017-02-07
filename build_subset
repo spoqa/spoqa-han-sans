@@ -1,0 +1,21 @@
+#!/bin/bash
+DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+pip install fonttools brotli
+mkdir -p $DIR/Subset/SpoqaHanSans
+mkdir -p $DIR/Subset/SpoqaHanSans_JP
+for ext in ttf woff woff2; do
+  for p in $DIR/Original/**/*.ttf; do
+    filename=$(basename "$p")
+    title="${filename%.*}"
+    printf "Making \e[1m\e[34m$title.$ext\e[0m..."
+    output_file=${p/Original/Subset}
+    output_file=${output_file/ttf/$ext}
+    if [ $ext != ttf ]; then
+        flavor=$ext
+    fi
+    pyftsubset "$p" --flavor=$flavor --output-file="$output_file" --text-file=$(dirname   "$output_file")/glyphs.txt --unicodes="U+2603,U+E000,U+E001" --layout-features='*'   --glyph-names --symbol-cmap --legacy-cmap --notdef-glyph --notdef-outline   --recommended-glyphs --name-IDs='*' --name-legacy --name-languages='*' --drop-tables=
+    if [ $? ]; then
+      printf "done!\n"
+    fi
+  done
+done
