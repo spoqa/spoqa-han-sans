@@ -40,7 +40,7 @@ layout: default
                 용량 다이어트를 감행해 웹 페이지에서도<br>부담 없이 사용할 수 있습니다.
               </div>
               <div class="column-content">
-                노토 산스를 포함한 한글꼴은 전체 용량이 크기 때문에 웹에서 사용하기에 좋지 않습니다. 이에 11,172자에서 한글꼴 완성형의 최소 단위인 2,350자로 줄였습니다. 첫 버전의 용량은 16MB에서 441KB 수준으로 줄었습니다. 
+                노토 산스를 포함한 한글꼴은 전체 용량이 크기 때문에 웹에서 사용하기에 좋지 않습니다. 이에 11,172자에서 한글꼴 완성형의 최소 단위인 2,350자로 줄였습니다. 첫 버전의 용량은 16MB에서 441KB 수준으로 줄었습니다.
                 <div class="link-underline">
                   <a target="_blank" href="https://spoqa.github.io/2016/06/03/localize-type-setting.html">스포카 한 산스와 글꼴 경량화</a>
                 </div>
@@ -53,7 +53,7 @@ layout: default
                 기존 스포카 한 산스를 개선한<br>두 번째 버전을 공개합니다.
               </div>
               <div class="column-content">
-                스포카 한 산스를 처음 공개하고 많은 사랑을 받았습니다.<br>그만큼 다양한 피드백을 들었고, 내부적으로 직접 사용하면서도 개선의 필요성을 느꼈습니다. <br>이를 반영해 개선한 스포카 한 산스를 공개합니다. 
+                스포카 한 산스를 처음 공개하고 많은 사랑을 받았습니다.<br>그만큼 다양한 피드백을 들었고, 내부적으로 직접 사용하면서도 개선의 필요성을 느꼈습니다. <br>이를 반영해 개선한 스포카 한 산스를 공개합니다.
                 <div class="link-underline">
                   <a target="_blank" href="https://spoqa.github.io/2016/06/03/localize-type-setting.html">스포카 한 산스 2.0에 관한 몇가지 단편적 사실들</a>
                 </div>
@@ -145,8 +145,42 @@ layout: default
         <h3 class="section-title">스포카 한 산스 써보기</h3>
         <div class="section-description">
           아래 섹션에 원하는 글자를 입력해 스포카 한 산스를 웹 페이지에서 써보세요!<br>
-          원하는 글자 굵기를 선택할 수 있으며, 글자 크기, 글줄 사이, 글자 사이 및 색상을 변경할 수 있습니다. 
-        </div> 
+          원하는 글자 굵기를 선택할 수 있으며, 글자 크기, 글줄 사이, 글자 사이 및 색상을 변경할 수 있습니다.
+        </div>
+        <div class="preview-area">
+          <div class="control-bar">
+            <div class="control-group">
+              <div class="option light"></div>
+              <div class="option dark"></div>
+            </div>
+            <div class="control-group">
+              <div class="fonts dropdown">
+                <button class="btn btn-default dropdown-toggle" type="button" id="dropdown-default" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                  KR Regular
+                  <span class="caret"></span>
+                </button>
+                <ul class="dropdown-menu" aria-labelledby="dropdown-default">
+                  <li><a href="#">KR Bold</a></li>
+                  <li><a href="#">KR Regular</a></li>
+                  <li><a href="#">KR Thin</a></li>
+                  <li><a href="#">JP Bold</a></li>
+                  <li><a href="#">JP Regular</a></li>
+                  <li><a href="#">JP Thin</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <textarea>도도 포인트의 많은 부분은 오픈소스에 기반한 기술로 이루어져 있습니다. 스포카는 오픈소스 기술을 이용하는 만큼 그 생태계에 기여해야 한다고 믿습니다. 이러한 기여가 모일수록 오픈소스 커뮤니티가 건강해지며, 사용자도 함께 성장해 나갈 것입니다.</textarea>
+        </div>
+        <script defer>
+          $('.preview-area').on('click', '.option', function (e) {
+            if ($(this).hasClass('light')) {
+              $('.preview-area').addClass('light');
+            } else {
+              $('.preview-area').removeClass('light');
+            }
+          });
+        </script>
       </div>
     </section>
     <section class="section">
@@ -190,7 +224,7 @@ layout: default
       <div class="container-fluid">
         <h3 class="section-title">어느 서비스에서 스포카 한 산스를 사용하고 있을까요?</h3>
         <div class="section-description">
-          스포카 한 산스는 명료한 숫자 모양 덕분에, 숫자를 많이 써야 하는 서비스의 사랑을 받고 있습니다. 또한, 무료로 배포하고 있어 비영리 행사나 예술계 행사의 웹 페이지에서도 자주 쓰입니다. 어떤 곳에서 어떻게 스포카 한 산스를 사용하는지 아래 링크를 눌러 확인해보세요. 
-        </div> 
+          스포카 한 산스는 명료한 숫자 모양 덕분에, 숫자를 많이 써야 하는 서비스의 사랑을 받고 있습니다. 또한, 무료로 배포하고 있어 비영리 행사나 예술계 행사의 웹 페이지에서도 자주 쓰입니다. 어떤 곳에서 어떻게 스포카 한 산스를 사용하는지 아래 링크를 눌러 확인해보세요.
+        </div>
       </div>
     </section>

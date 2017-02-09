@@ -16,6 +16,8 @@ $cover-background-color: $white;
 
 @import "dooboo/_dooboo-default";
 
+@import "./preview";
+
 //adhoc style
 
 body {
@@ -41,10 +43,10 @@ p {
 .container-fluid {
   @media screen and (max-width: 1440px) {
     max-width: 960px;
-  }  
+  }
 }
 
-//adhoc mixin 
+//adhoc mixin
 @mixin paragarph-link-effect {
   text-decoration: underline;
   color: $text-color;
@@ -105,22 +107,22 @@ div.link-underline {
 }
 
 .fig_2 {
-  width: 812px;  
+  width: 812px;
 }
 
 .fig_3 {
-  width: 906px;  
+  width: 906px;
 }
 
 .fig_4 {
-  width: 258px;  
+  width: 258px;
 }
 .fig_5 {
-  width: 362px;  
+  width: 362px;
 }
 
 .fig_6, .fig_7 {
-  width: 360px;  
+  width: 360px;
 }
 
 .section-preview {

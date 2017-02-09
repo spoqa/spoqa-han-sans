@@ -1,0 +1,100 @@
+@import "dooboo/mo/index";
+@import "dooboo/mixins";
+
+.preview-area {
+    $dark-background: $grey-8;
+    $dark-foreground: $white;
+    $dark-border: $grey-6;
+    $light-background: $white;
+    $light-foreground: $grey-7;
+    $light-border: $grey-3;
+    $highlight: $mainblue-l1;
+
+    $transition-duration: .5s;
+    $transition-duration-short: .1s;
+
+    box-sizing: border-box;
+    border-radius: 6px;
+    background-color: $dark-background;
+    box-shadow: 0 1px 14px 0 rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: all $transition-duration ease;
+
+    .control-bar {
+        @include clearfix;
+
+        height: 32px;
+        box-sizing: content-box;
+        padding: 16px;
+        border-bottom: 1px solid $dark-border;
+        transition: border-color $transition-duration ease;
+
+        .control-group {
+            @include clearfix;
+
+            float: left;
+            height: 32px;
+            padding: 0 9px;
+            border-left: 1px solid $dark-border;
+            &:first-child { border-left: none; }
+            transition: border-color $transition-duration ease;
+
+            .option {
+                float: left;
+                width: 28px;
+                height: 28px;
+                margin-right: 10px;
+                box-sizing: border-box;
+                border: 2px solid $grey-4;
+                border-radius: 50%;
+                transition: border $transition-duration-short ease;
+
+                &.light { background-color: $light-background; }
+                &.dark  { background-color: $dark-background;  }
+                &:hover { border-color: $highlight; }
+            }
+        }
+
+        .fonts.dropdown {
+            .btn {
+                background: transparent;
+                color: $grey-5;
+            }
+            .dropdown-menu {
+                background-color: $dark-background;
+                a { color: $grey-5; }
+            }
+        }
+    }
+
+    textarea {
+        display: block;
+        width: 100%;
+        height: 504px;
+        border: none;
+        padding: 50px 39px;
+        background: transparent;
+        font-size: 37px;
+        font-weight: normal;
+        font-style: normal;
+        font-stretch: normal;
+        line-height: 1.65;
+        letter-spacing: normal;
+        color: $dark-foreground;
+        transition-property: color, font-size;
+        transition: color $transition-duration ease;
+    }
+
+    &.light {
+        background-color: $light-background;
+
+        .control-bar {
+            border-bottom-color: $light-border;
+            .control-group { border-left-color: $light-border; }
+        }
+        textarea { color: $light-foreground; }
+    }
+
+    &.light       .option.light,
+    &:not(.light) .option.dark { border-width: 6px; }
+}
