@@ -95,8 +95,22 @@ h3.section-title {
   }  
 }
 
+.nav-wrap {
+  position: relative;
+}
+
+.nav-right {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
 .subnav-wrap {
   position: absolute;
+}
+
+.switch-language a {
+  color: $text-color-grey;
 }
 
 // Scrolling Nav
