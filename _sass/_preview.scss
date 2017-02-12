@@ -18,8 +18,8 @@
 
     box-sizing: border-box;
     border-radius: 6px;
+    border: 1px solid $dark-border;
     background-color: $dark-background;
-    box-shadow: 0 1px 14px 0 rgba(0, 0, 0, 0.1);
     overflow: hidden;
     transition: all $transition-duration ease;
 
@@ -172,6 +172,7 @@
 
     &.light {
         background-color: $light-background;
+        border-color: $light-border;
         > .control-bar {
             > .slider.group > .slider > .range > .handle {
                 outline-color: $light-background;
