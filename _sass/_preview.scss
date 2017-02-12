@@ -163,7 +163,7 @@
         transition-property: border-color, color, font-size, line-height, letter-spacing;
         transition-duration: $transition-duration;
         &.kr { font-family: 'Spoqa Han Sans'; }
-        &.jp { font-family: 'Spoqa Han Sans JP'; }
+        &.jp { font-family: 'Spoqa Han Sans JP'; word-break: break-all; }
         &.bold { font-weight: 700; }
         &.regular { font-weight: 400; }
         &.light { font-weight: 300; }
