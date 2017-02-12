@@ -16,6 +16,8 @@ $cover-background-color: $white;
 
 @import "dooboo/_dooboo-default";
 
+@import "./preview";
+
 //adhoc style
 
 body {
@@ -92,7 +94,7 @@ h3.section-title {
 .container-fluid {
   @media screen and (max-width: 1440px) {
     max-width: 960px;
-  }  
+  }
 }
 
 .subnav-wrap {
@@ -233,14 +235,14 @@ div.link-underline {
 }
 
 .fig_4 {
-  width: 258px;  
+  width: 258px;
 }
 .fig_5 {
-  width: 362px;  
+  width: 362px;
 }
 
 .fig_6, .fig_7 {
-  width: 360px;  
+  width: 360px;
 }
 
 .section-preview {
