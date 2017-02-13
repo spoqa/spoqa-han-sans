@@ -12,7 +12,7 @@
     <meta property="og:image" content="http://www.spoqa-han-sans.com/images/cover.png">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <link rel="shortcut icon" href="{{ base_path }}/images/favicon.ico">
-    <link rel="stylesheet" type="text/css" href="./css/style.css">
+    <link rel="stylesheet" type="text/css" href="/css/style.css">
     <link href='https://fonts.googleapis.com/css?family=Source+Code+Pro' rel='stylesheet' type='text/css'>
     <link href='//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSans-kr.css' rel='stylesheet' type='text/css'>
     <link href='//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSans-jp.css' rel='stylesheet' type='text/css'>
@@ -49,7 +49,7 @@
           document.documentElement.className += " no-touch";
       }
     </script>
-    <script type="text/javascript" src="./js/subnav-scrolling.js"></script>
+    <script type="text/javascript" src="/js/subnav-scrolling.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-scrollTo/2.1.2/jquery.scrollTo.min.js"></script>
 
   </head>
@@ -63,15 +63,8 @@
       js.src = '//connect.facebook.net/ko_KR/sdk.js#xfbml=1&version=v2.5';
       fjs.parentNode.insertBefore(js, fjs);
     }(document, 'script', 'facebook-jssdk'));</script>
-
-    <header id="top">
-      <div class="nav-box">
-        <div class="container-fluid">
-          <div class="nav-text"><a href="/">스포카 한 산스</a></div>
-        </div>
-      </div>
-    </header>
-      {{ content }}
+    
+    {{ content }}
 
     <footer class="footer footer-light">
       <div class="container-fluid">

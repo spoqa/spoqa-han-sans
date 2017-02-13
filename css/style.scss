@@ -101,6 +101,7 @@ h3.section-title {
   position: absolute;
 }
 
+
 // Scrolling Nav
 //
 // IMPORTANT: insert blow script on `<head>`
@@ -253,8 +254,21 @@ div.link-underline {
   padding-top: 30px;
 }
 
-.nav-text a {
+.nav-text > .title {
   color: $text-color;
+  font-weight: 700;
+}
+
+.nav-text > .language-selector {
+  margin-left: 28px;
+  color: $text-color-grey-light;
+}
+
+.nav-text > .language-selector a {
+  color: $text-color-grey-light;
+}
+
+.nav-text > .language-selector > .selected {
   font-weight: 700;
 }
 
