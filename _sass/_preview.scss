@@ -194,9 +194,21 @@
             > .slider.group {
                 display: none;
             }
-            > .others.group > .control:first-child {
-                border-left: none;
+            > .others.group {
+                -ms-flex: 1;
+                flex: 1;
+                > .control:first-child {
+                    border-left: none;
+                }
+                > .font-family.control {
+                    background-position: calc(100% - 22px) 45%;
+                }
             }
+        }
+        > textarea {
+            overflow: hidden;
+            height: 518px;
+            font-size: 22px !important;
         }
     }
 }
