@@ -2,7 +2,7 @@
 layout: default
 ---
 {% assign base_path = '../..' %}
-    <header id="top">
+    <header id="header">
       <div class="nav-box">
         <div class="container-fluid">
           <div class="nav-text">
@@ -15,9 +15,9 @@ layout: default
       </div>
     </header>
 
-    <section class="section section-header hero-wrap" id="header">
+    <section class="section section-header hero-wrap">
       <div class="container-fluid">
-        <h1>Spoqa Han Sans is a custom font based on Noto Sans and Lato to fit Multilingual UI of Spoqa’s products. We unveil the new version which has evolved in many ways. 스포카 한 산스는 스포카의 제품의 다국어 UI에 대응하기 위해 노토 산스와 라토를 바탕으로 커스텀한 글꼴입니다. 여러모로 개선을 거쳐 진화한 스포카 한 산스를 공개합니다.<span class="JP-word-break">スポカーハンサンスはスポカ製品の多言語UIを対応するためにNoto Sansとラトをもとにカスタムしたフォントです。これまでいろいろ改善して進化した新しいスポカーハンサンスを公開します。</span></h1>
+        <h1 class="header-text"><span class="header-text-700">Spoqa Han Sans is a custom font based on Noto Sans and Lato to fit multilingual UI of Spoqa’s products. We now unveil the new version which has evolved in many ways.</span> <span class="header-text-400">스포카 한 산스는 스포카의 제품의 다국어 UI에 대응하기 위해 노토 산스와 라토를 바탕으로 커스텀한 글꼴입니다.</span> <span class="header-text-300">여러모로 개선을 거쳐 진화한 스포카 한 산스를 공개합니다.</span><span class="JP-word-break header-text-100">スポカーハンサンスはスポカ製品の多言語UIを対応するためにNoto Sansとラトをもとにカスタムしたフォントです。これまでいろいろ改善して進化した新しいスポカーハンサンスを公開します。</span></h1>
       </div>
     </section>
     <hr />
@@ -25,12 +25,13 @@ layout: default
       <div id="subnav-anchor"></div>
       <nav>
         <ul class="subnav-menus">
-          <li><a href="#header">header</a></li>
-          <li><a href="#intro">intro</a></li>
-          <li><a href="#feature">feature</a></li>
-          <li><a href="#preview">preview</a></li>
-          <li><a href="#webfont">webfont</a></li>
-          <li><a href="#fontinuse">fontinuse</a></li>
+          <li><a href="#header">메인으로</a></li>
+          <li><a href="#intro">소개</a></li>
+          <li><a href="#feature">2.0 특징</a></li>
+          <li><a href="#preview">써보기</a></li>
+          <li><a href="#download">내려받기</a></li>
+          <li><a href="#webfont">웹폰트 사용하기</a></li>
+          <li><a href="#fontinuse">사용 예시</a></li>
         </ul>
       </nav>
     </div>
@@ -189,7 +190,7 @@ layout: default
           {% include preview.html lang="ko-KR" %}
         </div>
       </section>
-      <section class="section">
+      <section class="section" id="download">
         <div class="container-fluid">
           <h3 class="section-title">스포카 한 산스 내려받기</h3>
           <div class="link-underline download-wrap">
