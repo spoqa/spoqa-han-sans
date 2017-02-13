@@ -173,7 +173,7 @@ h3.section-title {
 // paragraph-link
 @mixin paragarph-link-effect {
   text-decoration: underline;
-  color: $text-color;
+  color: $grey-8;
   &:hover, &:active {
     color: $text-primary;
     transition: 0.2s all;
