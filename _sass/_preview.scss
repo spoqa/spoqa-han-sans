@@ -89,6 +89,9 @@
                             border-radius: $handle-size / 2;
                             outline: solid 3px $dark-background;
                             transition: outline $transition-duration ease;
+                            &:hover, &:active {
+                                background-color: $highlight;
+                            }
                         }
                     }
                 }
@@ -133,7 +136,7 @@
                             border: none;
                             outline: none;
                             color: $text-color;
-                            &:active {
+                            &:hover, &:active {
                                 color: $highlight;
                             }
                         }
