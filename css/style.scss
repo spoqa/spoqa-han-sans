@@ -35,47 +35,27 @@ p {
   margin-bottom: 16px;
 }
 
-
-//media query stuffed
-@media (max-width: 767px) {
-  .column-group, .section-title, .section-description {
-    text-align: left;
-  }
-  section, .section {
-    padding: 56px 0;
-  }
-  p, .column-title, body  {
-    font-size: 16px;
-  }
-  .feature-content {
-    padding-bottom: 30px;
-  }
-  .column-group {
-    padding-bottom: 0;
-  }
-  .section-title + .section-description {
-    margin-top: 0;
-  }
-  .section-title + .section-description {
-    margin-top: 0;
-  }
-  .section-description {
-    margin-bottom: 0;
-  }
-  .section-font-in-use {
-    margin-top: 22px;
-  }
-  .hero-wrap {
-    padding-top: 40px;
-  }
-  body, p, .column-title {
-    font-size: 15px;
-  }
+.hero-wrap {
+  padding: 90px 0 100px;
 }
 
-h1 {
+.header-text {
+  .header-text-700 {
+    font-weight: 700;
+  }
+  .header-text-400 {
+    font-weight: 400;
+  }
+  .header-text-300 {
+    font-weight: 300;
+  }
+  .header-text-100 {
+    font-weight: 100;
+  }
+  font-size: 43px;
+  line-height: 1.5;
   @media (max-width: 767px) {
-    font-size: 40px;
+    font-size: 38px;
   }
   @media (max-width: 480px) {
     font-size: 28px;  
@@ -99,6 +79,10 @@ h3.section-title {
 
 .subnav-wrap {
   position: absolute;
+  @media (max-width: 1440px) {
+    display: none;
+  }
+  margin: 90px 40px;
 }
 
 
@@ -119,6 +103,9 @@ h3.section-title {
     max-width: 273.6px - ($container-padding-base * 2); // 273.px = $container-fluid-width * $default-subnav-width
     z-index: $zindex-navbar;
     margin-top:12px;
+    .subnav-menus {
+      padding-top: 20px;
+    }
   }
 
   .subnav-menus li > a.active {
@@ -132,6 +119,10 @@ h3.section-title {
   .subnav-menus li {
     > ul { // Hide
       display: none;
+    }
+
+    > a {
+      color: $text-color-grey;
     }
 
     > a.active + ul { // Show
@@ -257,11 +248,16 @@ div.link-underline {
 .nav-text > .title {
   color: $text-color;
   font-weight: 700;
+  font-size: 22px;
+  @media (max-width: 767px) {
+    font-size: 18px;
+  }
 }
 
 .nav-text > .language-selector {
-  margin-left: 28px;
+  float: right;  
   color: $text-color-grey-light;
+
 }
 
 .nav-text > .language-selector a {
@@ -392,6 +388,44 @@ button {
         margin-top: 0;
       }
     }
+  }
+}
+
+
+//media query for smaller width browser
+@media (max-width: 767px) {
+  .column-group, .section-title, .section-description {
+    text-align: left;
+  }
+  section, .section {
+    padding: 56px 0;
+  }
+  p, .column-title, body  {
+    font-size: 16px;
+  }
+  .feature-content {
+    padding-bottom: 30px;
+  }
+  .column-group {
+    padding-bottom: 0;
+  }
+  .section-title + .section-description {
+    margin-top: 0;
+  }
+  .section-title + .section-description {
+    margin-top: 0;
+  }
+  .section-description {
+    margin-bottom: 0;
+  }
+  .section-font-in-use {
+    margin-top: 22px;
+  }
+  .hero-wrap {
+    padding-top: 40px;
+  }
+  body, p, .column-title {
+    font-size: 15px;
   }
 }
 
