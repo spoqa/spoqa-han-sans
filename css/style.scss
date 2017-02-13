@@ -211,9 +211,10 @@ div.link-underline {
   max-width: 100%;
   background-size: 50%;
   padding-top: 20px;
-  @media (max-width: 767px) {
-    padding-top: 0;
-  }
+}
+
+.fig_1 { 
+  padding-top: 42px; 
 }
 
 .fig_2 {
@@ -257,11 +258,14 @@ div.link-underline {
 .nav-text > .language-selector {
   float: right;  
   color: $text-color-grey-light;
-
 }
 
 .nav-text > .language-selector a {
   color: $text-color-grey-light;
+  &:hover, &:active {
+    color: $link-color;
+    transition: 0.2s ease-out;
+  }
 }
 
 .nav-text > .language-selector > .selected {
@@ -426,6 +430,9 @@ button {
   }
   body, p, .column-title {
     font-size: 15px;
+  }
+  .column-img {
+    padding-top: 0;
   }
 }
 
