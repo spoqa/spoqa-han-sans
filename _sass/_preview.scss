@@ -150,7 +150,7 @@
         border: none;
         outline: none;
         border-top: 1px solid $dark-border;
-        padding: 50px 39px;
+        padding: 44px;
         background: transparent;
         font-size: 37px;
         font-weight: normal;
@@ -190,6 +190,7 @@
 
 @media (max-width: 700px) {
     .preview-area {
+        margin-top: 30px;
         > .control-bar {
             > .slider.group {
                 display: none;
@@ -207,8 +208,9 @@
         }
         > textarea {
             overflow: hidden;
-            height: 518px;
-            font-size: 22px !important;
+            height: 476px;
+            font-size: 20px !important;
+            padding: 20px 25px;
         }
     }
 }
