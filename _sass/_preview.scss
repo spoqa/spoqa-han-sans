@@ -198,5 +198,10 @@
                 border-left: none;
             }
         }
+        > textarea {
+            overflow: hidden;
+            height: 518px;
+            font-size: 22px !important;
+        }
     }
 }
