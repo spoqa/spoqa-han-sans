@@ -52,13 +52,16 @@ p {
   .header-text-100 {
     font-weight: 100;
   }
-  font-size: 43px;
-  line-height: 1.5;
+  font-size: 38px;
+  line-height: 1.6;
+  @media (max-width: 1440px) {
+    font-size: 36px;
+  }
   @media (max-width: 767px) {
-    font-size: 38px;
+    font-size: 34px;
   }
   @media (max-width: 480px) {
-    font-size: 28px;  
+    font-size: 19px;  
   }
 }
 
@@ -74,6 +77,38 @@ h3.section-title {
 .container-fluid {
   @media screen and (max-width: 1440px) {
     max-width: 960px;
+  }
+}
+
+.progress-container {
+  left:0;
+  width: 100%;
+  height: 0.7em;
+  margin-bottom: 0px;
+  position: fixed;
+  bottom: 0px;
+  overflow: hidden;
+  background-color: white;
+  content: "";
+  display: table;
+  table-layout: fixed;
+  @media (min-width: 1440px) {
+    display: none;    
+  }
+}
+
+.progress-bar {
+  width: 0%;
+  float: left;
+  height: 100%;
+  z-index: 99;
+  max-width: 100%;
+  background-color: $mainblue-l1;
+  -webkit-transition: width .3s ease;
+  -o-transition: width .3s ease;
+  transition: width .3s ease;
+  @media (min-width: 1440px) {
+    display: none;    
   }
 }
 
@@ -247,7 +282,7 @@ div.link-underline {
 }
 
 .nav-text > .title {
-  color: $text-color;
+  color: $grey-8;
   font-weight: 700;
   font-size: 22px;
   @media (max-width: 767px) {
@@ -388,6 +423,7 @@ button {
       align-self: flex-start;
       padding: 0;
       font-weight: 400;
+      height: 42px;
       &:active {
         margin-top: 0;
       }
@@ -440,19 +476,26 @@ button {
 .highlight > pre {
     margin-bottom: 32px;
     padding: 28px 50px;
+    border-radius: 4px;
+    background-color: $grey-8;
+    border: none;
     @media (max-width: 767px) {
       padding: 28px 30px;    
     }
 }
 
 .highlight .s1, .highlight .s, .highlight .sx {
-  color: $text-primary;
+  color: $mainblue-l1;
 }
 
 .highlight .nt {
-  color: $mainblue-l1;
+  color: $text-primary;
 }
 
 .highlight .na {
   color: $green-l1;
+}
+
+.highlight .nl, .highlight .k, .highlight .o {
+  color: $text-color-grey-light;
 }
