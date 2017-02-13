@@ -16,6 +16,8 @@ $cover-background-color: $white;
 
 @import "dooboo/_dooboo-default";
 
+@import "./preview";
+
 //adhoc style
 
 body {
@@ -92,26 +94,13 @@ h3.section-title {
 .container-fluid {
   @media screen and (max-width: 1440px) {
     max-width: 960px;
-  }  
-}
-
-.nav-wrap {
-  position: relative;
-}
-
-.nav-right {
-  position: absolute;
-  top: 0;
-  right: 0;
+  }
 }
 
 .subnav-wrap {
   position: absolute;
 }
 
-.switch-language a {
-  color: $text-color-grey;
-}
 
 // Scrolling Nav
 //
@@ -247,14 +236,14 @@ div.link-underline {
 }
 
 .fig_4 {
-  width: 258px;  
+  width: 258px;
 }
 .fig_5 {
-  width: 362px;  
+  width: 362px;
 }
 
 .fig_6, .fig_7 {
-  width: 360px;  
+  width: 360px;
 }
 
 .section-preview {
@@ -265,8 +254,21 @@ div.link-underline {
   padding-top: 30px;
 }
 
-.nav-text a {
+.nav-text > .title {
   color: $text-color;
+  font-weight: 700;
+}
+
+.nav-text > .language-selector {
+  margin-left: 28px;
+  color: $text-color-grey-light;
+}
+
+.nav-text > .language-selector a {
+  color: $text-color-grey-light;
+}
+
+.nav-text > .language-selector > .selected {
   font-weight: 700;
 }
 

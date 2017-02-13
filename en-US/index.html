@@ -5,9 +5,11 @@ layout: default
     <header id="top">
       <div class="nav-box">
         <div class="container-fluid">
-          <div class="nav-wrap">
-            <div class="nav-text"><a href="/">Spoqa Han Sans</a></div>
-            <div class="nav-right switch-language"><a href="/ko-KR">한국어</a></div>
+          <div class="nav-text">
+            <a href="/en-US" class="title">Spoqa Han Sans</a>
+            <span class="language-selector">
+              <a href="/ko-KR">KR</a>｜<a class="selected" href="/en-US">EN</a>
+            </span>
           </div>
         </div>
       </div>
@@ -183,7 +185,8 @@ layout: default
           <div class="section-description">
             Enter Spoqa Han Sans by typing random characters below!<br>
             You can select specific font family you want, and change the font size, line height, letter spacing, color.
-          </div> 
+          </div>
+          {% include preview.html lang="en-US" %}
         </div>
       </section>
       <section class="section">

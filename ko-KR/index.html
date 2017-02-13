@@ -5,9 +5,11 @@ layout: default
     <header id="top">
       <div class="nav-box">
         <div class="container-fluid">
-          <div class="nav-wrap">
-            <div class="nav-text"><a href="/">스포카 한 산스</a></div>
-            <div class="nav-right switch-language"><a href="/en-US">English</a></div>
+          <div class="nav-text">
+            <a href="/ko-KR" class="title">스포카 한 산스</a>
+            <span class="language-selector">
+              <a class="selected" href="/ko-KR">KR</a>｜<a href="/en-US">EN</a>
+            </span>
           </div>
         </div>
       </div>
@@ -183,7 +185,8 @@ layout: default
           <div class="section-description">
             아래 섹션에 원하는 글자를 입력해 스포카 한 산스를 웹 페이지에서 써보세요!<br>
             원하는 글자 굵기를 선택할 수 있으며, 글자 크기, 글줄 사이, 글자 사이 및 색상을 변경할 수 있습니다. 
-          </div> 
+          </div>
+          {% include preview.html lang="ko-KR" %}
         </div>
       </section>
       <section class="section">
