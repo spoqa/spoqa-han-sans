@@ -5,6 +5,7 @@
     $dark-background: $grey-8;
     $dark-foreground: $white;
     $dark-border: $grey-6;
+    $dark-border-preview-area: $grey-8;
     $light-background: $white;
     $light-foreground: $grey-7;
     $light-border: $grey-3;
@@ -12,13 +13,12 @@
     $range-input-background: $grey-3;
     $range-input-handle-background: $grey-5;
     $text-color: $grey-5;
-
     $transition-duration: .5s;
     $transition-duration-short: .2s;
 
     box-sizing: border-box;
     border-radius: 6px;
-    border: 1px solid $dark-border;
+    border: 1px solid $dark-border-preview-area;
     background-color: $dark-background;
     overflow: hidden;
     transition: all $transition-duration ease;
