@@ -1,4 +1,4 @@
-Spoqa Han Sans v1.0.4
+Spoqa Han Sans v2.0.0
 =====================
 
 [![npm version](https://badge.fury.io/js/spoqa-han-sans.svg)](https://www.npmjs.com/package/spoqa-han-sans)
@@ -16,11 +16,11 @@ Spoqa Han Sans v1.0.4
 
 ## 폰트 다운로드(TTF, Subset TTF)
 
-- [All](https://github.com/spoqa/spoqa-han-sans/releases/download/1.0.4/SpoqaHanSans_all.zip)
-- [KR Original](https://github.com/spoqa/spoqa-han-sans/releases/download/1.0.4/SpoqaHanSans_original.zip)
-- [KR Subset](https://github.com/spoqa/spoqa-han-sans/releases/download/1.0.4/SpoqaHanSans_subset.zip)
-- [JP Original](https://github.com/spoqa/spoqa-han-sans/releases/download/1.0.4/SpoqaHanSans_JP_original.zip)
-- [JP Subset](https://github.com/spoqa/spoqa-han-sans/releases/download/1.0.4/SpoqaHanSans_JP_subset.zip)
+- [All](https://github.com/spoqa/spoqa-han-sans/releases/download/2.0.0/SpoqaHanSans_all.zip)
+- [KR Original](https://github.com/spoqa/spoqa-han-sans/releases/download/2.0.0/SpoqaHanSans_original.zip)
+- [KR Subset](https://github.com/spoqa/spoqa-han-sans/releases/download/2.0.0/SpoqaHanSans_subset.zip)
+- [JP Original](https://github.com/spoqa/spoqa-han-sans/releases/download/2.0.0/SpoqaHanSans_JP_original.zip)
+- [JP Subset](https://github.com/spoqa/spoqa-han-sans/releases/download/2.0.0/SpoqaHanSans_JP_subset.zip)
 
 
 ## 폰트 설치 방법
