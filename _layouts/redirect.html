@@ -17,7 +17,7 @@
       var language = languages[code];
       // if we didn't find a supporting language, default to ko-KR
       if (!language) { language = "ko-KR"; }
-      document.location = "/" + language + '{{ page.url }}';
+      document.location = "./" + language + '{{ page.url }}';
     </script>
     <noscript>
       <meta http-equiv="refresh" content="0; url=/ko-KR{{ page.url }}">
