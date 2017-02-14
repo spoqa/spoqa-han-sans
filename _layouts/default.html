@@ -7,13 +7,19 @@
     <meta property="og:url" content="http://www.spoqa-han-sans.com/">
     <meta property="og:type" content="website">
     <meta property="og:title" content="Spoqa Han Sans">
-    <meta property="og:description" content="스포카 혼자 쓰기엔 지나치게 산뜻한 스포카 한 산스,
-                                             한글날을 맞이하여 누구나 무료로 쓸 수 있도록 배포합니다.">
-    <meta property="og:image" content="http://www.spoqa-han-sans.com/images/cover.png">
+    <meta property="og:description" content="Spoqa unveil the new version of Spoqa Han Sans, which has evolved in many ways. | 여러모로 개선을 거쳐 진화한 스포카 한 산스 두 번째 버전을 공개합니다. | これまでいろいろ改善して進化した新しいスポカーハンサンスを公開します。">
+    <meta property="og:image" content="http://spoqa.github.io/spoqa-han-sans/images/preview.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@spoqa">
+    <meta name="twitter:title" content="Spoqa Han Sans">
+    <meta name="twitter:description" content="Spoqa unveil the new version of Spoqa Han Sans, which has evolved in many ways. | 여러모로 개선을 거쳐 진화한 스포카 한 산스 두 번째 버전을 공개합니다. | これまでいろいろ改善して進化した新しいスポカーハンサンスを公開します。">
+    <meta name="twtiter:image" content="http://spoqa.github.io/spoqa-han-sans/images/preview.png">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <link rel="shortcut icon" href="{{ base_path }}/images/favicon.ico">
-    <link rel="stylesheet" type="text/css" href="./css/style.css">
+    <link rel="stylesheet" type="text/css" href="/css/style.css">
     <link href='https://fonts.googleapis.com/css?family=Source+Code+Pro' rel='stylesheet' type='text/css'>
+    <link href='//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSans-kr.css' rel='stylesheet' type='text/css'>
+    <link href='//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSans-jp.css' rel='stylesheet' type='text/css'>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
     <script>
@@ -47,6 +53,20 @@
           document.documentElement.className += " no-touch";
       }
     </script>
+    <script type="text/javascript" src="/js/subnav-scrolling.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-scrollTo/2.1.2/jquery.scrollTo.min.js"></script>
+    <script type="text/javascript">
+      $(window).load(function(){
+        $(window).scroll(function() {
+          var wintop = $(window).scrollTop(), docheight = $('article').height(), winheight = $(window).height();
+          console.log(wintop);
+          var totalScroll = (wintop/(docheight-winheight))*100;
+          console.log("total scroll" + totalScroll);
+          $(".progress-bar").css("width",totalScroll+"%");
+        });
+      });
+    </script>
+
   </head>
   <body class="preview-weight-regular preview-background-light">
     <!-- Load Facebook SDK for JavaScript -->
@@ -58,38 +78,41 @@
       js.src = '//connect.facebook.net/ko_KR/sdk.js#xfbml=1&version=v2.5';
       fjs.parentNode.insertBefore(js, fjs);
     }(document, 'script', 'facebook-jssdk'));</script>
+    
+    {{ content }}
 
-    <nav class="topnav">
-      <div class="fixed-container">
-        <div class="brand-logo"><strong>스포카 한 산스</strong>를 소개합니다.</div>
-        <div class="nav">
-          <input type="checkbox" id="toggle">
-          <label for="toggle" class="toggle" onclick></label>
-          <ul class="topnav-tabs menu">
-            <li>
-              <a class="topnav-tab" href="#section-intro">글꼴 소개</a>
-            </li>
-            <li>
-              <a class="topnav-tab" href="#section-edited">글꼴 특징</a>
-            </li>
-            <li>
-              <a class="topnav-tab cta" href="#section-download">글꼴 내려받기</a>
-            </li>
-          </ul>
+    <footer class="footer footer-light">
+      <div class="container-fluid">
+        <div class="footer-wrapper row">
+          <div class="col-xs-12">
+            <div class="info-default row">
+              <div class="col-xs-12 col-sm-10 col-md-12 col-lg-11">
+                Spoqa Han Sans fonts are open source. All Spoqa Han Sans fonts are published under the <a href="http://scripts.sil.org/cms/scripts/page.php?site_id=nrsi&id=OFL" target="_blank">SIL Open Font License, Version 1.1</a>.
+              </div>
+            </div>
+            <div class="footer-menus">
+              <a target="_blank" href="http://scripts.sil.org/OFL">Open Font License</a>
+              <a target="_blank" href="https://github.com/spoqa/spoqa-han-sans" target='blank'>View on Github</a>
+              <a href="https://dribbble.com/spoqa" target='blank' class="footer-menu">Dribbble</a>
+            </div>
+            <div class="corp-info">
+              <a class="corp-logo" href="http://www.spoqa.com/" target="blank"></a>
+              <div class="corp-text">
+                <span>SEOUL</span>
+                <span>∙</span>
+                <span>BUSAN</span>
+                <span>∙</span>
+                <span>TOKYO</span>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
-    </nav>
-      {{ content }}
-
-    <footer class="footer">
-      <div class="fixed-container row">
-        <div class="brand-logo">© Spoqa, Inc. Distributed under <a href="http://scripts.sil.org/OFL">Open Font License</a>.</div>
-        <ul class="topnav-tabs">
-          <li><a class="topnav-tab" href="http://www.spoqa.com/">회사 소개</a></li>
-          <li><a class="topnav-tab" href="http://spoqa.github.io/">블로그</a></li>
-        </ul>
-      </div>
     </footer>
+    <div class="progress-container">
+      <div class="progress-bar">
+      </div>
+    </div>
   </body>
 </html>
 

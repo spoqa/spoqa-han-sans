@@ -1,0 +1,222 @@
+@import "dooboo/mo/index";
+@import "dooboo/mixins";
+
+.preview-area {
+    $dark-background: $grey-8;
+    $dark-foreground: $white;
+    $dark-border: $grey-6;
+    $dark-border-preview-area: $grey-8;
+    $light-background: $white;
+    $light-foreground: $grey-7;
+    $light-border: $grey-3;
+    $highlight: $mainblue-l1;
+    $range-input-background: $grey-3;
+    $range-input-handle-background: $grey-5;
+    $text-color: $grey-5;
+    $transition-duration: .5s;
+    $transition-duration-short: .2s;
+
+    box-sizing: border-box;
+    border-radius: 6px;
+    border: 1px solid $dark-border-preview-area;
+    background-color: $dark-background;
+    overflow: hidden;
+    transition: all $transition-duration ease;
+
+    > .control-bar {
+        display: -ms-flexbox;
+        display: flex;
+        margin: 16px 0;
+        box-sizing: content-box;
+        height: 32px;
+        font-size: 0;
+        -webkit-user-select: none;
+        user-select: none;
+        > .group {
+            $others-group-width: 255px;
+            $slider-group-margin: 22px;
+            display: -ms-flexbox;
+            display: flex;
+            height: 100%;
+            &.slider {
+                -ms-flex: 1;
+                flex: 1;
+                margin: 0 $slider-group-margin;
+                height: 100%;
+                > .slider {
+                    -ms-flex: 1;
+                    flex: 1;
+                    margin-left: $slider-group-margin;
+                    display: -ms-flexbox;
+                    display: flex;
+                    align-items: center;
+                    height: 100%;
+                    &:first-child {
+                        margin-left: 0;
+                    }
+                    > img {
+                        margin-right: 8px;
+                    }
+                    > .range {
+                        $line-height: 2px;
+                        $handle-size: 12px;
+                        position: relative;
+                        -ms-flex: 1;
+                        flex: 1;
+                        height: $handle-size;
+                        cursor: pointer;
+                        cursor: grab;
+                        cursor: -webkit-grab;
+                        &:active {
+                            cursor: grabbing;
+                            cursor: -webkit-grabbing;
+                        }
+                        > .line {
+                            position: absolute;
+                            top: ($handle-size / 2) - ($line-height / 2);
+                            left: 0;
+                            width: 100%;
+                            height: $line-height;
+                            background-color: $range-input-background;
+                        }
+                        > .handle {
+                            position: absolute;
+                            top: 0;
+                            left: 0;
+                            width: $handle-size;
+                            height: $handle-size;
+                            background-color: $range-input-handle-background;
+                            border-radius: $handle-size / 2;
+                            outline: solid 3px $dark-background;
+                            transition: outline $transition-duration ease;
+                            &:hover, &:active {
+                                background-color: $highlight;
+                            }
+                        }
+                    }
+                }
+            }
+            &.others {
+                width: $others-group-width; // ie10에는 flex-basis가 없음
+                display: -ms-flexbox;
+                display: flex;
+                > .control {
+                    height: 100%;
+                    border-left: 1px solid $dark-border;
+                    transition: border-color $transition-duration ease;
+                    &.theme {
+                        display: -ms-flexbox;
+                        display: flex;
+                        padding: 0 19px;
+                        > .option {
+                            $option-size: 28px;
+                            width: $option-size;
+                            height: $option-size;
+                            box-sizing: border-box;
+                            border: 2px solid $grey-4;
+                            border-radius: 50%;
+                            transition: border $transition-duration-short ease;
+                            &.selected { border-width: 6px; }
+                            &.light { background-color: $light-background; margin-right: 10px; }
+                            &.dark  { background-color: $dark-background;  }
+                            &:hover { border-color: $highlight; }
+                        }
+                    }
+                    &.font-family {
+                        flex: 1;
+                        overflow: hidden;
+                        font-size: 14px;
+                        background: url('/images/assets/dropdown_caret.svg') 110px 45% no-repeat;
+                        > select {
+                            display: inline-block;
+                            margin: 0 12px;
+                            width: calc(100% + 20px);
+                            height: 100%;
+                            background: transparent;
+                            border: none;
+                            outline: none;
+                            color: $text-color;
+                            &:hover, &:active {
+                                color: $highlight;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    
+    > input[type="text"], textarea {
+        display: block;
+        -webkit-appearance: none;
+        apperance: none;
+        border-radius: 0;
+        width: 100%;
+        height: 504px;
+        border: none;
+        outline: none;
+        border-top: 1px solid $dark-border;
+        padding: 44px;
+        background: transparent;
+        font-size: 37px;
+        font-weight: normal;
+        font-style: normal;
+        font-stretch: normal;
+        line-height: 1.65;
+        letter-spacing: normal;
+        color: $dark-foreground;
+        resize: none;
+        transition-property: border-color, color, font-size, line-height, letter-spacing;
+        transition-duration: $transition-duration;
+        &.kr { font-family: 'Spoqa Han Sans'; }
+        &.jp { font-family: 'Spoqa Han Sans JP'; word-break: break-all; }
+        &.bold { font-weight: 700; }
+        &.regular { font-weight: 400; }
+        &.light { font-weight: 300; }
+        &.thin { font-weight: 200; }
+    }
+
+    &.light {
+        background-color: $light-background;
+        border-color: $light-border;
+        > .control-bar {
+            > .slider.group > .slider > .range > .handle {
+                outline-color: $light-background;
+            }
+            > .others.group > .control {
+                border-left-color: $light-border;
+            }
+        }
+        > textarea {
+            border-top-color: $light-border;
+            color: $light-foreground;
+        }
+    }
+}
+
+@media (max-width: 700px) {
+    .preview-area {
+        margin-top: 30px;
+        > .control-bar {
+            > .slider.group {
+                display: none;
+            }
+            > .others.group {
+                -ms-flex: 1;
+                flex: 1;
+                > .control:first-child {
+                    border-left: none;
+                }
+                > .font-family.control {
+                    background-position: calc(100% - 22px) 45%;
+                }
+            }
+        }
+        > textarea {
+            overflow: hidden;
+            height: 476px;
+            font-size: 20px !important;
+            padding: 20px 25px;
+        }
+    }
+}

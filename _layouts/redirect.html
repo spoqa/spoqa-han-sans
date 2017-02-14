@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Spoqa Han Sans</title>
+    <script type="text/javascript">
+      // a list of mappings, the keys are what we might get from a browser, and the
+      // values are what URL we should send that value to.
+      var languages = {
+        "en": "en-US",
+        "en-US": "en-US",
+        "ko": "ko-KR",
+        "ko-KR": "ko-KR",
+      };
+      // look up the provided language in the map
+      var code = window.navigator.language || window.navigator.userLanguage || "ko";
+      var language = languages[code];
+      // if we didn't find a supporting language, default to ko-KR
+      if (!language) { language = "ko-KR"; }
+      document.location = "/" + language + '{{ page.url }}';
+    </script>
+    <noscript>
+      <meta http-equiv="refresh" content="0; url=/ko-KR{{ page.url }}">
+    </noscript>
+  </head>
+  <body>
+    <p><a href="/ko-KR{{ page.url }}">여기를 누르세요</a>.</p>
+  </body>
+</html>

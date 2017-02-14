@@ -24,35 +24,36 @@
 @font-face {
     font-family: 'Spoqa Han Sans JP';
     font-weight: 700;
-    src: url('https://cdn.rawgit.com/spoqa/spoqa-han-sans/master/Subset/SpoqaHanSans_JP/Spoqa%20Han%20sans%20JP_subset(webfont%20inclued)/SpoqaHanSansJP-Bold/SpoqaHanSansJP-Bold.eot');
-    src: local('SpoqaHanSansJP-Bold'),
-    url('https://cdn.rawgit.com/spoqa/spoqa-han-sans/master/Subset/SpoqaHanSans_JP/Spoqa%20Han%20sans%20JP_subset(webfont%20inclued)/SpoqaHanSansJP-Bold/SpoqaHanSansJP-Bold.eot?#iefix') format('embedded-opentype'),
-    url('https://cdn.rawgit.com/spoqa/spoqa-han-sans/master/Subset/SpoqaHanSans_JP/Spoqa%20Han%20sans%20JP_subset(webfont%20inclued)/SpoqaHanSansJP-Bold/SpoqaHanSansJP-Bold.woff2') format('woff2'),
-    url('https://cdn.rawgit.com/spoqa/spoqa-han-sans/master/Subset/SpoqaHanSans_JP/Spoqa%20Han%20sans%20JP_subset(webfont%20inclued)/SpoqaHanSansJP-Bold/SpoqaHanSansJP-Bold.woff') format('woff'),
-    url('https://cdn.rawgit.com/spoqa/spoqa-han-sans/master/Subset/SpoqaHanSans_JP/Spoqa%20Han%20sans%20JP_subset(webfont%20inclued)/SpoqaHanSansJP-Bold/SpoqaHanSansJP-Bold.ttf') format('truetype'),
-    url('https://cdn.rawgit.com/spoqa/spoqa-han-sans/master/Subset/SpoqaHanSans_JP/Spoqa%20Han%20sans%20JP_subset(webfont%20inclued)/SpoqaHanSansJP-Bold/SpoqaHanSansJP-Bold.svg#SpoqaHanSansJP') format('svg');
+
+    src: local('Spoqa Han Sans JP Bold'), local('Spoqa Han Sans JP Bold'),
+    url('https://cdn.rawgit.com/spoqa/spoqa-han-sans/c11a27b4/Subset/SpoqaHanSans_JP/Spoqa%20Han%20Sans%20JP%20Bold.woff2') format('woff2'),
+    url('https://cdn.rawgit.com/spoqa/spoqa-han-sans/c11a27b4/Subset/SpoqaHanSans_JP/Spoqa%20Han%20Sans%20JP%20Bold.woff') format('woff'),
+    url('https://cdn.rawgit.com/spoqa/spoqa-han-sans/c11a27b4/Subset/SpoqaHanSans_JP/Spoqa%20Han%20Sans%20JP%20Bold.ttf') format('truetype');
 }
 
 @font-face {
     font-family: 'Spoqa Han Sans JP';
     font-weight: 400;
-    src: url('https://cdn.rawgit.com/spoqa/spoqa-han-sans/master/Subset/SpoqaHanSans_JP/Spoqa%20Han%20sans%20JP_subset(webfont%20inclued)/SpoqaHanSansJP-Regular/SpoqaHanSansJP-Regular.eot');
-    src: local('SpoqaHanSansJP-Regular'),
-    url('https://cdn.rawgit.com/spoqa/spoqa-han-sans/master/Subset/SpoqaHanSans_JP/Spoqa%20Han%20sans%20JP_subset(webfont%20inclued)/SpoqaHanSansJP-Regular/SpoqaHanSansJP-Regular.eot?#iefix') format('embedded-opentype'),
-    url('https://cdn.rawgit.com/spoqa/spoqa-han-sans/master/Subset/SpoqaHanSans_JP/Spoqa%20Han%20sans%20JP_subset(webfont%20inclued)/SpoqaHanSansJP-Regular/SpoqaHanSansJP-Regular.woff2') format('woff2'),
-    url('https://cdn.rawgit.com/spoqa/spoqa-han-sans/master/Subset/SpoqaHanSans_JP/Spoqa%20Han%20sans%20JP_subset(webfont%20inclued)/SpoqaHanSansJP-Regular/SpoqaHanSansJP-Regular.woff') format('woff'),
-    url('https://cdn.rawgit.com/spoqa/spoqa-han-sans/master/Subset/SpoqaHanSans_JP/Spoqa%20Han%20sans%20JP_subset(webfont%20inclued)/SpoqaHanSansJP-Regular/SpoqaHanSansJP-Regular.ttf') format('truetype'),
-    url('https://cdn.rawgit.com/spoqa/spoqa-han-sans/master/Subset/SpoqaHanSans_JP/Spoqa%20Han%20sans%20JP_subset(webfont%20inclued)/SpoqaHanSansJP-Regular/SpoqaHanSansJP-Regular.svg#SpoqaHanSansJP') format('svg');
+    src: local('Spoqa Han Sans JP Regular'), local('Spoqa Han Sans JP Regular'),
+    url('https://cdn.rawgit.com/spoqa/spoqa-han-sans/c11a27b4/Subset/SpoqaHanSans_JP/Spoqa%20Han%20Sans%20JP%20Regular.woff2') format('woff2'),
+    url('https://cdn.rawgit.com/spoqa/spoqa-han-sans/c11a27b4/Subset/SpoqaHanSans_JP/Spoqa%20Han%20Sans%20JP%20Regular.woff') format('woff'),
+    url('https://cdn.rawgit.com/spoqa/spoqa-han-sans/c11a27b4/Subset/SpoqaHanSans_JP/Spoqa%20Han%20Sans%20JP%20Regular.ttf') format('truetype');
 }
 
 @font-face {
     font-family: 'Spoqa Han Sans JP';
-    font-weight: 200;
-    src: url('https://cdn.rawgit.com/spoqa/spoqa-han-sans/master/Subset/SpoqaHanSans_JP/Spoqa%20Han%20sans%20JP_subset(webfont%20inclued)/SpoqaHanSansJP-Thin/SpoqaHanSansJP-Thin.eot');
-    src: local('SpoqaHanSansJP-Thin'),
-    url('https://cdn.rawgit.com/spoqa/spoqa-han-sans/master/Subset/SpoqaHanSans_JP/Spoqa%20Han%20sans%20JP_subset(webfont%20inclued)/SpoqaHanSansJP-Thin/SpoqaHanSansJP-Thin.eot?#iefix') format('embedded-opentype'),
-    url('https://cdn.rawgit.com/spoqa/spoqa-han-sans/master/Subset/SpoqaHanSans_JP/Spoqa%20Han%20sans%20JP_subset(webfont%20inclued)/SpoqaHanSansJP-Thin/SpoqaHanSansJP-Thin.woff2') format('woff2'),
-    url('https://cdn.rawgit.com/spoqa/spoqa-han-sans/master/Subset/SpoqaHanSans_JP/Spoqa%20Han%20sans%20JP_subset(webfont%20inclued)/SpoqaHanSansJP-Thin/SpoqaHanSansJP-Thin.woff') format('woff'),
-    url('https://cdn.rawgit.com/spoqa/spoqa-han-sans/master/Subset/SpoqaHanSans_JP/Spoqa%20Han%20sans%20JP_subset(webfont%20inclued)/SpoqaHanSansJP-Thin/SpoqaHanSansJP-Thin.ttf') format('truetype'),
-    url('https://cdn.rawgit.com/spoqa/spoqa-han-sans/master/Subset/SpoqaHanSans_JP/Spoqa%20Han%20sans%20JP_subset(webfont%20inclued)/SpoqaHanSansJP-Thin/SpoqaHanSansJP-Thin.svg#SpoqaHanSansJP') format('svg');
+    font-weight: 300;
+    src: local('Spoqa Han Sans JP Light'), local('Spoqa Han Sans JP Light'),
+    url('https://cdn.rawgit.com/spoqa/spoqa-han-sans/c11a27b4/Subset/SpoqaHanSans_JP/Spoqa%20Han%20Sans%20JP%20Light.woff2') format('woff2'),
+    url('https://cdn.rawgit.com/spoqa/spoqa-han-sans/c11a27b4/Subset/SpoqaHanSans_JP/Spoqa%20Han%20Sans%20JP%20Light.woff') format('woff'),
+    url('https://cdn.rawgit.com/spoqa/spoqa-han-sans/c11a27b4/Subset/SpoqaHanSans_JP/Spoqa%20Han%20Sans%20JP%20Light.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Spoqa Han Sans JP';
+    font-weight: 100;
+    src: local('Spoqa Han Sans JP Thin'), local('Spoqa Han Sans JP Thin'),
+    url('https://cdn.rawgit.com/spoqa/spoqa-han-sans/c11a27b4/Subset/SpoqaHanSans_JP/Spoqa%20Han%20Sans%20JP%20Thin.woff2') format('woff2'),
+    url('https://cdn.rawgit.com/spoqa/spoqa-han-sans/c11a27b4/Subset/SpoqaHanSans_JP/Spoqa%20Han%20Sans%20JP%20Thin.woff') format('woff'),
+    url('https://cdn.rawgit.com/spoqa/spoqa-han-sans/c11a27b4/Subset/SpoqaHanSans_JP/Spoqa%20Han%20Sans%20JP%20Thin.ttf') format('truetype');
 }
