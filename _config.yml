@@ -7,6 +7,4 @@ kramdown:
   input: GFM
   hard_wrap: false
 
-email:
-  address: visual-design+spoqahansans@spoqa.com
-  body_preset: '혹시 문의하려던 내용이 상업적 이용에 관한 질문인가요? 스포카 한 산스는 오픈 폰트 라이선스로 상업적으로도 자유롭게 사용, 수정 및 재배포할 수 있습니다.'
+base_path: https://spoqa.github.io/spoqa-han-sans/  # Change in your local dev environment

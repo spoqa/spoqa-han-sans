@@ -1,14 +1,13 @@
 ---
 layout: default
 ---
-{% assign base_path = '../' %}
     <header id="header">
       <div class="nav-box">
         <div class="container-fluid">
           <div class="nav-text">
-            <a href="/en-US" class="title">Spoqa Han Sans</a>
+            <a href="{{ site.base_path }}en-US/" class="title">Spoqa Han Sans</a>
             <span class="language-selector">
-              <a href="/ko-KR">KR</a>｜<a class="selected" href="/en-US">EN</a>
+              <a href="{{ site.base_path }}ko-KR/">KO</a>｜<a class="selected" href="{{ site.base_path }}en-US/">EN</a>
             </span>
           </div>
         </div>
@@ -99,7 +98,7 @@ layout: default
             <div class="col-xs-12">
               <hr />
               <div class="column-group">
-                <img class="column-img fig_1" src="/images/en-US/feature/fig_1.png" />
+                <img class="column-img fig_1" src="{{ site.base_path }}images/en-US/feature/fig_1.png" />
                 <div class="column-content feature-content">
                   Fixed-width between numbers make it easier to catch the unit of numbers at a glance. Dodo services including Dodo point include a lot of numbers, so we have adjusted the numbers of Spoqa Han Sans to have fixed-width.
                 </div>
@@ -112,7 +111,7 @@ layout: default
               <div class="column-group">
                 <div class="row">
                   <div class="col-md-6 col-sm-12 col-xs-12">
-                    <img class="column-img fig_2" src="/images/en-US/feature/fig_2.png" />
+                    <img class="column-img fig_2" src="{{ site.base_path }}images/en-US/feature/fig_2.png" />
                   </div>
                   <div class="col-md-6 col-sm-12 col-xs-12">
                     <div class="column-content feature-content">
@@ -129,7 +128,7 @@ layout: default
               <div class="column-group fig-magin-adhoc">
                 <div class="row">
                   <div class="col-md-6 col-sm-12 col-xs-12">
-                    <img class="column-img fig_3" src="/images/en-US/feature/fig_3.png" />
+                    <img class="column-img fig_3" src="{{ site.base_path }}images/en-US/feature/fig_3.png" />
                   </div>
                   <div class="col-md-6 col-sm-12 col-xs-12 ">
                     <div class="column-content feature-content">
@@ -144,7 +143,7 @@ layout: default
             <div class="col-sm-6 col-xs-12">
               <hr />
               <div class="column-group">
-                <img class="column-img fig_4" src="/images/en-US/feature/fig_4.png" />
+                <img class="column-img fig_4" src="{{ site.base_path }}images/en-US/feature/fig_4.png" />
                 <div class="column-content feature-content">
                   Carets are often used along with “learn more” or “back” labels. We added caret glyphs to PUA (Private Use Areas). Therefore, Spoqa Han Sans provides caret with higher consistency among text labels, and also cuts off time to work on a caret icon.
                 </div>
@@ -153,7 +152,7 @@ layout: default
             <div class="col-sm-6 col-xs-12">
               <hr />
               <div class="column-group">
-                <img class="column-img fig_5" src="/images/en-US/feature/fig_5.png" />
+                <img class="column-img fig_5" src="{{ site.base_path }}images/en-US/feature/fig_5.png" />
                 <div class="column-content feature-content">
                   We added Popo and Pui, the characters of Dodo Point, to the Snowman Glyph (U + 2603). ‘Thin’ and ‘Light’ include Pui, ‘Regular’ and ‘Bold’ include Popo.
                 </div>
@@ -164,7 +163,7 @@ layout: default
             <div class="col-sm-6 col-xs-12">
               <hr />
               <div class="column-group">
-                <img class="column-img fig_6" src="/images/en-US/feature/fig_6.png" />
+                <img class="column-img fig_6" src="{{ site.base_path }}images/en-US/feature/fig_6.png" />
                 <div class="column-content feature-content">
                   We improved usability by adding additional characters to the complete code system of Hangeul. Subset of the latest version Spoqa Han Sans provides a total of 2,574 characters plus 224 additional characters. Learn more from “<a target="_blank" href="http://koreantypography.org/wp-content/uploads/2016/02/kst_12_7_2_06.pdf">Proposal for Additional Korean Characters in Complete Code of Hangeul</a>”.
                 </div>
@@ -173,7 +172,7 @@ layout: default
             <div class="col-sm-6 col-xs-12">
               <hr />
               <div class="column-group">
-                <img class="column-img fig_7" src="/images/en-US/feature/fig_7.png" />
+                <img class="column-img fig_7" src="{{ site.base_path }}images/en-US/feature/fig_7.png" />
                 <div class="column-content feature-content">
                   We changed the shape of Guillemet to match other letters. We changed corner brackets and arrow brackets to have halfwidth forms instead of fullwidth. So every user can use it in general-purpose applications and web environments without additional setting.
                 </div>
