@@ -145,9 +145,12 @@
             }
         }
     }
-
-    > textarea {
+    
+    > input[type="text"], textarea {
         display: block;
+        -webkit-appearance: none;
+        apperance: none;
+        border-radius: 0;
         width: 100%;
         height: 504px;
         border: none;
