@@ -50,7 +50,7 @@
 
 @font-face {
     font-family: 'Spoqa Han Sans JP';
-    font-weight: 200;
+    font-weight: 100;
     src: local('Spoqa Han Sans JP Thin'), local('Spoqa Han Sans JP Thin'),
     url('../Subset/SpoqaHanSans_JP/Spoqa%20Han%20Sans%20JP%20Thin.woff2') format('woff2'),
     url('../Subset/SpoqaHanSans_JP/Spoqa%20Han%20Sans%20JP%20Thin.woff') format('woff'),
