@@ -2,7 +2,7 @@
 layout: default
 ---
 {% assign base_path = '../..' %}
-    <header id="top">
+    <header id="header">
       <div class="nav-box">
         <div class="container-fluid">
           <div class="nav-text">
@@ -15,9 +15,9 @@ layout: default
       </div>
     </header>
 
-    <section class="section section-header hero-wrap" id="header">
+    <section class="section section-header hero-wrap">
       <div class="container-fluid">
-        <h1>Spoqa Han Sans is a custom font based on Noto Sans and Lato to fit multilingual UI of Spoqa’s products. We now unveil the new version which has evolved in many ways. 스포카 한 산스는 스포카의 제품의 다국어 UI에 대응하기 위해 노토 산스와 라토를 바탕으로 커스텀한 글꼴입니다. 여러모로 개선을 거쳐 진화한 스포카 한 산스를 공개합니다.<span class="JP-word-break">スポカーハンサンスはスポカ製品の多言語UIを対応するためにNoto Sansとラトをもとにカスタムしたフォントです。これまでいろいろ改善して進化した新しいスポカーハンサンスを公開します。</span></h1>
+        <h1 class="header-text"><span class="header-text-700">Spoqa Han Sans is a custom font based on Noto Sans and Lato to fit multilingual UI of Spoqa’s products. We now unveil the new version which has evolved in many ways.</span> <span class="header-text-400">스포카 한 산스는 스포카의 제품의 다국어 UI에 대응하기 위해 노토 산스와 라토를 바탕으로 커스텀한 글꼴입니다.</span> <span class="header-text-300">여러모로 개선을 거쳐 진화한 스포카 한 산스를 공개합니다.</span><span class="JP-word-break header-text-100">スポカハンサンスはスポカ製品の多言語UIを対応するためにNoto SansとLatoをもとにカスタムしたフォントです。これまでいろいろ改善して進化させた新しいスポカーハンサンスを公開します。</span></h1>
       </div>
     </section>
     <hr />
@@ -25,16 +25,17 @@ layout: default
       <div id="subnav-anchor"></div>
       <nav>
         <ul class="subnav-menus">
-          <li><a href="#header">header</a></li>
-          <li><a href="#intro">intro</a></li>
-          <li><a href="#feature">feature</a></li>
-          <li><a href="#preview">preview</a></li>
-          <li><a href="#webfont">webfont</a></li>
-          <li><a href="#fontinuse">fontinuse</a></li>
+          <li><a href="#header">Back to top</a></li>
+          <li><a href="#intro">Intro</a></li>
+          <li><a href="#feature">Feature</a></li>
+          <li><a href="#preview">Tryout</a></li>
+          <li><a href="#download">Download</a></li>
+          <li><a href="#webfont">Webfonts</a></li>
+          <li><a href="#fontinuse">Font in use</a></li>
         </ul>
       </nav>
     </div>
-    <div class="content-wrap">
+    <article class="content-wrap">
       <section class="section" id="intro">
         <div class="container-fluid">
           <h3 class="section-title">Spoqa Han Sans<br>Custom font released in 2015</h3>
@@ -82,7 +83,7 @@ layout: default
                 <div class="column-content">
                   We thank everyone for being a big fan of Spoqa Hans Sans. We received helpful feedbacks and comments. As developers of Spoqa Han Sans, we discoverd more to elaborate in our product. Now we release the latest version of Spoqa Han Sans. Let’s take a look around.
                   <div class="link-underline">
-                    <a target="_blank" href="https://spoqa.github.io/2016/06/03/localize-type-setting.html">Some fragmentary facts of Spoqa Han Sans</a>
+                    <a target="_blank" href="https://spoqa.github.io/2017/02/15/shs-trivia.html">Some fragmentary facts of Spoqa Han Sans</a>
                   </div>
                 </div>
               </div>
@@ -90,6 +91,7 @@ layout: default
           </div>
         </div>
       </section>
+      <hr />
       <section class="section" id="feature">
         <div class="container-fluid">
           <h3 class="section-title">We unveil evolved Spoqa Han Sans</h3>
@@ -131,7 +133,7 @@ layout: default
                   </div>
                   <div class="col-md-6 col-sm-12 col-xs-12 ">
                     <div class="column-content feature-content">
-                      We added Light, a font style between ‘Regular’ and ‘Thin’. ‘Thin’ is too thin for large text text on web pages, and ‘Regular’ is rather thick. Now, you can use Spoka Han Sans Light. Larger size font can show a gray level similar to ‘Regular’.
+                      We added Light, a font style between ‘Regular’ and ‘Thin’. ‘Thin’ is too thin for large text text on web pages, and ‘Regular’ is rather thick. Now, you can use Spoqa Han Sans Light. Larger size font can show a gray level similar to ‘Regular’.
                     </div>
                   </div>
                 </div>
@@ -164,7 +166,7 @@ layout: default
               <div class="column-group">
                 <img class="column-img fig_6" src="/images/en-US/feature/fig_6.png" />
                 <div class="column-content feature-content">
-                  We improved usability by adding additional characters to the complete code system of Hangeul. Subset of the latest version Spoqa Han Sans provides a total of 2,574 characters plus 224 additional characters. Learn more from “Proposal for Additional Korean Characters in Complete Code of Hangeul”.
+                  We improved usability by adding additional characters to the complete code system of Hangeul. Subset of the latest version Spoqa Han Sans provides a total of 2,574 characters plus 224 additional characters. Learn more from “<a target="_blank" href="http://koreantypography.org/wp-content/uploads/2016/02/kst_12_7_2_06.pdf">Proposal for Additional Korean Characters in Complete Code of Hangeul</a>”.
                 </div>
               </div>
             </div>
@@ -189,18 +191,18 @@ layout: default
           {% include preview.html lang="en-US" %}
         </div>
       </section>
-      <section class="section">
+      <section class="section" id="download">
         <div class="container-fluid">
           <h3 class="section-title">Download Spoqa Han Sans</h3>
           <div class="link-underline download-wrap">
-            <a>Download All</a>
+            <a href="https://github.com/spoqa/spoqa-han-sans/releases/download/2.0.0/SpoqaHanSans_all.zip">Download All</a>
             <span class="download-group">
-              <a>KR Original</a>
-              <a>KR Subset</a>
+              <a href="https://github.com/spoqa/spoqa-han-sans/releases/download/2.0.0/SpoqaHanSans_original.zip">KR Original</a>
+              <a href="https://github.com/spoqa/spoqa-han-sans/releases/download/2.0.0/SpoqaHanSans_subset.zip">KR Subset</a>
             </span>
             <span class="download-group">
-              <a>JP Original</a>
-              <a>JP Subset</a>
+              <a href="https://github.com/spoqa/spoqa-han-sans/releases/download/2.0.0/SpoqaHanSans_JP_original.zip">JP Original</a>
+              <a href="https://github.com/spoqa/spoqa-han-sans/releases/download/2.0.0/SpoqaHanSans_JP_subset.zip">JP Subset</a>
             </span>
           </div>
           <p>Click the download button and try it on your PC now!<br>The Korean subsets support a total of 2,574 glyphs, and Japanese subsets support 6,355 Japanese Kanji. You can use it with more compact capacity than the original version.
@@ -216,16 +218,16 @@ layout: default
           <p>To embed Spoqa Han Sans into a webpage, there are two ways.</p>
           <p>Copy this code into stylesheet as the import method</p>
           {% highlight scss %}
-  @import url(//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSans-kr.css);
-  @import url(//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSans-jp.css);{% endhighlight %}
+@import url(//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSans-kr.css);
+@import url(//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSans-jp.css);{% endhighlight %}
           <p>Or copy this code into the <code>&lt;head&gt;</code> of your HTML document.</p>
           {% highlight html %}
-  <link href='//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSans-kr.css' rel='stylesheet' type='text/css'>
-  <link href='//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSans-jp.css' rel='stylesheet' type='text/css'>{% endhighlight %}
+<link href='//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSans-kr.css' rel='stylesheet' type='text/css'>
+<link href='//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSans-jp.css' rel='stylesheet' type='text/css'>{% endhighlight %}
           <p>And then, specify the font with <code>font-family</code> in the <code>&lt;style&gt;</code> tag.</p>
           {% highlight scss %}
-  * { font-family: 'Spoqa Han Sans', 'Spoqa Han Sans JP', 'Sans-serif'; }{% endhighlight %}
-          <p>If you use below ways, it may take a while because it is a free serve version. We recommended to serve it directly to your server. If you need more information, refer to <a target="_blank" href="https://spoqa.github.io/2016/06/03/localize-type-setting.html">the tips on using Spoqa Han Sans web fonts.</a></p>
+* { font-family: 'Spoqa Han Sans', 'Spoqa Han Sans JP', 'Sans-serif'; }{% endhighlight %}
+          <p>If you use below ways, it may take a while because it is a free serve version. We recommended to serve it directly to your server. If you need more information, refer to <a target="_blank" href="https://spoqa.github.io/2017/02/15/using-shs-as-webfonts.html">the tips on using Spoqa Han Sans web fonts.</a></p>
           <p></p>
         </div>
       </section>
@@ -239,33 +241,33 @@ layout: default
           </div>
           <div class="row section-font-in-use">
             <div class="col-sm-4 col-xs-12 item-font-in-use tumblbug">
-              <button><a href="https://www.tumblbug.com" target="_blank">Tumblbug&nbsp;<span>></span></a></button>
+              <button><a href="https://www.tumblbug.com" target="_blank">Tumblbug</a></button>
             </div>
             <div class="col-sm-4 col-xs-12 item-font-in-use lendit">
-              <button><a href="https://lendit.co.kr/" target="_blank">Lendit&nbsp;<span>></span></a></button>
+              <button><a href="https://lendit.co.kr/" target="_blank">Lendit</a></button>
             </div>
             <div class="col-sm-4 col-xs-12 item-font-in-use ssup">
-              <button><a href="http://ssup.us/" target="_blank">Ssup&nbsp;<span>></span></a></button>
+              <button><a href="http://ssup.us/" target="_blank">Ssup</a></button>
             </div>
             <div class="col-sm-4 col-xs-12 item-font-in-use coinone">
-              <button><a href="https://coinone.co.kr/" target="_blank">Coinone&nbsp;<span>></span></a></button>
+              <button><a href="https://coinone.co.kr/" target="_blank">Coinone</a></button>
             </div>
             <div class="col-sm-4 col-xs-12 item-font-in-use toss">
-              <button><a href="https://toss.im/" target="_blank">Toss&nbsp;<span>></span></a></button>
+              <button><a href="https://toss.im/" target="_blank">Toss</a></button>
             </div>
             <div class="col-sm-4 col-xs-12 item-font-in-use assorted-books">
-              <button><a href="http://assorted-books.com/" target="_blank">Assorted Books&nbsp;<span>></span></a></button>
+              <button><a href="http://assorted-books.com/" target="_blank">Assorted Books</a></button>
             </div>
             <div class="col-sm-4 col-xs-12 item-font-in-use mangoplate">
-              <button><a href="https://www.mangoplate.com/" target="_blank">Mango Plate&nbsp;<span>></span></a></button>
+              <button><a href="https://www.mangoplate.com/" target="_blank">Mango Plate</a></button>
             </div>
             <div class="col-sm-4 col-xs-12 item-font-in-use duiro">
-              <button><a href="http://www.duiromagazine.com/" target="_blank">Duiro Magazine&nbsp;<span>></span></a></button>
+              <button><a href="http://www.duiromagazine.com/" target="_blank">Duiro Magazine</a></button>
             </div>
             <div class="col-sm-4 col-xs-12 item-font-in-use up">
-              <button><a href="http://www.unionpool.com/about" target="_blank">Union Pool&nbsp;<span>></span></a></button>
+              <button><a href="http://www.unionpool.com/about" target="_blank">Union Pool</a></button>
             </div>
           </div>
         </div>
       </section>
-    </div>
+    </article>

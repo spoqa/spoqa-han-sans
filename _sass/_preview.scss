@@ -5,6 +5,7 @@
     $dark-background: $grey-8;
     $dark-foreground: $white;
     $dark-border: $grey-6;
+    $dark-border-preview-area: $grey-8;
     $light-background: $white;
     $light-foreground: $grey-7;
     $light-border: $grey-3;
@@ -12,13 +13,12 @@
     $range-input-background: $grey-3;
     $range-input-handle-background: $grey-5;
     $text-color: $grey-5;
-
     $transition-duration: .5s;
     $transition-duration-short: .2s;
 
     box-sizing: border-box;
     border-radius: 6px;
-    border: 1px solid $dark-border;
+    border: 1px solid $dark-border-preview-area;
     background-color: $dark-background;
     overflow: hidden;
     transition: all $transition-duration ease;
@@ -89,6 +89,9 @@
                             border-radius: $handle-size / 2;
                             outline: solid 3px $dark-background;
                             transition: outline $transition-duration ease;
+                            &:hover, &:active {
+                                background-color: $highlight;
+                            }
                         }
                     }
                 }
@@ -133,7 +136,7 @@
                             border: none;
                             outline: none;
                             color: $text-color;
-                            &:active {
+                            &:hover, &:active {
                                 color: $highlight;
                             }
                         }
@@ -142,15 +145,18 @@
             }
         }
     }
-
-    > textarea {
+    
+    > input[type="text"], textarea {
         display: block;
+        -webkit-appearance: none;
+        apperance: none;
+        border-radius: 0;
         width: 100%;
         height: 504px;
         border: none;
         outline: none;
         border-top: 1px solid $dark-border;
-        padding: 50px 39px;
+        padding: 44px;
         background: transparent;
         font-size: 37px;
         font-weight: normal;
@@ -190,6 +196,7 @@
 
 @media (max-width: 700px) {
     .preview-area {
+        margin-top: 30px;
         > .control-bar {
             > .slider.group {
                 display: none;
@@ -207,8 +214,9 @@
         }
         > textarea {
             overflow: hidden;
-            height: 518px;
-            font-size: 22px !important;
+            height: 476px;
+            font-size: 20px !important;
+            padding: 20px 25px;
         }
     }
 }
