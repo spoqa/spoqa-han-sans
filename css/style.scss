@@ -184,10 +184,10 @@ h3.section-title {
 .section-header h1 {
   margin-top: 0;
   margin-bottom: 0;
+  word-break: break-all;
 }
 
 .JP-word-break {
-  word-break: break-all;
   word-wrap: break-word;
   font-family: 'Spoqa Han Sans JP', 'Spoqa Han Sans', 'Source Sans Pro', Apple SD Gothic Neo, Nanum Barun Gothic, Nanum Gothic, '돋움', Dotum, Verdana, Arial, sans-serif;
 }
