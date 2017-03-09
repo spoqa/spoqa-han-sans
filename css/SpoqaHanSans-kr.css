@@ -24,7 +24,7 @@
 @font-face {
     font-family: 'Spoqa Han Sans';
     font-weight: 700;
-    src: local('Spoqa Han Sans Bold'), local('Spoqa Han Sans Bold'),
+    src: local('Spoqa Han Sans Bold'),
     url('../Subset/SpoqaHanSans/Spoqa%20Han%20Sans%20Bold.woff2') format('woff2'),
     url('../Subset/SpoqaHanSans/Spoqa%20Han%20Sans%20Bold.woff') format('woff'),
     url('../Subset/SpoqaHanSans/Spoqa%20Han%20Sans%20Bold.ttf') format('truetype');
@@ -33,7 +33,7 @@
 @font-face {
     font-family: 'Spoqa Han Sans';
     font-weight: 400;
-    src: local('Spoqa Han Sans Regular'), local('Spoqa Han Sans Regular'),
+    src: local('Spoqa Han Sans Regular'),
     url('../Subset/SpoqaHanSans/Spoqa%20Han%20Sans%20Regular.woff2') format('woff2'),
     url('../Subset/SpoqaHanSans/Spoqa%20Han%20Sans%20Regular.woff') format('woff'),
     url('../Subset/SpoqaHanSans/Spoqa%20Han%20Sans%20Regular.ttf') format('truetype');
@@ -42,7 +42,7 @@
 @font-face {
     font-family: 'Spoqa Han Sans';
     font-weight: 300;
-    src: local('Spoqa Han Sans Light'), local('Spoqa Han Sans Light'),
+    src: local('Spoqa Han Sans Light'),
     url('../Subset/SpoqaHanSans/Spoqa%20Han%20Sans%20Light.woff2') format('woff2'),
     url('../Subset/SpoqaHanSans/Spoqa%20Han%20Sans%20Light.woff') format('woff'),
     url('../Subset/SpoqaHanSans/Spoqa%20Han%20Sans%20Light.ttf') format('truetype');
@@ -51,7 +51,7 @@
 @font-face {
     font-family: 'Spoqa Han Sans';
     font-weight: 100;
-    src: local('Spoqa Han Sans Thin'), local('Spoqa Han Sans Thin'),
+    src: local('Spoqa Han Sans Thin'),
     url('../Subset/SpoqaHanSans/Spoqa%20Han%20Sans%20Thin.woff2') format('woff2'),
     url('../Subset/SpoqaHanSans/Spoqa%20Han%20Sans%20Thin.woff') format('woff'),
     url('../Subset/SpoqaHanSans/Spoqa%20Han%20Sans%20Thin.ttf') format('truetype');
