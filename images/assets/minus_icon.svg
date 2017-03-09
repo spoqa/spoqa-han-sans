@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #a9afb3;
+      }
+    </style>
+  </defs>
+  <g id="minus_icon">
+    <rect id="minus_copy" data-name="minus copy" class="cls-1" y="7" width="16" height="2"/>
+  </g>
+</svg>
