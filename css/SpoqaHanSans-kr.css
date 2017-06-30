@@ -25,34 +25,34 @@
     font-family: 'Spoqa Han Sans';
     font-weight: 700;
     src: local('Spoqa Han Sans Bold'),
-    url('../Subset/SpoqaHanSans/Spoqa%20Han%20Sans%20Bold.woff2') format('woff2'),
-    url('../Subset/SpoqaHanSans/Spoqa%20Han%20Sans%20Bold.woff') format('woff'),
-    url('../Subset/SpoqaHanSans/Spoqa%20Han%20Sans%20Bold.ttf') format('truetype');
+    url('../Subset/SpoqaHanSans/SpoqaHanSansBold.woff2') format('woff2'),
+    url('../Subset/SpoqaHanSans/SpoqaHanSansBold.woff') format('woff'),
+    url('../Subset/SpoqaHanSans/SpoqaHanSansBold.ttf') format('truetype');
 }
 
 @font-face {
     font-family: 'Spoqa Han Sans';
     font-weight: 400;
     src: local('Spoqa Han Sans Regular'),
-    url('../Subset/SpoqaHanSans/Spoqa%20Han%20Sans%20Regular.woff2') format('woff2'),
-    url('../Subset/SpoqaHanSans/Spoqa%20Han%20Sans%20Regular.woff') format('woff'),
-    url('../Subset/SpoqaHanSans/Spoqa%20Han%20Sans%20Regular.ttf') format('truetype');
+    url('../Subset/SpoqaHanSans/SpoqaHanSansRegular.woff2') format('woff2'),
+    url('../Subset/SpoqaHanSans/SpoqaHanSansRegular.woff') format('woff'),
+    url('../Subset/SpoqaHanSans/SpoqaHanSansRegular.ttf') format('truetype');
 }
 
 @font-face {
     font-family: 'Spoqa Han Sans';
     font-weight: 300;
     src: local('Spoqa Han Sans Light'),
-    url('../Subset/SpoqaHanSans/Spoqa%20Han%20Sans%20Light.woff2') format('woff2'),
-    url('../Subset/SpoqaHanSans/Spoqa%20Han%20Sans%20Light.woff') format('woff'),
-    url('../Subset/SpoqaHanSans/Spoqa%20Han%20Sans%20Light.ttf') format('truetype');
+    url('../Subset/SpoqaHanSans/SpoqaHanSansLight.woff2') format('woff2'),
+    url('../Subset/SpoqaHanSans/SpoqaHanSansLight.woff') format('woff'),
+    url('../Subset/SpoqaHanSans/SpoqaHanSansLight.ttf') format('truetype');
 }
 
 @font-face {
     font-family: 'Spoqa Han Sans';
     font-weight: 100;
     src: local('Spoqa Han Sans Thin'),
-    url('../Subset/SpoqaHanSans/Spoqa%20Han%20Sans%20Thin.woff2') format('woff2'),
-    url('../Subset/SpoqaHanSans/Spoqa%20Han%20Sans%20Thin.woff') format('woff'),
-    url('../Subset/SpoqaHanSans/Spoqa%20Han%20Sans%20Thin.ttf') format('truetype');
+    url('../Subset/SpoqaHanSans/SpoqaHanSansThin.woff2') format('woff2'),
+    url('../Subset/SpoqaHanSans/SpoqaHanSansThin.woff') format('woff'),
+    url('../Subset/SpoqaHanSans/SpoqaHanSansThin.ttf') format('truetype');
 }
