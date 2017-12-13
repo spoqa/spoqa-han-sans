@@ -1,3 +1,7 @@
+env:
+  global:
+    - PATH=$HOME/.local/bin:$PATH
+
 language: bash
 before_deploy:
   - "./build_release"
@@ -13,3 +17,6 @@ deploy:
     - release/SpoqaHanSans_original.zip
   on:
     tags: true
+after_deploy:
+  - pip install --user awscli
+  - "./upload_s3"

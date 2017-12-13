@@ -1,0 +1,21 @@
+#!/bin/sh
+set -e
+
+echo "# Uploading to s3..."
+
+upload_files()
+{
+  echo " # $1"
+  pushd $1 > /dev/null
+  for i in SpoqaHanSans*
+  do
+    aws s3 cp $i s3://cdn-spoqa/`echo $i | sed -e "s/$2/$3/g"` --acl public-read
+  done
+  popd
+}
+
+upload_files "Subset/SpoqaHanSans" SpoqaHanSans SpoqaHanSans-
+upload_files "Subset/SpoqaHanSans_Caret" SpoqaHanSans SpoqaHanSans
+upload_files "Subset/SpoqaHanSans_JP" SpoqaHanSansJP SpoqaHanSansJP-
+
+aws cloudfront create-invalidation --distribution-id $AWS_DISTRIBUTION_ID --paths /SpoqaHanSans\*
