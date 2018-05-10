@@ -1,4 +1,4 @@
-Spoqa Han Sans v2.1.1
+Spoqa Han Sans v2.1.2
 =====================
 
 [![npm version](https://badge.fury.io/js/spoqa-han-sans.svg)](https://www.npmjs.com/package/spoqa-han-sans)
@@ -16,11 +16,11 @@ Spoqa Han Sans v2.1.1
 
 ## 폰트 다운로드(TTF, Subset TTF)
 
-- [All](https://github.com/spoqa/spoqa-han-sans/releases/download/2.1.1/SpoqaHanSans_all.zip)
-- [KR Original](https://github.com/spoqa/spoqa-han-sans/releases/download/2.1.1/SpoqaHanSans_original.zip)
-- [KR Subset](https://github.com/spoqa/spoqa-han-sans/releases/download/2.1.1/SpoqaHanSans_subset.zip)
-- [JP Original](https://github.com/spoqa/spoqa-han-sans/releases/download/2.1.1/SpoqaHanSans_JP_original.zip)
-- [JP Subset](https://github.com/spoqa/spoqa-han-sans/releases/download/2.1.1/SpoqaHanSans_JP_subset.zip)
+- [All](https://github.com/spoqa/spoqa-han-sans/releases/download/v2.1.2/SpoqaHanSans_all.zip)
+- [KR Original](https://github.com/spoqa/spoqa-han-sans/releases/download/v2.1.2/SpoqaHanSans_original.zip)
+- [KR Subset](https://github.com/spoqa/spoqa-han-sans/releases/download/v2.1.2/SpoqaHanSans_subset.zip)
+- [JP Original](https://github.com/spoqa/spoqa-han-sans/releases/download/v2.1.2/SpoqaHanSans_JP_original.zip)
+- [JP Subset](https://github.com/spoqa/spoqa-han-sans/releases/download/v2.1.2/SpoqaHanSans_JP_subset.zip)
 
 
 ## 폰트 설치 방법
@@ -63,7 +63,7 @@ Spoqa Han Sans 프로젝트에 제안하고 싶은 사항이 있다면 이슈를
 
 ## 제작 정보
 
-Spoqa Han Sans에 대한 제작 배경 및 미리보기에 대한 정보는 [Spoqa Han Sans Introduction](http://spoqa-han-sans.com/)에서 얻으실 수 있습니다.
+Spoqa Han Sans에 대한 제작 배경 및 미리보기에 대한 정보는 [Spoqa Han Sans Introduction](https://spoqa.github.io/spoqa-han-sans/)에서 얻으실 수 있습니다.
 
 ## 오픈 소스
 
