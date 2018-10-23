@@ -27,34 +27,34 @@
     font-weight: 700;
 
     src: local('Spoqa Han Sans JP Bold'),
-    url('https://cdn.rawgit.com/spoqa/spoqa-han-sans/01ff0283/Subset/SpoqaHanSans_JP/SpoqaHanSansJPBold.woff2') format('woff2'),
-    url('https://cdn.rawgit.com/spoqa/spoqa-han-sans/01ff0283/Subset/SpoqaHanSans_JP/SpoqaHanSansJPBold.woff') format('woff'),
-    url('https://cdn.rawgit.com/spoqa/spoqa-han-sans/01ff0283/Subset/SpoqaHanSans_JP/SpoqaHanSansJPBold.ttf') format('truetype');
+    url('https://cdn.jsdelivr.net/gh/spoqa/spoqa-han-sans@01ff0283e4f36e159ffbf744b36e16ef742da6d8/Subset/SpoqaHanSans_JP/SpoqaHanSansJPBold.woff2') format('woff2'),
+    url('https://cdn.jsdelivr.net/gh/spoqa/spoqa-han-sans@01ff0283e4f36e159ffbf744b36e16ef742da6d8/Subset/SpoqaHanSans_JP/SpoqaHanSansJPBold.woff') format('woff'),
+    url('https://cdn.jsdelivr.net/gh/spoqa/spoqa-han-sans@01ff0283e4f36e159ffbf744b36e16ef742da6d8/Subset/SpoqaHanSans_JP/SpoqaHanSansJPBold.ttf') format('truetype');
 }
 
 @font-face {
     font-family: 'Spoqa Han Sans JP';
     font-weight: 400;
     src: local('Spoqa Han Sans JP Regular'),
-    url('https://cdn.rawgit.com/spoqa/spoqa-han-sans/01ff0283/Subset/SpoqaHanSans_JP/SpoqaHanSansJPRegular.woff2') format('woff2'),
-    url('https://cdn.rawgit.com/spoqa/spoqa-han-sans/01ff0283/Subset/SpoqaHanSans_JP/SpoqaHanSansJPRegular.woff') format('woff'),
-    url('https://cdn.rawgit.com/spoqa/spoqa-han-sans/01ff0283/Subset/SpoqaHanSans_JP/SpoqaHanSansJPRegular.ttf') format('truetype');
+    url('https://cdn.jsdelivr.net/gh/spoqa/spoqa-han-sans@01ff0283e4f36e159ffbf744b36e16ef742da6d8/Subset/SpoqaHanSans_JP/SpoqaHanSansJPRegular.woff2') format('woff2'),
+    url('https://cdn.jsdelivr.net/gh/spoqa/spoqa-han-sans@01ff0283e4f36e159ffbf744b36e16ef742da6d8/Subset/SpoqaHanSans_JP/SpoqaHanSansJPRegular.woff') format('woff'),
+    url('https://cdn.jsdelivr.net/gh/spoqa/spoqa-han-sans@01ff0283e4f36e159ffbf744b36e16ef742da6d8/Subset/SpoqaHanSans_JP/SpoqaHanSansJPRegular.ttf') format('truetype');
 }
 
 @font-face {
     font-family: 'Spoqa Han Sans JP';
     font-weight: 300;
     src: local('Spoqa Han Sans JP Light'),
-    url('https://cdn.rawgit.com/spoqa/spoqa-han-sans/01ff0283/Subset/SpoqaHanSans_JP/SpoqaHanSansJPLight.woff2') format('woff2'),
-    url('https://cdn.rawgit.com/spoqa/spoqa-han-sans/01ff0283/Subset/SpoqaHanSans_JP/SpoqaHanSansJPLight.woff') format('woff'),
-    url('https://cdn.rawgit.com/spoqa/spoqa-han-sans/01ff0283/Subset/SpoqaHanSans_JP/SpoqaHanSansJPLight.ttf') format('truetype');
+    url('https://cdn.jsdelivr.net/gh/spoqa/spoqa-han-sans@01ff0283e4f36e159ffbf744b36e16ef742da6d8/Subset/SpoqaHanSans_JP/SpoqaHanSansJPLight.woff2') format('woff2'),
+    url('https://cdn.jsdelivr.net/gh/spoqa/spoqa-han-sans@01ff0283e4f36e159ffbf744b36e16ef742da6d8/Subset/SpoqaHanSans_JP/SpoqaHanSansJPLight.woff') format('woff'),
+    url('https://cdn.jsdelivr.net/gh/spoqa/spoqa-han-sans@01ff0283e4f36e159ffbf744b36e16ef742da6d8/Subset/SpoqaHanSans_JP/SpoqaHanSansJPLight.ttf') format('truetype');
 }
 
 @font-face {
     font-family: 'Spoqa Han Sans JP';
     font-weight: 100;
     src: local('Spoqa Han Sans JP Thin'),
-    url('https://cdn.rawgit.com/spoqa/spoqa-han-sans/01ff0283/Subset/SpoqaHanSans_JP/SpoqaHanSansJPThin.woff2') format('woff2'),
-    url('https://cdn.rawgit.com/spoqa/spoqa-han-sans/01ff0283/Subset/SpoqaHanSans_JP/SpoqaHanSansJPThin.woff') format('woff'),
-    url('https://cdn.rawgit.com/spoqa/spoqa-han-sans/01ff0283/Subset/SpoqaHanSans_JP/SpoqaHanSansJPThin.ttf') format('truetype');
+    url('https://cdn.jsdelivr.net/gh/spoqa/spoqa-han-sans@01ff0283e4f36e159ffbf744b36e16ef742da6d8/Subset/SpoqaHanSans_JP/SpoqaHanSansJPThin.woff2') format('woff2'),
+    url('https://cdn.jsdelivr.net/gh/spoqa/spoqa-han-sans@01ff0283e4f36e159ffbf744b36e16ef742da6d8/Subset/SpoqaHanSans_JP/SpoqaHanSansJPThin.woff') format('woff'),
+    url('https://cdn.jsdelivr.net/gh/spoqa/spoqa-han-sans@01ff0283e4f36e159ffbf744b36e16ef742da6d8/Subset/SpoqaHanSans_JP/SpoqaHanSansJPThin.ttf') format('truetype');
 }
