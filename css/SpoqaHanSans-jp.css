@@ -24,6 +24,7 @@
 @font-face {
     font-family: 'Spoqa Han Sans JP';
     font-weight: 700;
+    font-display: swap;
     src: local('Spoqa Han Sans JP Bold'),
     url('../Subset/SpoqaHanSans_JP/SpoqaHanSansJPBold.woff2') format('woff2'),
     url('../Subset/SpoqaHanSans_JP/SpoqaHanSansJPBold.woff') format('woff'),
@@ -33,6 +34,7 @@
 @font-face {
     font-family: 'Spoqa Han Sans JP';
     font-weight: 400;
+    font-display: swap;
     src: local('Spoqa Han Sans JP Regular'),
     url('../Subset/SpoqaHanSans_JP/SpoqaHanSansJPRegular.woff2') format('woff2'),
     url('../Subset/SpoqaHanSans_JP/SpoqaHanSansJPRegular.woff') format('woff'),
@@ -42,6 +44,7 @@
 @font-face {
     font-family: 'Spoqa Han Sans JP';
     font-weight: 300;
+    font-display: swap;
     src: local('Spoqa Han Sans JP Light'),
     url('../Subset/SpoqaHanSans_JP/SpoqaHanSansJPLight.woff2') format('woff2'),
     url('../Subset/SpoqaHanSans_JP/SpoqaHanSansJPLight.woff') format('woff'),
@@ -51,6 +54,7 @@
 @font-face {
     font-family: 'Spoqa Han Sans JP';
     font-weight: 100;
+    font-display: swap;
     src: local('Spoqa Han Sans JP Thin'),
     url('../Subset/SpoqaHanSans_JP/SpoqaHanSansJPThin.woff2') format('woff2'),
     url('../Subset/SpoqaHanSans_JP/SpoqaHanSansJPThin.woff') format('woff'),
