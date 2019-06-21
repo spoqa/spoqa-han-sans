@@ -51,7 +51,7 @@ Spoqa Han Sans를 웹폰트로 사용하시려면 2가지 방법이 있습니다
 
 ```css
 * {
-  font-family: 'Spoqa Han Sans', 'Spoqa Han Sans JP', 'Sans-serif';
+  font-family: 'Spoqa Han Sans', 'Spoqa Han Sans JP', sans-serif;
 }
 ```
 
