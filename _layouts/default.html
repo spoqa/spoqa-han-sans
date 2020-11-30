@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Spoqa Han Sans</title>
+    <link rel="canonical" href="{{ canonical_url }}">
+    <meta property="og:url" content="{{ og_url }}">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Spoqa Han Sans">
+    <meta property="og:description" content="Spoqa unveil the new Spoqa Han Sans Neo, which has evolved in many ways. | 여러모로 개선을 거쳐 진화한 스포카 한 산스 네오를 공개합니다. | これまでいろいろ改善して進化した新しいスポカーハンサンスネオを公開します。">
+    <meta property="og:image" content="{{ site.url }}/images/preview.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@spoqa">
+    <meta name="twitter:title" content="Spoqa Han Sans">
+    <meta name="twitter:description" content="Spoqa unveil the new Spoqa Han Sans Neo, which has evolved in many ways. | 여러모로 개선을 거쳐 진화한 스포카 한 산스 네오를 공개합니다. | これまでいろいろ改善して進化した新しいスポカーハンサンスネオを公開します。">
+    <meta name="twtiter:image" content="{{ site.url }}/images/preview.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="shortcut icon" href="{{ site.url }}/images/favicon.ico">
+    <link rel="stylesheet" type="text/css" href="{{ site.url }}/css/style.css">
+    <link href='//fonts.googleapis.com/css?family=Source+Code+Pro' rel='stylesheet' type='text/css'>
+    <link href='{{ site.url }}/css/SpoqaHanSansNeo.css' rel='stylesheet' type='text/css'>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <script>
+    $(function() {
+      $('a[href^="#"]').click(function(e) {
+        e.preventDefault();
+        var $this = $(this);
+        var href = $this.attr('href');
+        if (history.pushState) history.pushState(href, href, href);
+        var target = $(href);
+        if (target.length == 0) return false;
+        var offsetTop = target.offset().top;
+        var topnavHeight = $('.topnav').height();
+        var scrollTopTarget = offsetTop - topnavHeight;
+        $('body,html').stop().animate({scrollTop: scrollTopTarget}, '1000', 'swing');
+      })
+    })
+    </script>
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+      ga('create', 'UA-61954097-5', 'auto');
+      ga('send', 'pageview');
+    </script>
+    <script type="text/javascript">
+      if ("ontouchstart" in document.documentElement) {
+          document.documentElement.className += " touch";
+      } else {
+          document.documentElement.className += " no-touch";
+      }
+    </script>
+    <script type="text/javascript" src="{{ site.url }}/js/subnav-scrolling.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery-scrollTo/2.1.2/jquery.scrollTo.min.js"></script>
+    <script type="text/javascript">
+      $(window).load(function(){
+        $(window).scroll(function() {
+          var wintop = $(window).scrollTop(), docheight = $('article').height(), winheight = $(window).height();
+          var totalScroll = (wintop/(docheight-winheight))*100;
+          $(".progress-bar").css("width",totalScroll+"%");
+        });
+      });
+    </script>
+
+  </head>
+  <body class="preview-weight-regular preview-background-light">
+
+      {{ content }}
+
+  </body>
+</html>
+
