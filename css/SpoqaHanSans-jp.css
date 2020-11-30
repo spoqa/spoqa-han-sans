@@ -1,5 +1,5 @@
 /**
- * Copyright (c) 2015 Spoqa, Inc.
+ * Copyright (c) 2020 Spoqa, Inc.
  *
  * Permission is hereby granted, free of charge, to any person obtaining
  * a copy of this software and associated documentation files (the
@@ -26,9 +26,19 @@
     font-weight: 700;
     font-display: swap;
     src: local('Spoqa Han Sans JP Bold'),
-    url('../Subset/SpoqaHanSans_JP/SpoqaHanSansJPBold.woff2') format('woff2'),
-    url('../Subset/SpoqaHanSans_JP/SpoqaHanSansJPBold.woff') format('woff'),
-    url('../Subset/SpoqaHanSans_JP/SpoqaHanSansJPBold.ttf') format('truetype');
+    url('../Subset/SpoqaHanSansNeo/Spoqa Han Sans Neo Bold.woff2') format('woff2'),
+    url('../Subset/SpoqaHanSansNeo/SpoqaHanSansNeo-Bold.woff') format('woff'),
+    url('../Subset/SpoqaHanSansNeo/SpoqaHanSansNeo-Bold.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Spoqa Han Sans JP';
+    font-weight: 500;
+    font-display: swap;
+    src: local('Spoqa Han Sans JP Medium'),
+    url('../Subset/SpoqaHanSansNeo/Spoqa Han Sans Neo Medium.woff2') format('woff2'),
+    url('../Subset/SpoqaHanSansNeo/SpoqaHanSansNeo-Medium.woff') format('woff'),
+    url('../Subset/SpoqaHanSansNeo/SpoqaHanSansNeo-Medium.ttf') format('truetype');
 }
 
 @font-face {
@@ -36,9 +46,9 @@
     font-weight: 400;
     font-display: swap;
     src: local('Spoqa Han Sans JP Regular'),
-    url('../Subset/SpoqaHanSans_JP/SpoqaHanSansJPRegular.woff2') format('woff2'),
-    url('../Subset/SpoqaHanSans_JP/SpoqaHanSansJPRegular.woff') format('woff'),
-    url('../Subset/SpoqaHanSans_JP/SpoqaHanSansJPRegular.ttf') format('truetype');
+    url('../Subset/SpoqaHanSansNeo/Spoqa Han Sans Neo Regular.woff2') format('woff2'),
+    url('../Subset/SpoqaHanSansNeo/SpoqaHanSansNeo-Regular.woff') format('woff'),
+    url('../Subset/SpoqaHanSansNeo/SpoqaHanSansNeo-Regular.ttf') format('truetype');
 }
 
 @font-face {
@@ -46,9 +56,9 @@
     font-weight: 300;
     font-display: swap;
     src: local('Spoqa Han Sans JP Light'),
-    url('../Subset/SpoqaHanSans_JP/SpoqaHanSansJPLight.woff2') format('woff2'),
-    url('../Subset/SpoqaHanSans_JP/SpoqaHanSansJPLight.woff') format('woff'),
-    url('../Subset/SpoqaHanSans_JP/SpoqaHanSansJPLight.ttf') format('truetype');
+    url('../Subset/SpoqaHanSansNeo/Spoqa Han Sans Neo Light.woff2') format('woff2'),
+    url('../Subset/SpoqaHanSansNeo/SpoqaHanSansNeo-Light.woff') format('woff'),
+    url('../Subset/SpoqaHanSansNeo/SpoqaHanSansNeo-Light.ttf') format('truetype');
 }
 
 @font-face {
@@ -56,7 +66,7 @@
     font-weight: 100;
     font-display: swap;
     src: local('Spoqa Han Sans JP Thin'),
-    url('../Subset/SpoqaHanSans_JP/SpoqaHanSansJPThin.woff2') format('woff2'),
-    url('../Subset/SpoqaHanSans_JP/SpoqaHanSansJPThin.woff') format('woff'),
-    url('../Subset/SpoqaHanSans_JP/SpoqaHanSansJPThin.ttf') format('truetype');
+    url('../Subset/SpoqaHanSansNeo/Spoqa Han Sans Neo Thin.woff2') format('woff2'),
+    url('../Subset/SpoqaHanSansNeo/SpoqaHanSansNeo-Thin.woff') format('woff'),
+    url('../Subset/SpoqaHanSansNeo/SpoqaHanSansNeo-Thin.ttf') format('truetype');
 }
