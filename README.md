@@ -21,6 +21,8 @@ Spoqa Han Sans Neo v3.0.0
 - [OTF Original](https://github.com/spoqa/spoqa-han-sans/releases/download/v3.0.0/SpoqaHanSansNeo_OTF_original.zip)
 - [TTF Subset](https://github.com/spoqa/spoqa-han-sans/releases/download/v3.0.0/SpoqaHanSans_TTF_subset.zip)
 - [OTF Subset](https://github.com/spoqa/spoqa-han-sans/releases/download/v3.0.0/SpoqaHanSans_OTF_subset.zip)
+- [JP Original](https://github.com/spoqa/spoqa-han-sans/releases/download/v2.1.2/SpoqaHanSans_JP_original.zip)
+- [JP Subset](https://github.com/spoqa/spoqa-han-sans/releases/download/v2.1.2/SpoqaHanSans_JP_subset.zip)
 
 
 ## 폰트 설치 방법
