@@ -1,5 +1,4 @@
 $(function () {
-  console.log('hi');
   var $window = $(window);
   var $previewArea = $('.preview-area');
   var $controlBar = $('.control-bar', $previewArea);
@@ -96,7 +95,6 @@ $(function () {
     function updateFontFamily() {
       var value = $select.val();
       var text = $textarea.val();
-      console.log(lastWeight, value);
       if (lastWeight !== value) {
           lastWeight = value;
           text = defaultText['kr'];

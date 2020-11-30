@@ -105,7 +105,7 @@
         <div class="col-xs-12">
           <hr />
           <div class="column-group">
-            <img class="column-img fig_1" src="{{ site.url }}/images/en-US/feature/fig_1.png" />
+            <img class="column-img fig_1" src="{{ site.url }}/images/feature/fig_1.png" />
             <div class="column-content feature-content">
               이전의 스포카 한 산스에는 각진 형태의 숫자와 쉼표, 그리고 둥근 형태의 다른 글리프들이 섞여 이질적인 느낌을 주었습니다. 스포카 한 산스 네오는 숫자에 쓰인 Lato에 맞추어 다른 둥근 글리프들의 형태를 각지게 변경했습니다. 이를 통해 서체의 가독성과 통일성을 향상했습니다. 전각 특수문자들 또한 함께 변경해, 일본어를 포함한 다국어로 텍스트를 작성해도 같은 인상을 주도록 했습니다.
             </div>
@@ -118,7 +118,7 @@
           <div class="column-group">
             <div class="row">
               <div class="col-md-6 col-sm-12 col-xs-12">
-                <img class="column-img fig_2" src="{{ site.url }}/images/en-US/feature/fig_2.png">
+                <img class="column-img fig_2" src="{{ site.url }}/images/feature/fig_2.png">
               </div>
               <div class="col-md-6 col-sm-12 col-xs-12">
                 <div class="column-content feature-content">
@@ -135,7 +135,7 @@
           <div class="column-group fig-magin-adhoc">
             <div class="row">
               <div class="col-md-6 col-sm-12 col-xs-12">
-                <img class="column-img fig_3" src="{{ site.url }}/images/en-US/feature/fig_3.png" />
+                <img class="column-img fig_3" src="{{ site.url }}/images/feature/fig_3.png" />
               </div>
               <div class="col-md-6 col-sm-12 col-xs-12 ">
                 <div class="column-content feature-content">
@@ -150,7 +150,7 @@
         <div class="col-sm-6 col-xs-12">
           <hr />
           <div class="column-group">
-            <img class="column-img fig_4" src="{{ site.url }}/images/ko-KR/feature/fig_4.png" />
+            <img class="column-img fig_4" src="{{ site.url }}/images/feature/fig_4.png" />
             <div class="column-content feature-content">
               “더보기”나 “뒤로” 레이블과 함께 쓰는 화살표(caret) 글리프를 PUA(Private Use Areas)에 추가했습니다. 보통 > (U+003E)로 사용되곤 하는데 완결된 형태의 아이콘을 넣어 UI 요소로서의 완성도를 높이고자 했습니다.
             </div>
@@ -159,7 +159,7 @@
         <div class="col-sm-6 col-xs-12">
           <hr />
           <div class="column-group">
-            <img class="column-img fig_5" src="images/ko-KR/feature/fig_5.png" />
+            <img class="column-img fig_5" src="{{ site.url }}/images/feature/fig_5.png" />
             <div class="column-content feature-content">
               TTF만 지원하던 이전과 달리, Postscript Curve를 기반으로 하는 OTF와 WOFF2 형식을 지원합니다. 윈도우에서 웹폰트로 사용할 때 폰트가 좀 더 깨끗하게 출력되며, 고해상도의 출력물에도 사용이 가능합니다.
             </div>
@@ -170,7 +170,7 @@
         <div class="col-sm-6 col-xs-12">
           <hr />
           <div class="column-group">
-            <img class="column-img fig_6" src="{{ site.url }}/images/ko-KR/feature/fig_6.png" />
+            <img class="column-img fig_6" src="{{ site.url }}/images/feature/fig_6.png" />
             <div class="column-content feature-content">
               한글 완성형 글꼴에 추가 글자를 넣어 사용성을 개선했습니다. 노민지, 윤민구 님의 논문인 “<a target="_blank" href="http://koreantypography.org/wp-content/uploads/2016/02/kst_12_7_2_06.pdf">KS 코드 완성형 한글의 추가 글자 제안</a>”을 참고했습니다. 두 번째 버전의 서브셋은 KS 완성형에 추가 글자 224자를 더해 총 2,574자를 제공합니다.
             </div>
@@ -179,7 +179,7 @@
         <div class="col-sm-6 col-xs-12">
           <hr />
           <div class="column-group">
-            <img class="column-img fig_7" src="{{ site.url }}/images/ko-KR/feature/fig_7.png" />
+            <img class="column-img fig_7" src="{{ site.url }}/images/feature/fig_7.png" />
             <div class="column-content feature-content">
               기예메의 모양을 다른 글자와 어울리게 변경했고, 전각으로 되어있던 낫표와 괄호를 디자이너가 아닌 일반 사용자도 범용 애플리케이션과 웹 환경에서 미세 조정 없이 반각으로 사용할 수 있게 조정했습니다.
             </div>
@@ -276,6 +276,7 @@
 </code></pre></figure>
       <p>그후 <code>&lt;style&gt;</code> 태그 안에  <code>font-family</code>를 설정해주세요.</p>
       <figure class="highlight"><pre><code class="language-scss" data-lang="scss"><span class="o">*</span> <span class="p">{</span> <span class="nl">font-family</span><span class="p">:</span> <span class="s1">'Spoqa Han Sans Neo'</span><span class="o">,</span> <span class="s1">'sans-serif'</span><span class="p">;</span> <span class="p">}</span></code></pre></figure>
+
       <p>웹폰트로 사용할 때 위 방법을 사용하시면 무료로 서브되는 버전이기에 불러오는 속도가 느릴 수 있습니다. 가능하면 직접 서브해서 사용하길 추천합니다. 조금 더 자세히 알고싶다면 &ldquo;<a target="_blank" href="https://spoqa.github.io/2017/02/15/using-shs-as-webfonts.html">스포카 한 산스 웹폰트로 사용하기</a>&rdquo; 포스트을 참조하세요.</p>
       <p></p>
     </div>

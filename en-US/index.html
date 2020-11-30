@@ -111,7 +111,7 @@ og_url: https://spoqa.github.io/spoqa-han-sans/en-US/
         <div class="col-xs-12">
           <hr />
           <div class="column-group">
-            <img class="column-img fig_1" src="https://spoqa.github.io/spoqa-han-sans/images/en-US/feature/fig_1.png" />
+            <img class="column-img fig_1" src="{{ site.url }}/images/feature/fig_1.png" />
             <div class="column-content feature-content">
               There were both angular and round glyphs in the previous Spoqa Sans which gave heterogeneous feelings. We angled the shapes of the other round glyphs in Spoqa Hans Neo, to match the number glyphs of the Lato font. The legibility and uniformity of the font were improved through this modification. EM size glyphs were also modified to make the same impression when writing text in multiple languages, including Japanese.
 
@@ -125,7 +125,7 @@ og_url: https://spoqa.github.io/spoqa-han-sans/en-US/
           <div class="column-group">
             <div class="row">
               <div class="col-md-6 col-sm-12 col-xs-12">
-                <img class="column-img fig_2" src="https://spoqa.github.io/spoqa-han-sans/images/en-US/feature/fig_2.png" />
+                  <img class="column-img fig_2" src="{{ site.url }}/images/feature/fig_2.png" />
               </div>
               <div class="col-md-6 col-sm-12 col-xs-12">
                 <div class="column-content feature-content">
@@ -141,7 +141,7 @@ og_url: https://spoqa.github.io/spoqa-han-sans/en-US/
           <div class="column-group fig-magin-adhoc">
             <div class="row">
               <div class="col-md-6 col-sm-12 col-xs-12">
-                <img class="column-img fig_3" src="https://spoqa.github.io/spoqa-han-sans/images/en-US/feature/fig_3.png" />
+                <img class="column-img fig_3" src="{{ site.url }}/images/feature/fig_3.png" />
               </div>
               <div class="col-md-6 col-sm-12 col-xs-12 ">
                 <div class="column-content feature-content">
@@ -156,7 +156,7 @@ og_url: https://spoqa.github.io/spoqa-han-sans/en-US/
         <div class="col-sm-6 col-xs-12">
           <hr />
           <div class="column-group">
-            <img class="column-img fig_4" src="https://spoqa.github.io/spoqa-han-sans/images/en-US/feature/fig_4.png" />
+            <img class="column-img fig_4" src="{{ site.url }}/images/feature/fig_4.png" />
             <div class="column-content feature-content">
               Carets are often used along with “learn more” or “back” labels. We added caret glyphs to PUA (Private Use Areas). Therefore, Spoqa Han Sans Neo provides caret with higher consistency among text labels, and also cuts off time to work on a caret icon.
             </div>
@@ -165,7 +165,7 @@ og_url: https://spoqa.github.io/spoqa-han-sans/en-US/
         <div class="col-sm-6 col-xs-12">
           <hr />
           <div class="column-group">
-            <img class="column-img fig_5" src="https://spoqa.github.io/spoqa-han-sans/images/en-US/feature/fig_5.png" />
+            <img class="column-img fig_5" src="{{ site.url }}/images/feature/fig_5.png" />
             <div class="column-content feature-content">
               Spoqa Han Sans Neo supports OTF and WOFF2 formats based on Postscript Curve, unlike before when only TTFs were supported. When you use it as a webfont in Windows, the font is printed more clearly and can be used in high-resolution printouts.
             </div>
@@ -176,7 +176,7 @@ og_url: https://spoqa.github.io/spoqa-han-sans/en-US/
         <div class="col-sm-6 col-xs-12">
           <hr />
           <div class="column-group">
-            <img class="column-img fig_6" src="https://spoqa.github.io/spoqa-han-sans/images/en-US/feature/fig_6.png" />
+            <img class="column-img fig_6" src="{{ site.url }}/images/feature/fig_6.png" />
             <div class="column-content feature-content">
               We improved usability by adding additional characters to the complete code system of Hangeul. Subset of the latest version Spoqa Han Sans Neo provides a total of 2,574 characters plus 224 additional characters. Learn more from “<a target="_blank" href="http://koreantypography.org/wp-content/uploads/2016/02/kst_12_7_2_06.pdf">Proposal for Additional Korean Characters in Complete Code of Hangeul</a>”.
             </div>
@@ -185,7 +185,7 @@ og_url: https://spoqa.github.io/spoqa-han-sans/en-US/
         <div class="col-sm-6 col-xs-12">
           <hr />
           <div class="column-group">
-            <img class="column-img fig_7" src="https://spoqa.github.io/spoqa-han-sans/images/en-US/feature/fig_7.png" />
+            <img class="column-img fig_7" src="{{ site.url }}/images/feature/fig_7.png" />
             <div class="column-content feature-content">
               We changed the shape of Guillemet to match other letters. We changed corner brackets and arrow brackets to have halfwidth forms instead of fullwidth. So every user can use it in general-purpose applications and web environments without additional setting.
             </div>
@@ -244,7 +244,7 @@ og_url: https://spoqa.github.io/spoqa-han-sans/en-US/
 <textarea></textarea>
 </div>
 
-    <script src={{ stie.url }}/js/slider.js">
+    <script src="{{ stie.url }}/js/slider.js">
     </script>
     </div>
   </section>
@@ -275,8 +275,12 @@ og_url: https://spoqa.github.io/spoqa-han-sans/en-US/
       <p>To embed Spoqa Han Sans Neo into a webpage, there are two ways.</p>
       <p>Copy this code into stylesheet as the import method.</p>
       <figure class="highlight"><pre><code class="language-scss" data-lang="scss"><span class="k">@import</span> <span class="sx">url(//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSansNeo.css)</span><span class="p">;</span>
+</code></pre></figure>
       <p>Or copy this code into the <code>&lt;head&gt;</code> of your HTML document.</p>
+
       <figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;link</span> <span class="na">href=</span><span class="s">'//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSansNeo.css'</span> <span class="na">rel=</span><span class="s">'stylesheet'</span> <span class="na">type=</span><span class="s">'text/css'</span><span class="nt">&gt;</span>
+</code></pre></figure>
+
       <p>And then, specify the font with <code>font-family</code> in the <code>&lt;style&gt;</code> tag.</p>
       <figure class="highlight"><pre><code class="language-scss" data-lang="scss"><span class="o">*</span> <span class="p">{</span> <span class="nl">font-family</span><span class="p">:</span> <span class="s1">'Spoqa Han Sans Neo'</span><span class="o">,</span> <span class="s1">'sans-serif'</span><span class="p">;</span> <span class="p">}</span></code></pre></figure>
       <p>If you use below ways, it may take a while because it is a free serve version. We recommended to serve it directly to your server. If you need more information, refer to &ldquo;<a target="_blank" href="https://spoqa.github.io/2017/02/15/using-shs-as-webfonts.html">The Tips on Using Spoqa Han Sans Web Fonts (KO)</a>&rdquo;.</p>
