@@ -1,5 +1,5 @@
-Spoqa Han Sans v2.1.2
-=====================
+Spoqa Han Sans Neo v3.0.0
+=========================
 
 [![npm version](https://badge.fury.io/js/spoqa-han-sans.svg)](https://www.npmjs.com/package/spoqa-han-sans)
 [![Build Status](https://travis-ci.org/spoqa/spoqa-han-sans.svg?branch=master)](https://travis-ci.org/spoqa/spoqa-han-sans)
@@ -7,18 +7,20 @@ Spoqa Han Sans v2.1.2
 
 
 스포카 한 산스는 국문, 영문, 일문, 숫자, 글리프의 어울림이 훌륭합니다.
-가는 굵기(Thin), 보통 굵기(Regular), 두꺼운 굵기(Bold) 세 가지 자족으로,
+가는 굵기(Thin), 보통 굵기(Regular), 중간 굵기 (Medium), 두꺼운 굵기(Bold) 네 가지 자족으로,
 디지털 환경에서 언어를 아름답게 표현합니다.
 
-스포카 혼자 쓰기엔 지나치게 산뜻한 스포카 한 산스,
-한글날을 맞이하여 누구나 무료로 쓸 수 있도록 배포합니다.
+스포카 혼자 쓰기엔 지나치게 산뜻한 스포카 한 산스 네오,
+누구나 무료로 쓸 수 있도록 배포합니다.
 
 
-## 폰트 다운로드(TTF, Subset TTF)
+## 폰트 다운로드
 
-- [All](https://github.com/spoqa/spoqa-han-sans/releases/download/v2.1.2/SpoqaHanSans_all.zip)
-- [KR Original](https://github.com/spoqa/spoqa-han-sans/releases/download/v2.1.2/SpoqaHanSans_original.zip)
-- [KR Subset](https://github.com/spoqa/spoqa-han-sans/releases/download/v2.1.2/SpoqaHanSans_subset.zip)
+- [All](https://github.com/spoqa/spoqa-han-sans/releases/download/v3.0.0/SpoqaHanSansNeo_all.zip)
+- [TTF Original](https://github.com/spoqa/spoqa-han-sans/releases/download/v3.0.0/SpoqaHanSansNeo_TTF_original.zip)
+- [OTF Original](https://github.com/spoqa/spoqa-han-sans/releases/download/v3.0.0/SpoqaHanSansNeo_OTF_original.zip)
+- [TTF Subset](https://github.com/spoqa/spoqa-han-sans/releases/download/v3.0.0/SpoqaHanSans_TTF_subset.zip)
+- [OTF Subset](https://github.com/spoqa/spoqa-han-sans/releases/download/v3.0.0/SpoqaHanSans_OTF_subset.zip)
 - [JP Original](https://github.com/spoqa/spoqa-han-sans/releases/download/v2.1.2/SpoqaHanSans_JP_original.zip)
 - [JP Subset](https://github.com/spoqa/spoqa-han-sans/releases/download/v2.1.2/SpoqaHanSans_JP_subset.zip)
 
@@ -51,7 +53,7 @@ Spoqa Han Sans를 웹폰트로 사용하시려면 2가지 방법이 있습니다
 
 ```css
 * {
-  font-family: 'Spoqa Han Sans', 'Spoqa Han Sans JP', sans-serif;
+  font-family: 'Spoqa Han Sans', 'Spoqa Han Sans Neo', 'Spoqa Han Sans JP', sans-serif;
 }
 ```
 
