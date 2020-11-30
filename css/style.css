@@ -3054,7 +3054,7 @@ input,
 select,
 textarea,
 button {
-  font: 9.3333333333px, "Spoqa Han Sans JP", "Spoqa Han Sans", "Source Sans Pro", Apple SD Gothic Neo, Nanum Barun Gothic, Nanum Gothic, "돋움", Dotum, Verdana, Arial, sans-serif; }
+  font: 9.3333333333px, "Spoqa Han Sans JP", "Spoqa Han Sans", "Spoqa Han Sans", "Source Sans Pro", Apple SD Gothic Neo, Nanum Barun Gothic, Nanum Gothic, "돋움", Dotum, Verdana, Arial, sans-serif; }
 
 a {
   color: #4c80f1;
@@ -4280,7 +4280,7 @@ hr {
     margin-left: 100%; } }
 body {
   color: #4d5256;
-  font-family: "Spoqa Han Sans JP", "Spoqa Han Sans", "Source Sans Pro", Apple SD Gothic Neo, Nanum Barun Gothic, Nanum Gothic, "돋움", Dotum, Verdana, Arial, sans-serif;
+  font-family: "Spoqa Han Sans JP", "Spoqa Han Sans Neo", "Spoqa Han Sans", "Source Sans Pro", Apple SD Gothic Neo, Nanum Barun Gothic, Nanum Gothic, "돋움", Dotum, Verdana, Arial, sans-serif;
   font-size: 14px;
   -webkit-font-smoothing: antialiased;
   line-height: 1.5; }
@@ -7770,7 +7770,7 @@ body {
   font-size: 18px;
   line-height: 1.6;
   color: #363a3c;
-  font-family: 'Spoqa Han Sans', 'Spoqa Han Sans JP', 'Source Sans Pro', Apple SD Gothic Neo, Nanum Barun Gothic, Nanum Gothic, '돋움', Dotum, Verdana, Arial, sans-serif; }
+  font-family: 'Spoqa Han Sans', 'Spoqa Han Sans Neo', 'Spoqa Han Sans JP', 'Source Sans Pro', Apple SD Gothic Neo, Nanum Barun Gothic, Nanum Gothic, '돋움', Dotum, Verdana, Arial, sans-serif; }
 
 p, .column-title {
   font-size: 18px; }
@@ -7786,6 +7786,8 @@ p {
   line-height: 1.6; }
   .header-text .header-text-700 {
     font-weight: 700; }
+  .header-text .header-text-500 {
+    font-weight: 500; }
   .header-text .header-text-400 {
     font-weight: 400; }
   .header-text .header-text-300 {
