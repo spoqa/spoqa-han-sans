@@ -7604,16 +7604,16 @@ footer,
     font-size: 0;
     -webkit-user-select: none;
     user-select: none; }
-    .preview-area > .control-bar > .grocashnote {
+    .preview-area > .control-bar > .group {
       display: -ms-flexbox;
       display: flex;
       height: 100%; }
-      .preview-area > .control-bar > .grocashnote.slider {
+      .preview-area > .control-bar > .group.slider {
         -ms-flex: 1;
         flex: 1;
         margin: 0 22px;
         height: 100%; }
-        .preview-area > .control-bar > .grocashnote.slider > .slider {
+        .preview-area > .control-bar > .group.slider > .slider {
           -ms-flex: 1;
           flex: 1;
           margin-left: 22px;
@@ -7621,11 +7621,11 @@ footer,
           display: flex;
           align-items: center;
           height: 100%; }
-          .preview-area > .control-bar > .grocashnote.slider > .slider:first-child {
+          .preview-area > .control-bar > .group.slider > .slider:first-child {
             margin-left: 0; }
-          .preview-area > .control-bar > .grocashnote.slider > .slider > img {
+          .preview-area > .control-bar > .group.slider > .slider > img {
             margin-right: 8px; }
-          .preview-area > .control-bar > .grocashnote.slider > .slider > .range {
+          .preview-area > .control-bar > .group.slider > .slider > .range {
             position: relative;
             -ms-flex: 1;
             flex: 1;
@@ -7633,17 +7633,17 @@ footer,
             cursor: pointer;
             cursor: grab;
             cursor: -webkit-grab; }
-            .preview-area > .control-bar > .grocashnote.slider > .slider > .range:active {
+            .preview-area > .control-bar > .group.slider > .slider > .range:active {
               cursor: grabbing;
               cursor: -webkit-grabbing; }
-            .preview-area > .control-bar > .grocashnote.slider > .slider > .range > .line {
+            .preview-area > .control-bar > .group.slider > .slider > .range > .line {
               position: absolute;
               top: 5px;
               left: 0;
               width: 100%;
               height: 2px;
               background-color: #e1e4e6; }
-            .preview-area > .control-bar > .grocashnote.slider > .slider > .range > .handle {
+            .preview-area > .control-bar > .group.slider > .slider > .range > .handle {
               position: absolute;
               top: 0;
               left: 0;
@@ -7653,42 +7653,42 @@ footer,
               border-radius: 6px;
               outline: solid 3px #363a3c;
               transition: outline 0.5s ease; }
-              .preview-area > .control-bar > .grocashnote.slider > .slider > .range > .handle:hover, .preview-area > .control-bar > .grocashnote.slider > .slider > .range > .handle:active {
+              .preview-area > .control-bar > .group.slider > .slider > .range > .handle:hover, .preview-area > .control-bar > .group.slider > .slider > .range > .handle:active {
                 background-color: #87b1f3; }
-      .preview-area > .control-bar > .grocashnote.others {
+      .preview-area > .control-bar > .group.others {
         width: 255px;
         display: -ms-flexbox;
         display: flex; }
-        .preview-area > .control-bar > .grocashnote.others > .control {
+        .preview-area > .control-bar > .group.others > .control {
           height: 100%;
           border-left: 1px solid #878d91;
           transition: border-color 0.5s ease; }
-          .preview-area > .control-bar > .grocashnote.others > .control.theme {
+          .preview-area > .control-bar > .group.others > .control.theme {
             display: -ms-flexbox;
             display: flex;
             padding: 0 19px; }
-            .preview-area > .control-bar > .grocashnote.others > .control.theme > .option {
+            .preview-area > .control-bar > .group.others > .control.theme > .option {
               width: 28px;
               height: 28px;
               box-sizing: border-box;
               border: 2px solid #ced3d6;
               border-radius: 50%;
               transition: border 0.2s ease; }
-              .preview-area > .control-bar > .grocashnote.others > .control.theme > .option.selected {
+              .preview-area > .control-bar > .group.others > .control.theme > .option.selected {
                 border-width: 6px; }
-              .preview-area > .control-bar > .grocashnote.others > .control.theme > .option.light {
+              .preview-area > .control-bar > .group.others > .control.theme > .option.light {
                 background-color: #ffffff;
                 margin-right: 10px; }
-              .preview-area > .control-bar > .grocashnote.others > .control.theme > .option.dark {
+              .preview-area > .control-bar > .group.others > .control.theme > .option.dark {
                 background-color: #363a3c; }
-              .preview-area > .control-bar > .grocashnote.others > .control.theme > .option:hover {
+              .preview-area > .control-bar > .group.others > .control.theme > .option:hover {
                 border-color: #87b1f3; }
-          .preview-area > .control-bar > .grocashnote.others > .control.font-family {
+          .preview-area > .control-bar > .group.others > .control.font-family {
             flex: 1;
             overflow: hidden;
             font-size: 14px;
             background: url("../images/assets/dropdown_caret.svg") 110px 45% no-repeat; }
-            .preview-area > .control-bar > .grocashnote.others > .control.font-family > select {
+            .preview-area > .control-bar > .group.others > .control.font-family > select {
               -webkit-appearance: none;
               -moz-appearance: none;
               apperance: none;
@@ -7700,7 +7700,7 @@ footer,
               border: none;
               outline: none;
               color: #a9afb3; }
-              .preview-area > .control-bar > .grocashnote.others > .control.font-family > select:hover, .preview-area > .control-bar > .grocashnote.others > .control.font-family > select:active {
+              .preview-area > .control-bar > .group.others > .control.font-family > select:hover, .preview-area > .control-bar > .group.others > .control.font-family > select:active {
                 color: #87b1f3; }
   .preview-area > input[type="text"], .preview-area textarea {
     display: block;
@@ -7740,9 +7740,9 @@ footer,
   .preview-area.light {
     background-color: #ffffff;
     border-color: #e1e4e6; }
-    .preview-area.light > .control-bar > .slider.grocashnote > .slider > .range > .handle {
+    .preview-area.light > .control-bar > .slider.group > .slider > .range > .handle {
       outline-color: #ffffff; }
-    .preview-area.light > .control-bar > .others.grocashnote > .control {
+    .preview-area.light > .control-bar > .others.group > .control {
       border-left-color: #e1e4e6; }
     .preview-area.light > textarea {
       border-top-color: #e1e4e6;
@@ -7751,14 +7751,14 @@ footer,
 @media (max-width: 700px) {
   .preview-area {
     margin-top: 30px; }
-    .preview-area > .control-bar > .slider.grocashnote {
+    .preview-area > .control-bar > .slider.group {
       display: none; }
-    .preview-area > .control-bar > .others.grocashnote {
+    .preview-area > .control-bar > .others.group {
       -ms-flex: 1;
       flex: 1; }
-      .preview-area > .control-bar > .others.grocashnote > .control:first-child {
+      .preview-area > .control-bar > .others.group > .control:first-child {
         border-left: none; }
-      .preview-area > .control-bar > .others.grocashnote > .font-family.control {
+      .preview-area > .control-bar > .others.group > .font-family.control {
         background-position: calc(100% - 22px) 45%; }
     .preview-area > textarea {
       overflow: hidden;
