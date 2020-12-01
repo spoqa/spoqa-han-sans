@@ -1,4 +1,4 @@
-Spoqa Han Sans Neo v3.0.0
+Spoqa Han Sans Neo v3.1.0
 =========================
 
 [![npm version](https://badge.fury.io/js/spoqa-han-sans.svg)](https://www.npmjs.com/package/spoqa-han-sans)
@@ -16,11 +16,11 @@ Spoqa Han Sans Neo v3.0.0
 
 ## 폰트 다운로드
 
-- [All](https://github.com/spoqa/spoqa-han-sans/releases/download/v3.0.0/SpoqaHanSansNeo_all.zip)
-- [TTF Original](https://github.com/spoqa/spoqa-han-sans/releases/download/v3.0.0/SpoqaHanSansNeo_TTF_original.zip)
-- [OTF Original](https://github.com/spoqa/spoqa-han-sans/releases/download/v3.0.0/SpoqaHanSansNeo_OTF_original.zip)
-- [TTF Subset](https://github.com/spoqa/spoqa-han-sans/releases/download/v3.0.0/SpoqaHanSans_TTF_subset.zip)
-- [OTF Subset](https://github.com/spoqa/spoqa-han-sans/releases/download/v3.0.0/SpoqaHanSans_OTF_subset.zip)
+- [All](https://github.com/spoqa/spoqa-han-sans/releases/download/v3.1.0/SpoqaHanSansNeo_all.zip)
+- [TTF Original](https://github.com/spoqa/spoqa-han-sans/releases/download/v3.1.0/SpoqaHanSansNeo_TTF_original.zip)
+- [OTF Original](https://github.com/spoqa/spoqa-han-sans/releases/download/v3.1.0/SpoqaHanSansNeo_OTF_original.zip)
+- [TTF Subset](https://github.com/spoqa/spoqa-han-sans/releases/download/v3.1.0/SpoqaHanSans_TTF_subset.zip)
+- [OTF Subset](https://github.com/spoqa/spoqa-han-sans/releases/download/v3.1.0/SpoqaHanSans_OTF_subset.zip)
 - [JP Original](https://github.com/spoqa/spoqa-han-sans/releases/download/v2.1.2/SpoqaHanSans_JP_original.zip)
 - [JP Subset](https://github.com/spoqa/spoqa-han-sans/releases/download/v2.1.2/SpoqaHanSans_JP_subset.zip)
 
@@ -38,14 +38,14 @@ Spoqa Han Sans를 웹폰트로 사용하시려면 2가지 방법이 있습니다
 스타일 시트에 아래의 코드를 넣거나,
 
 ```css
-@import url(//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSans-kr.css);
+@import url(//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSansNeo.css);
 @import url(//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSans-jp.css);
 ```
 
 혹은 HTML의 `<head>` 태그 안에 아래의 코드를 넣어주세요.
 
 ```html
-<link href='//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSans-kr.css' rel='stylesheet' type='text/css'>
+<link href='//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSansNeo.css' rel='stylesheet' type='text/css'>
 <link href='//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSans-jp.css' rel='stylesheet' type='text/css'>
 ```
 
@@ -53,7 +53,7 @@ Spoqa Han Sans를 웹폰트로 사용하시려면 2가지 방법이 있습니다
 
 ```css
 * {
-  font-family: 'Spoqa Han Sans', 'Spoqa Han Sans Neo', 'Spoqa Han Sans JP', sans-serif;
+  font-family: 'Spoqa Han Sans Neo', 'Spoqa Han Sans JP', sans-serif;
 }
 ```
 
