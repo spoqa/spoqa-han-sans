@@ -26,7 +26,7 @@
     font-weight: 700;
     font-display: swap;
     src: local('Spoqa Han Sans Bold'),
-    url('../Subset/SpoqaHanSansNeo/Spoqa Han Sans Neo Bold.woff2') format('woff2'),
+    url('../Subset/SpoqaHanSansNeo/SpoqaHanSansNeo-Bold.woff2') format('woff2'),
     url('../Subset/SpoqaHanSansNeo/SpoqaHanSansNeo-Bold.woff') format('woff'),
     url('../Subset/SpoqaHanSansNeo/SpoqaHanSansNeo-Bold.ttf') format('truetype');
 }
@@ -36,7 +36,7 @@
     font-weight: 500;
     font-display: swap;
     src: local('Spoqa Han Sans Medium'),
-    url('../Subset/SpoqaHanSansNeo/Spoqa Han Sans Neo Medium.woff2') format('woff2'),
+    url('../Subset/SpoqaHanSansNeo/SpoqaHanSansNeo-Medium.woff2') format('woff2'),
     url('../Subset/SpoqaHanSansNeo/SpoqaHanSansNeo-Medium.woff') format('woff'),
     url('../Subset/SpoqaHanSansNeo/SpoqaHanSansNeo-Medium.ttf') format('truetype');
 }
@@ -46,7 +46,7 @@
     font-weight: 400;
     font-display: swap;
     src: local('Spoqa Han Sans Regular'),
-    url('../Subset/SpoqaHanSansNeo/Spoqa Han Sans Neo Regular.woff2') format('woff2'),
+    url('../Subset/SpoqaHanSansNeo/SpoqaHanSansNeo-Regular.woff2') format('woff2'),
     url('../Subset/SpoqaHanSansNeo/SpoqaHanSansNeo-Regular.woff') format('woff'),
     url('../Subset/SpoqaHanSansNeo/SpoqaHanSansNeo-Regular.ttf') format('truetype');
 }
@@ -56,7 +56,7 @@
     font-weight: 300;
     font-display: swap;
     src: local('Spoqa Han Sans Light'),
-    url('../Subset/SpoqaHanSansNeo/Spoqa Han Sans Neo Light.woff2') format('woff2'),
+    url('../Subset/SpoqaHanSansNeo/SpoqaHanSansNeo-Light.woff2') format('woff2'),
     url('../Subset/SpoqaHanSansNeo/SpoqaHanSansNeo-Light.woff') format('woff'),
     url('../Subset/SpoqaHanSansNeo/SpoqaHanSansNeo-Light.ttf') format('truetype');
 }
@@ -66,7 +66,7 @@
     font-weight: 100;
     font-display: swap;
     src: local('Spoqa Han Sans Thin'),
-    url('../Subset/SpoqaHanSansNeo/Spoqa Han Sans Neo Thin.woff2') format('woff2'),
+    url('../Subset/SpoqaHanSansNeo/SpoqaHanSansNeo-Thin.woff2') format('woff2'),
     url('../Subset/SpoqaHanSansNeo/SpoqaHanSansNeo-Thin.woff') format('woff'),
     url('../Subset/SpoqaHanSansNeo/SpoqaHanSansNeo-Thin.ttf') format('truetype');
 }
@@ -76,7 +76,7 @@
     font-weight: 700;
     font-display: swap;
     src: local('Spoqa Han Sans Neo Bold'),
-    url('../Subset/SpoqaHanSansNeo/Spoqa Han Sans Neo Bold.woff2') format('woff2'),
+    url('../Subset/SpoqaHanSansNeo/SpoqaHanSansNeo-Bold.woff2') format('woff2'),
     url('../Subset/SpoqaHanSansNeo/SpoqaHanSansNeo-Bold.woff') format('woff'),
     url('../Subset/SpoqaHanSansNeo/SpoqaHanSansNeo-Bold.ttf') format('truetype');
 }
@@ -86,7 +86,7 @@
     font-weight: 500;
     font-display: swap;
     src: local('Spoqa Han Sans Neo Medium'),
-    url('../Subset/SpoqaHanSansNeo/Spoqa Han Sans Neo Medium.woff2') format('woff2'),
+    url('../Subset/SpoqaHanSansNeo/SpoqaHanSansNeo-Medium.woff2') format('woff2'),
     url('../Subset/SpoqaHanSansNeo/SpoqaHanSansNeo-Medium.woff') format('woff'),
     url('../Subset/SpoqaHanSansNeo/SpoqaHanSansNeo-Medium.ttf') format('truetype');
 }
@@ -96,7 +96,7 @@
     font-weight: 400;
     font-display: swap;
     src: local('Spoqa Han Sans Neo Regular'),
-    url('../Subset/SpoqaHanSansNeo/Spoqa Han Sans Neo Regular.woff2') format('woff2'),
+    url('../Subset/SpoqaHanSansNeo/SpoqaHanSansNeo-Regular.woff2') format('woff2'),
     url('../Subset/SpoqaHanSansNeo/SpoqaHanSansNeo-Regular.woff') format('woff'),
     url('../Subset/SpoqaHanSansNeo/SpoqaHanSansNeo-Regular.ttf') format('truetype');
 }
@@ -106,7 +106,7 @@
     font-weight: 300;
     font-display: swap;
     src: local('Spoqa Han Sans Neo Light'),
-    url('../Subset/SpoqaHanSansNeo/Spoqa Han Sans Neo Light.woff2') format('woff2'),
+    url('../Subset/SpoqaHanSansNeo/SpoqaHanSansNeo-Light.woff2') format('woff2'),
     url('../Subset/SpoqaHanSansNeo/SpoqaHanSansNeo-Light.woff') format('woff'),
     url('../Subset/SpoqaHanSansNeo/SpoqaHanSansNeo-Light.ttf') format('truetype');
 }
@@ -116,7 +116,7 @@
     font-weight: 100;
     font-display: swap;
     src: local('Spoqa Han Sans Neo Thin'),
-    url('../Subset/SpoqaHanSansNeo/Spoqa Han Sans Neo Thin.woff2') format('woff2'),
+    url('../Subset/SpoqaHanSansNeo/SpoqaHanSansNeo-Thin.woff2') format('woff2'),
     url('../Subset/SpoqaHanSansNeo/SpoqaHanSansNeo-Thin.woff') format('woff'),
     url('../Subset/SpoqaHanSansNeo/SpoqaHanSansNeo-Thin.ttf') format('truetype');
 }
