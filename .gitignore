@@ -1,2 +1,4 @@
 *.yml
 .DS_Store
+.jekyll-cache
+_site
