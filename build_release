@@ -4,7 +4,7 @@ set -e
 release_tag="${TRAVIS_TAG:-"$(git tag | tail -n 1)"}";
 project_root="$(pwd)";
 release_base_dir="$project_root/release";
-release_all_name="SpoqaHanSans_all";
+release_all_name="SpoqaHanSansNeo_all";
 all_dir="$release_base_dir/$release_all_name";
 
 mkdir -p "$release_base_dir";
@@ -14,6 +14,9 @@ cp LICENSE "$all_dir";
 build_zip()
 {
   release_dirname="SpoqaHanSans_$1";
+  if [[ "$2" = *Neo* ]]; then
+    release_dirname="SpoqaHanSansNeo_$1";
+  fi
   release_dir="$release_base_dir/$release_dirname";
   echo "* release $release_dirname";
   mkdir -p "$release_dir";
@@ -38,13 +41,13 @@ echo "${TRAVIS_REPO_SLUG:-"origin"}/${TRAVIS_BRANCH:-"master"}";
 echo "# Compress fonts...";
 
 build_zip "original" \
-          "Original/SpoqaHanSans";
+          "Original/SpoqaHanSansNeo";
 
 build_zip "jp_original" \
           "Original/SpoqaHanSans_JP";
 
 build_zip "subset" \
-          "Subset/SpoqaHanSans";
+          "Subset/SpoqaHanSansNeo";
 
 build_zip "jp_subset" \
           "Subset/SpoqaHanSans_JP";
