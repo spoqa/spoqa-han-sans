@@ -14,9 +14,10 @@ cp LICENSE "$all_dir";
 build_zip()
 {
   release_dirname="SpoqaHanSans_$1";
-  if [[ "$2" = *Neo* ]]; then
-    release_dirname="SpoqaHanSansNeo_$1";
-  fi
+  if [[ "$2" = *Neo* ]];
+    then
+        release_dirname="SpoqaHanSansNeo_$1";
+    fi
   release_dir="$release_base_dir/$release_dirname";
   echo "* release $release_dirname";
   mkdir -p "$release_dir";
