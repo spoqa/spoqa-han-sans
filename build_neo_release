@@ -1,0 +1,64 @@
+#!/usr/bin/env bash
+set -e
+
+release_tag="${TRAVIS_TAG:-"$(git tag | tail -n 1)"}"
+project_root="$(pwd)"
+release_base_dir="$project_root/release"
+release_all_name="SpoqaHanSansNeo_all"
+all_dir="$release_base_dir/$release_all_name"
+
+mkdir -p "$release_base_dir"
+mkdir -p "$all_dir"
+cp LICENSE "$all_dir"
+
+build_zip()
+{
+  release_dirname="SpoqaHanSansNeo_$1"
+  release_dir="$release_base_dir/$release_dirname"
+  echo "* release $release_dirname"
+  mkdir -p "$release_dir"
+  for ext in "${@:3}"; do
+    cp -r "$project_root/$2/"*."$ext" "$release_dir/"
+  done
+  cp -r "$release_dir" "$all_dir"
+  cp LICENSE "$release_dir/"
+
+  cd "$release_base_dir"
+  zip "$release_dir.zip" -r "$release_dirname"
+  cd ..
+  rm -rf "$release_dir"
+}
+
+echo "Release $release_tag"
+echo "~~~~~~~~~~~~~~~"
+
+echo "${TRAVIS_REPO_SLUG:-"origin"}/${TRAVIS_BRANCH:-"master"}"
+
+# git log from pre-released version to current version
+# git log "$(git tag | tail -n 2 | head -n 1)"..."$release_tag" --pretty="format:%an <%ae> %s" --no-merges
+
+echo "# Compress fonts..."
+
+build_zip "OTF_original" \
+          "Original/SpoqaHanSansNeo" \
+          "otf"
+
+build_zip "TTF_original" \
+          "Original/SpoqaHanSansNeo" \
+          "ttf"
+
+build_zip "OTF_subset" \
+          "Subset/SpoqaHanSansNeo" \
+          "otf" "woff" "woff2" "eot"
+
+build_zip "TTF_subset" \
+          "Subset/SpoqaHanSansNeo" \
+          "ttf" "woff" "woff2" "eot"
+
+echo "* release $release_all_name"
+cd "$release_base_dir" || exit
+zip "$release_all_name.zip" -r "$release_all_name"
+rm -rf "$release_all_name"
+cd ..
+
+echo "release done."
