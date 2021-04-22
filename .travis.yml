@@ -15,6 +15,7 @@ deploy:
     - release/SpoqaHanSansNeo_OTF_subset.zip
     - release/SpoqaHanSansNeo_TTF_original.zip
     - release/SpoqaHanSansNeo_TTF_subset.zip
+  skip_cleanup: true
   on:
     tags: true
 after_deploy:
